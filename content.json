@@ -1,0 +1,2936 @@
+{
+  "companies": [
+    {
+      "ticker": "CAVA",
+      "name": "CAVA Group",
+      "summary": {
+        "total": 52,
+        "free": 34,
+        "vendor": 14,
+        "proprietary": 4,
+        "has_drivers": true
+      },
+      "shelf": [
+        {
+          "doc_type": "broker-initiation",
+          "label": "Sell-side initiation",
+          "fiscal_period": "2026-03-05-davidson",
+          "source": "factset",
+          "klass": "vendor",
+          "is_fallback": true,
+          "title": "CAVA initiation - D.A. Davidson (Mar 5 2026)",
+          "ext": "pdf"
+        },
+        {
+          "doc_type": "broker-post-earnings",
+          "label": "Sell-side research",
+          "fiscal_period": "Q1-2026",
+          "source": "factset",
+          "klass": "vendor",
+          "is_fallback": true,
+          "title": "CAVA Q1 2026 sell-side post-earnings compilation (10 brokers)",
+          "ext": "pdf"
+        },
+        {
+          "doc_type": "10-K",
+          "label": "Annual report (10-K)",
+          "fiscal_period": "FY2024",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Annual report (10-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "10-K",
+          "label": "Annual report (10-K)",
+          "fiscal_period": "FY2025",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Annual report (10-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "10-Q",
+          "label": "Quarterly report (10-Q)",
+          "fiscal_period": "Q2-2024",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Quarterly report (10-Q)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "10-Q",
+          "label": "Quarterly report (10-Q)",
+          "fiscal_period": "Q3-2024",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Quarterly report (10-Q)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "10-Q",
+          "label": "Quarterly report (10-Q)",
+          "fiscal_period": "Q4-2024",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Quarterly report (10-Q)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "10-Q",
+          "label": "Quarterly report (10-Q)",
+          "fiscal_period": "Q2-2025",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Quarterly report (10-Q)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "10-Q",
+          "label": "Quarterly report (10-Q)",
+          "fiscal_period": "Q3-2025",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Quarterly report (10-Q)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "10-Q",
+          "label": "Quarterly report (10-Q)",
+          "fiscal_period": "Q4-2025",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Quarterly report (10-Q)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "10-Q",
+          "label": "Quarterly report (10-Q)",
+          "fiscal_period": "Q2-2026",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Quarterly report (10-Q)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "press-release",
+          "label": "Press release",
+          "fiscal_period": "Q1-2024",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Press release",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "press-release",
+          "label": "Press release",
+          "fiscal_period": "Q1-2025",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Press release",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "press-release",
+          "label": "Press release",
+          "fiscal_period": "Q1-2026",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Press release",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "press-release",
+          "label": "Press release",
+          "fiscal_period": "Q2-2024",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Press release",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "press-release",
+          "label": "Press release",
+          "fiscal_period": "Q2-2025",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Press release",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "press-release",
+          "label": "Press release",
+          "fiscal_period": "Q2-2026",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Press release",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "press-release",
+          "label": "Press release",
+          "fiscal_period": "Q3-2024",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Press release",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "press-release",
+          "label": "Press release",
+          "fiscal_period": "Q3-2025",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Press release",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "press-release",
+          "label": "Press release",
+          "fiscal_period": "Q4-2024",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Press release",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "press-release",
+          "label": "Press release",
+          "fiscal_period": "Q4-2025",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Press release",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "book",
+          "label": "FactSet book",
+          "fiscal_period": "Q1-2026",
+          "source": "granite",
+          "klass": "proprietary",
+          "is_fallback": false,
+          "title": "CAVA Q1 2026 FactSet Book",
+          "ext": "pdf"
+        },
+        {
+          "doc_type": "drivers",
+          "label": "Granite Drivers (thesis)",
+          "fiscal_period": "\u2014",
+          "source": "granite",
+          "klass": "proprietary",
+          "is_fallback": false,
+          "title": "CAVA Drivers (key debates / KPIs / quarter recaps / triggers)",
+          "ext": "md"
+        },
+        {
+          "doc_type": "llm-summary",
+          "label": "LLM summary (Gemini)",
+          "fiscal_period": "Q1-2026",
+          "source": "granite",
+          "klass": "proprietary",
+          "is_fallback": false,
+          "title": "CAVA Q1 2026 LLM earnings summary",
+          "ext": "pdf"
+        },
+        {
+          "doc_type": "one-sheet",
+          "label": "One-sheet summary",
+          "fiscal_period": "Q1-2026",
+          "source": "granite",
+          "klass": "proprietary",
+          "is_fallback": false,
+          "title": "CAVA Q1 2026 one-sheet metrics summary",
+          "ext": "pdf"
+        },
+        {
+          "doc_type": "10-Q",
+          "label": "Quarterly report (10-Q)",
+          "fiscal_period": "Q1-2026",
+          "source": "factset",
+          "klass": "vendor",
+          "is_fallback": true,
+          "title": "CAVA Form 10-Q (fiscal Q1 2026)",
+          "ext": "pdf"
+        },
+        {
+          "doc_type": "conference-slides",
+          "label": "Conference slides",
+          "fiscal_period": "2025-06-03-blair",
+          "source": "factset",
+          "klass": "vendor",
+          "is_fallback": true,
+          "title": "CAVA William Blair Conference slides (Jun 3 2025)",
+          "ext": "pdf"
+        },
+        {
+          "doc_type": "conference-transcript",
+          "label": "Conference transcript",
+          "fiscal_period": "2025-09-10-piper",
+          "source": "factset",
+          "klass": "vendor",
+          "is_fallback": true,
+          "title": "CAVA Piper Sandler Growth Frontiers Conference - Corrected Transcript (Sep 10 2025)",
+          "ext": "pdf"
+        },
+        {
+          "doc_type": "investor-slides",
+          "label": "Investor slides",
+          "fiscal_period": "Q1-2025",
+          "source": "manual",
+          "klass": "vendor",
+          "is_fallback": true,
+          "title": "Q1-2025 Earnings Supplemental Materials",
+          "ext": "pdf"
+        },
+        {
+          "doc_type": "investor-slides",
+          "label": "Investor slides",
+          "fiscal_period": "Q1-2026",
+          "source": "factset",
+          "klass": "vendor",
+          "is_fallback": true,
+          "title": "CAVA Q1 2026 Supplemental Materials",
+          "ext": "pdf"
+        },
+        {
+          "doc_type": "investor-slides",
+          "label": "Investor slides",
+          "fiscal_period": "Q1-2026",
+          "source": "manual",
+          "klass": "vendor",
+          "is_fallback": true,
+          "title": "Q1 2026 Earnings Supplemental Materials",
+          "ext": "pdf"
+        },
+        {
+          "doc_type": "investor-slides",
+          "label": "Investor slides",
+          "fiscal_period": "Q2-2025",
+          "source": "manual",
+          "klass": "vendor",
+          "is_fallback": true,
+          "title": "Q2-2025 Earnings Supplemental Materials",
+          "ext": "pdf"
+        },
+        {
+          "doc_type": "investor-slides",
+          "label": "Investor slides",
+          "fiscal_period": "Q3-2025",
+          "source": "manual",
+          "klass": "vendor",
+          "is_fallback": true,
+          "title": "Q3-2025 Earnings Supplemental Materials",
+          "ext": "pdf"
+        },
+        {
+          "doc_type": "investor-slides",
+          "label": "Investor slides",
+          "fiscal_period": "Q4-2024",
+          "source": "manual",
+          "klass": "vendor",
+          "is_fallback": true,
+          "title": "Q4-2024 Earnings Supplemental Materials",
+          "ext": "pdf"
+        },
+        {
+          "doc_type": "investor-slides",
+          "label": "Investor slides",
+          "fiscal_period": "Q4-2025",
+          "source": "manual",
+          "klass": "vendor",
+          "is_fallback": true,
+          "title": "Q4-2025 Earnings Supplemental Materials",
+          "ext": "pdf"
+        },
+        {
+          "doc_type": "press-release",
+          "label": "Press release",
+          "fiscal_period": "Q1-2026",
+          "source": "factset",
+          "klass": "vendor",
+          "is_fallback": true,
+          "title": "CAVA Group Reports First Quarter 2026 Results",
+          "ext": "pdf"
+        },
+        {
+          "doc_type": "transcript",
+          "label": "Earnings transcript",
+          "fiscal_period": "Q1-2026",
+          "source": "factset",
+          "klass": "vendor",
+          "is_fallback": true,
+          "title": "CAVA Q1 2026 Earnings Call - Corrected Transcript (19-May-2026)",
+          "ext": "pdf"
+        },
+        {
+          "doc_type": "investor-slides",
+          "label": "Investor slides",
+          "fiscal_period": "Q1-2026",
+          "source": "q4",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Investor slides",
+          "ext": "pdf"
+        }
+      ],
+      "funnel": [
+        {
+          "key": "pr",
+          "name": "1 \u00b7 Press release",
+          "klass": "free",
+          "why": "The headline numbers + narrative. Free from EDGAR.",
+          "items": [
+            {
+              "doc_type": "press-release",
+              "label": "Press release",
+              "present": true,
+              "count": 11,
+              "klass": "free",
+              "source": "edgar",
+              "reason": null,
+              "titles": [
+                "Press release",
+                "Press release",
+                "Press release"
+              ]
+            }
+          ],
+          "have": 1,
+          "expect": 1,
+          "complete": true
+        },
+        {
+          "key": "slides",
+          "name": "2 \u00b7 Investor slides",
+          "klass": "free",
+          "why": "Management's visual lead. Free from EDGAR / IR site.",
+          "items": [
+            {
+              "doc_type": "investor-slides",
+              "label": "Investor slides",
+              "present": true,
+              "count": 8,
+              "klass": "vendor",
+              "source": "manual",
+              "reason": null,
+              "titles": [
+                "Q1-2025 Earnings Supplemental Materials",
+                "CAVA Q1 2026 Supplemental Materials",
+                "Q1 2026 Earnings Supplemental Materials"
+              ]
+            }
+          ],
+          "have": 1,
+          "expect": 1,
+          "complete": true
+        },
+        {
+          "key": "transcript",
+          "name": "3 \u00b7 Earnings transcript",
+          "klass": "vendor",
+          "why": "The 'why' + the analyst Q&A. Vendor-gated (FactSet).",
+          "items": [
+            {
+              "doc_type": "transcript",
+              "label": "Earnings transcript",
+              "present": true,
+              "count": 1,
+              "klass": "vendor",
+              "source": "factset",
+              "reason": null,
+              "titles": [
+                "CAVA Q1 2026 Earnings Call - Corrected Transcript (19-May-2026)"
+              ]
+            }
+          ],
+          "have": 1,
+          "expect": 1,
+          "complete": true
+        },
+        {
+          "key": "sellside",
+          "name": "4 \u00b7 Sell-side research",
+          "klass": "vendor",
+          "why": "Consensus, reaction, ratings. Vendor-gated (FactSet / AlphaSense).",
+          "items": [
+            {
+              "doc_type": "broker-post-earnings",
+              "label": "Sell-side research",
+              "present": true,
+              "count": 1,
+              "klass": "vendor",
+              "source": "factset",
+              "reason": null,
+              "titles": [
+                "CAVA Q1 2026 sell-side post-earnings compilation (10 brokers)"
+              ]
+            },
+            {
+              "doc_type": "broker-initiation",
+              "label": "Sell-side initiation",
+              "present": true,
+              "count": 1,
+              "klass": "vendor",
+              "source": "factset",
+              "reason": null,
+              "titles": [
+                "CAVA initiation - D.A. Davidson (Mar 5 2026)"
+              ]
+            }
+          ],
+          "have": 2,
+          "expect": 2,
+          "complete": true
+        },
+        {
+          "key": "filings",
+          "name": "5 \u00b7 SEC filings",
+          "klass": "free",
+          "why": "The audited detail. Free from EDGAR. (10-K is annual, not in a Q1 book.)",
+          "items": [
+            {
+              "doc_type": "10-Q",
+              "label": "Quarterly report (10-Q)",
+              "present": true,
+              "count": 8,
+              "klass": "free",
+              "source": "edgar",
+              "reason": null,
+              "titles": [
+                "Quarterly report (10-Q)",
+                "Quarterly report (10-Q)",
+                "Quarterly report (10-Q)"
+              ]
+            },
+            {
+              "doc_type": "8-K",
+              "label": "Material events (8-K)",
+              "present": true,
+              "count": 14,
+              "klass": "free",
+              "source": "edgar",
+              "reason": null,
+              "titles": [
+                "Material events (8-K)",
+                "Material events (8-K)",
+                "Material events (8-K)"
+              ]
+            }
+          ],
+          "have": 2,
+          "expect": 2,
+          "complete": true
+        },
+        {
+          "key": "granite",
+          "name": "6 \u00b7 Granite's own",
+          "klass": "proprietary",
+          "why": "Our proprietary thesis + assembled book. No vendor has the Drivers.",
+          "items": [
+            {
+              "doc_type": "drivers",
+              "label": "Granite Drivers (thesis)",
+              "present": true,
+              "count": 1,
+              "klass": "proprietary",
+              "source": "granite",
+              "reason": null,
+              "titles": [
+                "CAVA Drivers (key debates / KPIs / quarter recaps / triggers)"
+              ]
+            },
+            {
+              "doc_type": "book",
+              "label": "FactSet book",
+              "present": true,
+              "count": 1,
+              "klass": "proprietary",
+              "source": "granite",
+              "reason": null,
+              "titles": [
+                "CAVA Q1 2026 FactSet Book"
+              ]
+            },
+            {
+              "doc_type": "llm-summary",
+              "label": "LLM summary (Gemini)",
+              "present": true,
+              "count": 1,
+              "klass": "proprietary",
+              "source": "granite",
+              "reason": null,
+              "titles": [
+                "CAVA Q1 2026 LLM earnings summary"
+              ]
+            },
+            {
+              "doc_type": "one-sheet",
+              "label": "One-sheet summary",
+              "present": true,
+              "count": 1,
+              "klass": "proprietary",
+              "source": "granite",
+              "reason": null,
+              "titles": [
+                "CAVA Q1 2026 one-sheet metrics summary"
+              ]
+            }
+          ],
+          "have": 4,
+          "expect": 4,
+          "complete": true
+        }
+      ]
+    },
+    {
+      "ticker": "AVY",
+      "name": "Avery Dennison",
+      "summary": {
+        "total": 58,
+        "free": 50,
+        "vendor": 5,
+        "proprietary": 3,
+        "has_drivers": false
+      },
+      "shelf": [
+        {
+          "doc_type": "broker-post-earnings",
+          "label": "Sell-side research",
+          "fiscal_period": "Q1-2026",
+          "source": "factset",
+          "klass": "vendor",
+          "is_fallback": true,
+          "title": "AVY Q1 2026 sell-side post-earnings note (Jefferies)",
+          "ext": "pdf"
+        },
+        {
+          "doc_type": "10-K",
+          "label": "Annual report (10-K)",
+          "fiscal_period": "FY2024",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Annual report (10-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "10-K",
+          "label": "Annual report (10-K)",
+          "fiscal_period": "FY2025",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Annual report (10-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "10-Q",
+          "label": "Quarterly report (10-Q)",
+          "fiscal_period": "Q2-2024",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Quarterly report (10-Q)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "10-Q",
+          "label": "Quarterly report (10-Q)",
+          "fiscal_period": "Q3-2024",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Quarterly report (10-Q)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "10-Q",
+          "label": "Quarterly report (10-Q)",
+          "fiscal_period": "Q1-2025",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Quarterly report (10-Q)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "10-Q",
+          "label": "Quarterly report (10-Q)",
+          "fiscal_period": "Q2-2025",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Quarterly report (10-Q)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "10-Q",
+          "label": "Quarterly report (10-Q)",
+          "fiscal_period": "Q3-2025",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Quarterly report (10-Q)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "10-Q",
+          "label": "Quarterly report (10-Q)",
+          "fiscal_period": "Q1-2026",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Quarterly report (10-Q)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "investor-slides",
+          "label": "Investor slides",
+          "fiscal_period": "Q1-2024",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Investor slides",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "investor-slides",
+          "label": "Investor slides",
+          "fiscal_period": "Q1-2025",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Investor slides",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "investor-slides",
+          "label": "Investor slides",
+          "fiscal_period": "Q1-2026",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Investor slides",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "investor-slides",
+          "label": "Investor slides",
+          "fiscal_period": "Q2-2024",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Investor slides",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "investor-slides",
+          "label": "Investor slides",
+          "fiscal_period": "Q2-2025",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Investor slides",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "investor-slides",
+          "label": "Investor slides",
+          "fiscal_period": "Q2-2026",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Investor slides",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "investor-slides",
+          "label": "Investor slides",
+          "fiscal_period": "Q3-2024",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Investor slides",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "investor-slides",
+          "label": "Investor slides",
+          "fiscal_period": "Q3-2025",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Investor slides",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "investor-slides",
+          "label": "Investor slides",
+          "fiscal_period": "Q4-2024",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Investor slides",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "investor-slides",
+          "label": "Investor slides",
+          "fiscal_period": "Q4-2025",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Investor slides",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "press-release",
+          "label": "Press release",
+          "fiscal_period": "Q1-2024",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Press release",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "press-release",
+          "label": "Press release",
+          "fiscal_period": "Q1-2025",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Press release",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "press-release",
+          "label": "Press release",
+          "fiscal_period": "Q1-2026",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Press release",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "press-release",
+          "label": "Press release",
+          "fiscal_period": "Q2-2024",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Press release",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "press-release",
+          "label": "Press release",
+          "fiscal_period": "Q2-2025",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Press release",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "press-release",
+          "label": "Press release",
+          "fiscal_period": "Q2-2026",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Press release",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "press-release",
+          "label": "Press release",
+          "fiscal_period": "Q3-2024",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Press release",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "press-release",
+          "label": "Press release",
+          "fiscal_period": "Q3-2025",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Press release",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "press-release",
+          "label": "Press release",
+          "fiscal_period": "Q4-2024",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Press release",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "press-release",
+          "label": "Press release",
+          "fiscal_period": "Q4-2025",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Press release",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "book",
+          "label": "FactSet book",
+          "fiscal_period": "Q1-2026",
+          "source": "granite",
+          "klass": "proprietary",
+          "is_fallback": false,
+          "title": "AVY Q1 2026 FactSet Book",
+          "ext": "pdf"
+        },
+        {
+          "doc_type": "llm-summary",
+          "label": "LLM summary (Gemini)",
+          "fiscal_period": "Q1-2026",
+          "source": "granite",
+          "klass": "proprietary",
+          "is_fallback": false,
+          "title": "AVY Q1 2026 LLM earnings summary",
+          "ext": "pdf"
+        },
+        {
+          "doc_type": "one-sheet",
+          "label": "One-sheet summary",
+          "fiscal_period": "Q1-2026",
+          "source": "granite",
+          "klass": "proprietary",
+          "is_fallback": false,
+          "title": "AVY Q1 2026 one-sheet metrics summary",
+          "ext": "pdf"
+        },
+        {
+          "doc_type": "10-Q",
+          "label": "Quarterly report (10-Q)",
+          "fiscal_period": "Q1-2026",
+          "source": "factset",
+          "klass": "vendor",
+          "is_fallback": true,
+          "title": "Form 10-Q, quarter ended March 31 2026",
+          "ext": "pdf"
+        },
+        {
+          "doc_type": "investor-slides",
+          "label": "Investor slides",
+          "fiscal_period": "Q1-2026",
+          "source": "factset",
+          "klass": "vendor",
+          "is_fallback": true,
+          "title": "Q1 2026 Financial Review and Analysis (Supplemental Presentation Materials)",
+          "ext": "pdf"
+        },
+        {
+          "doc_type": "press-release",
+          "label": "Press release",
+          "fiscal_period": "Q1-2026",
+          "source": "factset",
+          "klass": "vendor",
+          "is_fallback": true,
+          "title": "Avery Dennison Announces First Quarter 2026 Results",
+          "ext": "pdf"
+        },
+        {
+          "doc_type": "transcript",
+          "label": "Earnings transcript",
+          "fiscal_period": "Q1-2026",
+          "source": "factset",
+          "klass": "vendor",
+          "is_fallback": true,
+          "title": "AVY Q1 2026 Earnings Call - Corrected Transcript (28-Apr-2026)",
+          "ext": "pdf"
+        },
+        {
+          "doc_type": "investor-slides",
+          "label": "Investor slides",
+          "fiscal_period": "Q1-2026",
+          "source": "q4",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Investor slides",
+          "ext": "pdf"
+        }
+      ],
+      "funnel": [
+        {
+          "key": "pr",
+          "name": "1 \u00b7 Press release",
+          "klass": "free",
+          "why": "The headline numbers + narrative. Free from EDGAR.",
+          "items": [
+            {
+              "doc_type": "press-release",
+              "label": "Press release",
+              "present": true,
+              "count": 11,
+              "klass": "free",
+              "source": "edgar",
+              "reason": null,
+              "titles": [
+                "Press release",
+                "Press release",
+                "Press release"
+              ]
+            }
+          ],
+          "have": 1,
+          "expect": 1,
+          "complete": true
+        },
+        {
+          "key": "slides",
+          "name": "2 \u00b7 Investor slides",
+          "klass": "free",
+          "why": "Management's visual lead. Free from EDGAR / IR site.",
+          "items": [
+            {
+              "doc_type": "investor-slides",
+              "label": "Investor slides",
+              "present": true,
+              "count": 12,
+              "klass": "free",
+              "source": "edgar",
+              "reason": null,
+              "titles": [
+                "Investor slides",
+                "Investor slides",
+                "Investor slides"
+              ]
+            }
+          ],
+          "have": 1,
+          "expect": 1,
+          "complete": true
+        },
+        {
+          "key": "transcript",
+          "name": "3 \u00b7 Earnings transcript",
+          "klass": "vendor",
+          "why": "The 'why' + the analyst Q&A. Vendor-gated (FactSet).",
+          "items": [
+            {
+              "doc_type": "transcript",
+              "label": "Earnings transcript",
+              "present": true,
+              "count": 1,
+              "klass": "vendor",
+              "source": "factset",
+              "reason": null,
+              "titles": [
+                "AVY Q1 2026 Earnings Call - Corrected Transcript (28-Apr-2026)"
+              ]
+            }
+          ],
+          "have": 1,
+          "expect": 1,
+          "complete": true
+        },
+        {
+          "key": "sellside",
+          "name": "4 \u00b7 Sell-side research",
+          "klass": "vendor",
+          "why": "Consensus, reaction, ratings. Vendor-gated (FactSet / AlphaSense).",
+          "items": [
+            {
+              "doc_type": "broker-post-earnings",
+              "label": "Sell-side research",
+              "present": true,
+              "count": 1,
+              "klass": "vendor",
+              "source": "factset",
+              "reason": null,
+              "titles": [
+                "AVY Q1 2026 sell-side post-earnings note (Jefferies)"
+              ]
+            },
+            {
+              "doc_type": "broker-initiation",
+              "label": "Sell-side initiation",
+              "present": false,
+              "count": 0,
+              "klass": "vendor",
+              "source": null,
+              "reason": "pending FactSet / AlphaSense",
+              "titles": []
+            }
+          ],
+          "have": 1,
+          "expect": 2,
+          "complete": false
+        },
+        {
+          "key": "filings",
+          "name": "5 \u00b7 SEC filings",
+          "klass": "free",
+          "why": "The audited detail. Free from EDGAR. (10-K is annual, not in a Q1 book.)",
+          "items": [
+            {
+              "doc_type": "10-Q",
+              "label": "Quarterly report (10-Q)",
+              "present": true,
+              "count": 7,
+              "klass": "free",
+              "source": "edgar",
+              "reason": null,
+              "titles": [
+                "Quarterly report (10-Q)",
+                "Quarterly report (10-Q)",
+                "Quarterly report (10-Q)"
+              ]
+            },
+            {
+              "doc_type": "8-K",
+              "label": "Material events (8-K)",
+              "present": true,
+              "count": 21,
+              "klass": "free",
+              "source": "edgar",
+              "reason": null,
+              "titles": [
+                "Material events (8-K)",
+                "Material events (8-K)",
+                "Material events (8-K)"
+              ]
+            }
+          ],
+          "have": 2,
+          "expect": 2,
+          "complete": true
+        },
+        {
+          "key": "granite",
+          "name": "6 \u00b7 Granite's own",
+          "klass": "proprietary",
+          "why": "Our proprietary thesis + assembled book. No vendor has the Drivers.",
+          "items": [
+            {
+              "doc_type": "drivers",
+              "label": "Granite Drivers (thesis)",
+              "present": false,
+              "count": 0,
+              "klass": "proprietary",
+              "source": null,
+              "reason": "Drivers thesis not authored yet",
+              "titles": []
+            },
+            {
+              "doc_type": "book",
+              "label": "FactSet book",
+              "present": true,
+              "count": 1,
+              "klass": "proprietary",
+              "source": "granite",
+              "reason": null,
+              "titles": [
+                "AVY Q1 2026 FactSet Book"
+              ]
+            },
+            {
+              "doc_type": "llm-summary",
+              "label": "LLM summary (Gemini)",
+              "present": true,
+              "count": 1,
+              "klass": "proprietary",
+              "source": "granite",
+              "reason": null,
+              "titles": [
+                "AVY Q1 2026 LLM earnings summary"
+              ]
+            },
+            {
+              "doc_type": "one-sheet",
+              "label": "One-sheet summary",
+              "present": true,
+              "count": 1,
+              "klass": "proprietary",
+              "source": "granite",
+              "reason": null,
+              "titles": [
+                "AVY Q1 2026 one-sheet metrics summary"
+              ]
+            }
+          ],
+          "have": 3,
+          "expect": 4,
+          "complete": false
+        }
+      ]
+    },
+    {
+      "ticker": "GS",
+      "name": "Goldman Sachs",
+      "summary": {
+        "total": 72,
+        "free": 65,
+        "vendor": 4,
+        "proprietary": 3,
+        "has_drivers": false
+      },
+      "shelf": [
+        {
+          "doc_type": "10-K",
+          "label": "Annual report (10-K)",
+          "fiscal_period": "FY2024",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Annual report (10-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "10-K",
+          "label": "Annual report (10-K)",
+          "fiscal_period": "FY2025",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Annual report (10-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "10-Q",
+          "label": "Quarterly report (10-Q)",
+          "fiscal_period": "Q2-2024",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Quarterly report (10-Q)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "10-Q",
+          "label": "Quarterly report (10-Q)",
+          "fiscal_period": "Q3-2024",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Quarterly report (10-Q)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "10-Q",
+          "label": "Quarterly report (10-Q)",
+          "fiscal_period": "Q1-2025",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Quarterly report (10-Q)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "10-Q",
+          "label": "Quarterly report (10-Q)",
+          "fiscal_period": "Q2-2025",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Quarterly report (10-Q)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "10-Q",
+          "label": "Quarterly report (10-Q)",
+          "fiscal_period": "Q3-2025",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Quarterly report (10-Q)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "10-Q",
+          "label": "Quarterly report (10-Q)",
+          "fiscal_period": "Q1-2026",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Quarterly report (10-Q)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "8-K",
+          "label": "Material events (8-K)",
+          "fiscal_period": "\u2014",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": false,
+          "title": "Material events (8-K)",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "investor-slides",
+          "label": "Investor slides",
+          "fiscal_period": "Q1-2024",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Investor slides",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "investor-slides",
+          "label": "Investor slides",
+          "fiscal_period": "Q1-2025",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Investor slides",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "investor-slides",
+          "label": "Investor slides",
+          "fiscal_period": "Q1-2026",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Investor slides",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "investor-slides",
+          "label": "Investor slides",
+          "fiscal_period": "Q2-2024",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Investor slides",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "investor-slides",
+          "label": "Investor slides",
+          "fiscal_period": "Q2-2025",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Investor slides",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "investor-slides",
+          "label": "Investor slides",
+          "fiscal_period": "Q2-2026",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Investor slides",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "investor-slides",
+          "label": "Investor slides",
+          "fiscal_period": "Q3-2024",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Investor slides",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "investor-slides",
+          "label": "Investor slides",
+          "fiscal_period": "Q3-2025",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Investor slides",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "investor-slides",
+          "label": "Investor slides",
+          "fiscal_period": "Q4-2024",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Investor slides",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "investor-slides",
+          "label": "Investor slides",
+          "fiscal_period": "Q4-2025",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Investor slides",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "press-release",
+          "label": "Press release",
+          "fiscal_period": "Q1-2024",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Press release",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "press-release",
+          "label": "Press release",
+          "fiscal_period": "Q1-2025",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Press release",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "press-release",
+          "label": "Press release",
+          "fiscal_period": "Q1-2026",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Press release",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "press-release",
+          "label": "Press release",
+          "fiscal_period": "Q2-2024",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Press release",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "press-release",
+          "label": "Press release",
+          "fiscal_period": "Q2-2025",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Press release",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "press-release",
+          "label": "Press release",
+          "fiscal_period": "Q2-2026",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Press release",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "press-release",
+          "label": "Press release",
+          "fiscal_period": "Q3-2024",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Press release",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "press-release",
+          "label": "Press release",
+          "fiscal_period": "Q3-2025",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Press release",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "press-release",
+          "label": "Press release",
+          "fiscal_period": "Q4-2024",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Press release",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "press-release",
+          "label": "Press release",
+          "fiscal_period": "Q4-2025",
+          "source": "edgar",
+          "klass": "free",
+          "is_fallback": true,
+          "title": "Press release",
+          "ext": "htm"
+        },
+        {
+          "doc_type": "book",
+          "label": "FactSet book",
+          "fiscal_period": "Q1-2026",
+          "source": "granite",
+          "klass": "proprietary",
+          "is_fallback": false,
+          "title": "GS Q1 2026 FactSet Book",
+          "ext": "pdf"
+        },
+        {
+          "doc_type": "llm-summary",
+          "label": "LLM summary (Gemini)",
+          "fiscal_period": "Q1-2026",
+          "source": "granite",
+          "klass": "proprietary",
+          "is_fallback": false,
+          "title": "GS Q1 2026 LLM earnings summary",
+          "ext": "pdf"
+        },
+        {
+          "doc_type": "one-sheet",
+          "label": "One-sheet summary",
+          "fiscal_period": "Q1-2026",
+          "source": "granite",
+          "klass": "proprietary",
+          "is_fallback": false,
+          "title": "GS Q1 2026 one-sheet metrics summary",
+          "ext": "pdf"
+        },
+        {
+          "doc_type": "10-Q",
+          "label": "Quarterly report (10-Q)",
+          "fiscal_period": "Q1-2026",
+          "source": "factset",
+          "klass": "vendor",
+          "is_fallback": true,
+          "title": "GS Form 10-Q (Q1 2026)",
+          "ext": "pdf"
+        },
+        {
+          "doc_type": "investor-slides",
+          "label": "Investor slides",
+          "fiscal_period": "Q1-2026",
+          "source": "factset",
+          "klass": "vendor",
+          "is_fallback": true,
+          "title": "GS Q1 2026 Earnings Presentation",
+          "ext": "pdf"
+        },
+        {
+          "doc_type": "press-release",
+          "label": "Press release",
+          "fiscal_period": "Q1-2026",
+          "source": "factset",
+          "klass": "vendor",
+          "is_fallback": true,
+          "title": "Goldman Sachs Reports First Quarter 2026 Earnings Results (EPS $17.55)",
+          "ext": "pdf"
+        },
+        {
+          "doc_type": "transcript",
+          "label": "Earnings transcript",
+          "fiscal_period": "Q1-2026",
+          "source": "factset",
+          "klass": "vendor",
+          "is_fallback": true,
+          "title": "GS Q1 2026 Earnings Call - Corrected Transcript (13-Apr-2026)",
+          "ext": "pdf"
+        }
+      ],
+      "funnel": [
+        {
+          "key": "pr",
+          "name": "1 \u00b7 Press release",
+          "klass": "free",
+          "why": "The headline numbers + narrative. Free from EDGAR.",
+          "items": [
+            {
+              "doc_type": "press-release",
+              "label": "Press release",
+              "present": true,
+              "count": 11,
+              "klass": "free",
+              "source": "edgar",
+              "reason": null,
+              "titles": [
+                "Press release",
+                "Press release",
+                "Press release"
+              ]
+            }
+          ],
+          "have": 1,
+          "expect": 1,
+          "complete": true
+        },
+        {
+          "key": "slides",
+          "name": "2 \u00b7 Investor slides",
+          "klass": "free",
+          "why": "Management's visual lead. Free from EDGAR / IR site.",
+          "items": [
+            {
+              "doc_type": "investor-slides",
+              "label": "Investor slides",
+              "present": true,
+              "count": 11,
+              "klass": "free",
+              "source": "edgar",
+              "reason": null,
+              "titles": [
+                "Investor slides",
+                "Investor slides",
+                "Investor slides"
+              ]
+            }
+          ],
+          "have": 1,
+          "expect": 1,
+          "complete": true
+        },
+        {
+          "key": "transcript",
+          "name": "3 \u00b7 Earnings transcript",
+          "klass": "vendor",
+          "why": "The 'why' + the analyst Q&A. Vendor-gated (FactSet).",
+          "items": [
+            {
+              "doc_type": "transcript",
+              "label": "Earnings transcript",
+              "present": true,
+              "count": 1,
+              "klass": "vendor",
+              "source": "factset",
+              "reason": null,
+              "titles": [
+                "GS Q1 2026 Earnings Call - Corrected Transcript (13-Apr-2026)"
+              ]
+            }
+          ],
+          "have": 1,
+          "expect": 1,
+          "complete": true
+        },
+        {
+          "key": "sellside",
+          "name": "4 \u00b7 Sell-side research",
+          "klass": "vendor",
+          "why": "Consensus, reaction, ratings. Vendor-gated (FactSet / AlphaSense).",
+          "items": [
+            {
+              "doc_type": "broker-post-earnings",
+              "label": "Sell-side research",
+              "present": false,
+              "count": 0,
+              "klass": "vendor",
+              "source": null,
+              "reason": "pending FactSet / AlphaSense",
+              "titles": []
+            },
+            {
+              "doc_type": "broker-initiation",
+              "label": "Sell-side initiation",
+              "present": false,
+              "count": 0,
+              "klass": "vendor",
+              "source": null,
+              "reason": "pending FactSet / AlphaSense",
+              "titles": []
+            }
+          ],
+          "have": 0,
+          "expect": 2,
+          "complete": false
+        },
+        {
+          "key": "filings",
+          "name": "5 \u00b7 SEC filings",
+          "klass": "free",
+          "why": "The audited detail. Free from EDGAR. (10-K is annual, not in a Q1 book.)",
+          "items": [
+            {
+              "doc_type": "10-Q",
+              "label": "Quarterly report (10-Q)",
+              "present": true,
+              "count": 7,
+              "klass": "free",
+              "source": "edgar",
+              "reason": null,
+              "titles": [
+                "Quarterly report (10-Q)",
+                "Quarterly report (10-Q)",
+                "Quarterly report (10-Q)"
+              ]
+            },
+            {
+              "doc_type": "8-K",
+              "label": "Material events (8-K)",
+              "present": true,
+              "count": 37,
+              "klass": "free",
+              "source": "edgar",
+              "reason": null,
+              "titles": [
+                "Material events (8-K)",
+                "Material events (8-K)",
+                "Material events (8-K)"
+              ]
+            }
+          ],
+          "have": 2,
+          "expect": 2,
+          "complete": true
+        },
+        {
+          "key": "granite",
+          "name": "6 \u00b7 Granite's own",
+          "klass": "proprietary",
+          "why": "Our proprietary thesis + assembled book. No vendor has the Drivers.",
+          "items": [
+            {
+              "doc_type": "drivers",
+              "label": "Granite Drivers (thesis)",
+              "present": false,
+              "count": 0,
+              "klass": "proprietary",
+              "source": null,
+              "reason": "Drivers thesis not authored yet",
+              "titles": []
+            },
+            {
+              "doc_type": "book",
+              "label": "FactSet book",
+              "present": true,
+              "count": 1,
+              "klass": "proprietary",
+              "source": "granite",
+              "reason": null,
+              "titles": [
+                "GS Q1 2026 FactSet Book"
+              ]
+            },
+            {
+              "doc_type": "llm-summary",
+              "label": "LLM summary (Gemini)",
+              "present": true,
+              "count": 1,
+              "klass": "proprietary",
+              "source": "granite",
+              "reason": null,
+              "titles": [
+                "GS Q1 2026 LLM earnings summary"
+              ]
+            },
+            {
+              "doc_type": "one-sheet",
+              "label": "One-sheet summary",
+              "present": true,
+              "count": 1,
+              "klass": "proprietary",
+              "source": "granite",
+              "reason": null,
+              "titles": [
+                "GS Q1 2026 one-sheet metrics summary"
+              ]
+            }
+          ],
+          "have": 3,
+          "expect": 4,
+          "complete": false
+        }
+      ]
+    }
+  ],
+  "ticker_count": 21,
+  "funnel_order": [
+    "SE-DR",
+    "SE-PR",
+    "SE-IS",
+    "SE-CT",
+    "SE-SS",
+    "SE-QK"
+  ],
+  "funnel_labels": {
+    "SE-DR": "Granite Drivers",
+    "SE-PR": "Press release",
+    "SE-IS": "Investor slides",
+    "SE-CT": "Transcript",
+    "SE-SS": "Sell-side",
+    "SE-QK": "10-Q / 10-K"
+  },
+  "analysis_full_md": "# CAVA Group, Inc. (CAVA) \u2014 Q1 FY2026 Earnings Review\n\n> Full 8-task run. Sources: Press Release [SE-PR] \u00b7 Transcript [SE-CT] \u00b7 Investor Slides [SE-IS] \u00b7 10-Q [SE-QK] \u00b7 10-broker sell-side compilation [SE-SS] \u00b7 Granite Drivers [SE-DR]. Fiscal Q1 ended Apr 19, 2026; reported May 19, 2026. Every quantitative line carries printed Street consensus + a named-broker cross-check.\n\n---\n\n## Executive Summary \u2014 The View\n\nCAVA delivered a clean beat across every Street line \u2014 revenue +4.5%, EBITDA +8.7%, EPS and comps well ahead \u2014 into a soft, promotional QSR tape. The 9.7% comp was traffic-led (6.8% of it), so this is share gain through execution, not price or macro. Management raised FY26 comp (midpoint +150bps to 5.5%) and EBITDA guidance while barely touching margin guidance \u2014 a deliberately conservative posture multiple desks call beatable. The print de-risks the growth algorithm; valuation (~58x EBITDA) is now the debate.\n\n**The three things that matter:** (1) traffic-led re-acceleration (9.7% vs Street 6.2%, ahead of the ~8% buy-side whisper); (2) the honeymoon-fade bear was dismantled (2024 class still positive at 18 months, productivity >100%, Blair TAM ~2,000 units); (3) the raise reads conservative (mid 5.5% vs a ~10% run-rate). **Risks:** ~58x valuation, flat RLM with H2 salmon/energy headwinds, an implied H2 deceleration, and unresolved salmon permanence.\n\n---\n\n## Task 1: P&L Extraction\n\n### P&L Summary: CAVA Group, Inc. | Q1 2026 \u00b7 GAAP P&L; Adj. EBITDA non-GAAP \u00b7 16-wk vs 16-wk PY\n\n| Metric | $MMs | PY$ | y/y % | vs Consensus | Notes |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| **Revs** | 438 | 332 | 32% | $438 vs $419 \u2014 +4.5% beat | Traffic +6.8%, price/mix +2.9%; Blair +32% vs +26% cons |\n| **RLP** | 109 | 82.3 | 32% | in-line | Restaurant-Level Profit +32.3%; COGS beat ~60bps (mix) |\n| **RLM %** | 25.1% | 25.1% | 0 bps | 25.1% vs 25.0% \u2014 in-line, flat | Leverage offset by 3P-mix + wage; JPM 80bps below JPMe |\n| **EPS** | 0.20 | 0.22 | (9%) | $0.20 vs $0.17 \u2014 beat | Beat despite y/y drop; tax optic (lower equity-comp benefit); PBT +48% |\n| **G&A** | 51.6 | 41.4 | 25% | in-line (JPM) | 11.8% of rev vs 12.5% (-70bps); ex-SBC 9.9% vs 10.5% |\n| **OP** | 25.3 | 15.7 | 61% | \u2014 | RLP growth + G&A leverage; pre-opening 6.2 vs 4.5 |\n| **OM %** | 5.8% | 4.7% | +110 bps | \u2014 | Operating leverage on outsized SRS |\n| **Adj EBITDA** | 61.7 | 44.9 | 38% | $61.7 vs $57.3 \u2014 +8.7% beat | RBC: +49bps margin ahead; Blair +38% vs +28% cons |\n| **EM %** | 14.1% | 13.5% | +57 bps | ahead | Top-line upside flowed through |\n\n*Read:* clean beat on every line vs Street; the only non-beat is RLM (in-line/flat) \u2014 deliberate (3P-mix + wage), not a miss. EPS-down y/y is a tax-line optic (PBT +48%).\n\n---\n\n## Task 2: Guidance Analysis (FY2026, raised)\n\n**Macro posture:** Conservative / hedged. SSS midpoint raised +150bps to 5.5% (range 4.5\u20136.5%) yet Q1 printed 9.7% and Q2-to-date tracks ~9.7% \u2014 the guide embeds an H2 deceleration management isn't yet seeing. RLM guide raised only +10bps at the top despite the comp raise (salmon ~100bps + 2% wage + 20-40bps energy offset the leverage). Pre-opening raised $19.5\u201320M \u2192 $22\u201322.5M (pipeline timing).\n\n**Common narrative:** *Why:* execution-driven beat + NRO pipeline tracking >100% productivity. *Trends:* SSS re-accelerated to ~10% (2-yr traffic 7.2%) while QSR peers decelerate/discount. *Noise:* ignore \"EPS miss\" (tax optic) and \"RLM flat\" alarm (deliberate reinvestment).\n\n| Metric | Guidance (May 19) | Consensus | Prior (Feb 24) | Mgmt Explanation | Sell-side Cross-check |\n| :--- | :--- | :--- | :--- | :--- | :--- |\n| **Net New Units** | 75\u201377 | 76 | 74\u201376 | Accelerated pipeline; NRO productivity >100% | RBC: 20 in Q1 beat Street 16 |\n| **SSS %** | 4.5\u20136.5% | 5.1% | 3.0\u20135.0% | Q1 traffic + menu; H2 moderate MSD | RBC: mid +150bps to 5.5%, ahead of Street |\n| **RLM %** | 23.7\u201324.3% | 24.0% | 23.7\u201324.2% | +10bps top only; -100bps salmon, -20-40bps energy, +wage | Stifel: leverage almost entirely offset |\n| **Pre-opening** | $22.0\u201322.5M | $19.8M | $19.5\u201320.0M | Pipeline timing, higher site entries | RBC: +12.7% mid, supports units |\n| **Adj EBITDA** | $181\u2013191M | $186\u2013187M | $176\u2013184M | +$6M mid on Q1 flow-through | Stifel: encompasses cons $187M |\n\n---\n\n## Task 3: Segment / Channel Summary\n\n| Segment | Revs | Margin Y/Y | Notes | Sell-Side |\n| :--- | :--- | :--- | :--- | :--- |\n| **CAVA (brand)** | 434 vs 328 +32% | RLM 25.1% flat | 459 units (+20.2%); AUV $3.0M (vs $2.3M 1st-yr target); FB&P 29.1% (-20bps), Labor 25.7% (flat), Occupancy 6.9% (-50bps), Other OpEx 13.3% (+80bps, 3P) | RBC/Blair: RLM 25.1% vs 25.0% cons |\n| **Other** | 3.9 vs 3.3 +16% | \u2014 | CAVA Foods mfg + non-restaurant | RBC: immaterial to multiple |\n| **Digital (channel)** | ~40% mix | profit-neutral | Mix 39.9% vs ~36% PY; digital rev +1,080bps q/q (1P+3P); KDS investment | Priced dollar-profit-neutral (optic) |\n\n---\n\n## Task 4: KPI Summary\n\n| Metric | Value | Y/Y | Mgmt Explanation | Sell-side Cross-check |\n| :--- | :--- | :--- | :--- | :--- |\n| **% CAVA SSS** | 9.7% | (110) bps | Lapped +10.8% PY; traffic-led; 2-yr stack double-digit 3rd straight Q | RBC: beat Street 6.2% + buy-side ~8% whisper |\n| **% Traffic** | 6.8% | \u2014 | Below-CPI pricing drives visits | JPM: 6.8% vs 6.0%e \u2014 the surprise |\n| **% Price/Mix** | 2.9% | \u2014 | ~1.4% Jan price (base bowl/pita flat) + mix | RBC: only 1.4% price \u2192 traffic quality |\n| **CAVA Units** | 459 | +20% | 21 opens, 1 closure; 29 states + DC | RBC: 459 beat cons 455 |\n| **Net New Openings** | 20 | +33% | 16-wk Q1; Midwest entries; >100% productivity | RBC: 20 beat Street 16 \u2192 4.9% rev beat |\n| **AUV** | $3,027 | +3% | System-wide $3.0M; new units >$3M vs $2.3M target | RBC/Blair: best-in-class unit econ |\n| **$ RLM** | 25.1% | 0 bps | Leverage offset by 3P-mix + wage | RBC: in-line w/ cons; flat = labor reinvest |\n| **Digital Mix** | 39.9% | +~390 bps | 3P + 1P up; KDS investment | Blair: digital rev +1,080bps q/q |\n\n---\n\n## Task 5: Earnings Call \u2014 Management Discussion & Q&A\n\n**Management discussion (prepared remarks):**\n- Headline: Revs +32% $438M; NI $23.6M vs $25.7M (tax + D&A); Adj EBITDA +38% $61.7M.\n- SSS quality: 9.7% on 6.8% traffic; *\"a clear industry leader\u2026 meet the moment for the modern consumer.\"*\n- Footprint: 20 NROs \u2192 459 (+20.2%); Midwest (Cincinnati/St. Louis/Columbus); 2026 cohort \u22652025; honeymoon NOT fading (2024 class + at 18mo).\n- Salmon: national launch (first seafood; ~100bps RLM headwind, \"penny-profit neutral\"); White Sweet Potato drove frequency + COGS leverage; shrimp in Nashville market test.\n- Data/AI: CAVA Core + CAVA Current live (\"decade of data transformation\"); predictive prep/labor ahead. AGM role >50% of higher-volume stores.\n- Liquidity: zero debt, $403M cash, $150M undrawn revolver; OCF $64.1M, FCF $15.5M (vs $2.7M PY).\n\n**Q&A \u2014 synthesized themes:**\n- **SSS sustainability** *(analyst):* Q2 ~Q1 (~9.7%), above guide; buffer for tough comps + macro.\n- **Margin mechanics** *(analyst):* RLM flat = 3P-mix (profit-neutral) + 2% wage + H2 energy; Other OpEx +80bps; won't take price.\n- **Honeymoon** *(BofA/Baird):* 2024 class outpacing at 18mo \u2014 the fade-bear refuted.\n- **SSS breadth** *(TD Cowen):* all regions/vintages/income; lower-income outperforming (k-shaped bridge); no Iran-conflict hit.\n- **Salmon permanence** *(Morgan Stanley):* runs \u22654Q, NOT committed everyday \u2014 stays open.\n- **Pricing power** *(Citi):* would NOT take price; AB1228 precedent \u2014 chose not to price, traffic outperformed.\n- **Catering / capital** *(JPM):* Houston test \u2192 2nd market; $400M cash, highest use = NRO (gated by leader pipeline).\n\n---\n\n## Task 6: Sell-Side Summary (10 brokers, May 18\u201320; stock +~7% AH)\n\n**Ratings/PTs:** Piper OW PT\u2192$105 (raised) \u00b7 JPM OW $90 \u00b7 Blair/Baird/Roth/RBC/Jefferies constructive (raising ests) \u00b7 Loop HOLD $85 \u00b7 Davidson NEUTRAL $84 (\u2191$80) \u00b7 Stifel cautious. **Consensus-beat scoreboard:** SSS 9.7% vs 6.0% \u00b7 Revs $438 vs $419 \u00b7 RLM 25.1% vs 25.0% \u00b7 EBITDA $61.7 vs $57.3 \u00b7 EPS $0.20 vs $0.17.\n\n**Five bullish:** (1) 9.7% comp beat Street 6.2% AND ~8% buy-side whisper; (2) NRO productivity >100%, Blair TAM ~2,000 units; (3) low-income cohort outperforming (k-shaped); (4) EBITDA beat 8.7%, +49bps margin ahead; (5) pristine balance sheet (zero debt, $400M cash).\n\n**Five bearish:** (1) ~58x FY26 EBITDA \u2014 Davidson PT $84 assumes contraction to 43x FY27 (the dominant bear); (2) RLM flat/in-line, not expanding; (3) guide implies sharp H2 deceleration; (4) salmon permanence/margin unresolved; (5) EPS down y/y (tax optic) + rising pre-opening/D&A.\n\n**Macro/ecosystem:** QSR soft/promotional \u2014 CAVA gaining share without discounting; energy/fuel-surcharge + polyethylene a new H2 input watch; Midwest validates cross-country Mediterranean scale vs burger/burrito incumbents.\n\n---\n\n## Task 7: Stock Reaction (+~7% after-hours)\n\n1. **Traffic-led comp crushed the bar** (9.7% vs Street 6.2%, ~350bps; vs ~8% buy-side). Elite traffic insulation \u2014 CAVA the share consolidator (trade-down from casual dining, trade-up from QSR). The prime mover.\n2. **The honeymoon-fade bear was dismantled** \u2014 de-risks the growth algorithm, which matters to the multiple more than the print.\n3. **Conservative raise** (mid 5.5% vs ~10% run-rate) sets an easily-beatable bar \u2192 re-raise optionality.\n\n**Offset (why +7%, not euphoric):** ~58x EBITDA caps upside (bull case largely in the stock); flat RLM + EPS-down optics + implied H2 decel gave cautious desks (Loop HOLD, Davidson/Stifel NEUTRAL) cover. *Strong, but priced for greatness.*\n\n---\n\n## Task 8: Drivers Analysis (the loop)\n\n> Run AGAINST CAVA's saved Granite Drivers [SE-DR], with evidence cross-read from the quarter's book. Per-debate \"what happened this quarter.\"\n\n### Section 1 \u2014 Per-Debate Progress\n\n| Saved Debate | What happened this quarter | Evidence (number + source) | Verdict |\n| :--- | :--- | :--- | :--- |\n| **POS a) RLM cushion from reinvesting; easy comps rest of 2026** | RLM held flat, not expanded, despite 9.7% comp \u2014 cushion being reinvested, not banked. Easy-comp thesis intact. | RLM 25.1% flat [SE-PR]; guide +10bps top only [SE-PR]; \"leverage almost entirely offset by cost\" [SE-SS Stifel] | **Live \u2014 reinvested, not banked** |\n| **POS b) AGM and other investments made** | AGM rollout working \u2014 covered restaurants outperforming uncovered; scaling. | \"AGM coverage\u2026 outperforming those without\" [SE-CT]; \">50% of higher-volume locations\" [SE-CT] | **Resolving Bull** |\n| **POS c) Shrimp as next item; pipeline?** | Shrimp \u2192 market test (Nashville), last stage before national. Salmon launched as tent-pole. | Shrimp \"moved to market test\" [SE-CT]; salmon national, ~100bps headwind [SE-CT] | **Progressing** |\n| **POS d) Catering?** | Early/gated \u2014 Houston test \u2192 2nd market; not yet scaled, no $ contribution. | \"expand to a second market test\u2026 load balancing\" [SE-CT]; 20+ purpose-built kitchens | **Live \u2014 early, no $ yet** |\n| **NEG a) Lap comps in Q1-2027? Need more menu items?** | Unresolved (FY27 question) but de-risked \u2014 salmon \u22654Q, shrimp in test, loyalty/digital flywheel building. | 2-yr traffic stack 7.2% (up seq from 7.1%) [SE-SS Blair]; salmon \u22654Q [SE-CT] | **Live \u2014 pipeline forming** |\n| **NEG b) Keep RLM flat next year again?** | Effectively YES for FY26 \u2014 guide implies flat-ish RLM (23.7\u201324.3%) as salmon/wage/energy absorb leverage. Bear confirmed by choice. | RLM guide +10bps top only [SE-PR]; salmon ~100bps + energy 20-40bps + wage [SE-SS] | **Resolving Bear (flat deliberately)** |\n| **NEG c) New-store honeymoon + tough-comp recur?** | Directly refuted \u2014 2024 class positive at 18mo, no cliff; productivity >100%. Biggest structural overhang weakened. | \"2024 class\u2026 outpacing at 18mo\" [SE-CT]; AUV $3.0M vs $2.3M target; Blair TAM ~2,000 units [SE-SS] | **Resolving Bull (bear weakened)** |\n\n### Section 2 \u2014 KPI Scorecard (vs tracked KPIs)\n% SSS 9.7% (-110bps, traffic-led beat) \u00b7 % Traffic 6.8% (the surprise) \u00b7 % Price 2.9% (~1.4% list) \u00b7 AUV $3,027k (+3%) \u00b7 RLM 25.1% (flat \u2014 central debate) \u00b7 Food 29.1% (-20bps) \u00b7 Labor 25.7% (flat) \u00b7 Occupancy 6.9% (-50bps) \u00b7 Units 459 (+20%) \u00b7 Openings 20 (+33%) \u00b7 Menu: salmon (national), shrimp (test).\n\n### Section 3 \u2014 Triggers Check\n- **a) Watch for strong menu launch item \u2192 FIRED.** Glazed salmon (first-ever seafood, national, in line w/ tests) + White Sweet Potato return.\n- **b) Watch for sell-side upgrade on good data \u2192 FIRED.** Piper PT\u2192$105; Blair/Baird/Roth raising ests; Davidson $80\u2192$84.\n\n### Section 4 \u2014 New & Retiring Debates\n**New (track these):** (1) Energy/fuel-surcharge margin drag, H2-weighted (20-40bps) \u2014 the swing factor on FY26 RLM. (2) Digital-mix \u2192 margin optics (~40%, Other-OpEx +80bps). (3) Data/AI platform (CAVA Core + Current) \u2014 long-dated lever + execution risk.\n**Retire/downgrade:** NEG c) honeymoon recurrence \u2014 two quarters of evidence answered it; downgrade to a quarterly 2-yr-stack watch.\n\n### Section 5 \u2014 Updated View & Quarter Recap\n**Current point of view:** bull intact and strengthening on the top line (traffic, NRO productivity, honeymoon-bear weakened, ~2,000-unit TAM); bear has migrated from growth to **margin + valuation** (RLM flat by choice; ~58x prices the bull in). High conviction on durability, gated on multiple.\n\n**Append to Quarter recaps:**\n> **Q1-26: Blowout, traffic-led.** 9.7% comp (6.8% traffic) beat Street 6.2%; Revs +4.5% / EBITDA +8.7% vs cons; RLM flat 25.1% (deliberate reinvestment). Guide raised (SSS mid +150bps to 5.5%) but conservative. Honeymoon-fade bear weakened; salmon national, shrimp in test. Margin + ~58x valuation now the bear. Stock +7% AH.\n",
+  "analysis_full_tables": [
+    {
+      "headers": [
+        "Metric",
+        "$MMs",
+        "PY$",
+        "y/y %",
+        "vs Consensus",
+        "Notes"
+      ],
+      "rows": [
+        [
+          "**Revs**",
+          "438",
+          "332",
+          "32%",
+          "$438 vs $419 \u2014 +4.5% beat",
+          "Traffic +6.8%, price/mix +2.9%; Blair +32% vs +26% cons"
+        ],
+        [
+          "**RLP**",
+          "109",
+          "82.3",
+          "32%",
+          "in-line",
+          "Restaurant-Level Profit +32.3%; COGS beat ~60bps (mix)"
+        ],
+        [
+          "**RLM %**",
+          "25.1%",
+          "25.1%",
+          "0 bps",
+          "25.1% vs 25.0% \u2014 in-line, flat",
+          "Leverage offset by 3P-mix + wage; JPM 80bps below JPMe"
+        ],
+        [
+          "**EPS**",
+          "0.20",
+          "0.22",
+          "(9%)",
+          "$0.20 vs $0.17 \u2014 beat",
+          "Beat despite y/y drop; tax optic (lower equity-comp benefit); PBT +48%"
+        ],
+        [
+          "**G&A**",
+          "51.6",
+          "41.4",
+          "25%",
+          "in-line (JPM)",
+          "11.8% of rev vs 12.5% (-70bps); ex-SBC 9.9% vs 10.5%"
+        ],
+        [
+          "**OP**",
+          "25.3",
+          "15.7",
+          "61%",
+          "\u2014",
+          "RLP growth + G&A leverage; pre-opening 6.2 vs 4.5"
+        ],
+        [
+          "**OM %**",
+          "5.8%",
+          "4.7%",
+          "+110 bps",
+          "\u2014",
+          "Operating leverage on outsized SRS"
+        ],
+        [
+          "**Adj EBITDA**",
+          "61.7",
+          "44.9",
+          "38%",
+          "$61.7 vs $57.3 \u2014 +8.7% beat",
+          "RBC: +49bps margin ahead; Blair +38% vs +28% cons"
+        ],
+        [
+          "**EM %**",
+          "14.1%",
+          "13.5%",
+          "+57 bps",
+          "ahead",
+          "Top-line upside flowed through"
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "Metric",
+        "Guidance (May 19)",
+        "Consensus",
+        "Prior (Feb 24)",
+        "Mgmt Explanation",
+        "Sell-side Cross-check"
+      ],
+      "rows": [
+        [
+          "**Net New Units**",
+          "75\u201377",
+          "76",
+          "74\u201376",
+          "Accelerated pipeline; NRO productivity >100%",
+          "RBC: 20 in Q1 beat Street 16"
+        ],
+        [
+          "**SSS %**",
+          "4.5\u20136.5%",
+          "5.1%",
+          "3.0\u20135.0%",
+          "Q1 traffic + menu; H2 moderate MSD",
+          "RBC: mid +150bps to 5.5%, ahead of Street"
+        ],
+        [
+          "**RLM %**",
+          "23.7\u201324.3%",
+          "24.0%",
+          "23.7\u201324.2%",
+          "+10bps top only; -100bps salmon, -20-40bps energy, +wage",
+          "Stifel: leverage almost entirely offset"
+        ],
+        [
+          "**Pre-opening**",
+          "$22.0\u201322.5M",
+          "$19.8M",
+          "$19.5\u201320.0M",
+          "Pipeline timing, higher site entries",
+          "RBC: +12.7% mid, supports units"
+        ],
+        [
+          "**Adj EBITDA**",
+          "$181\u2013191M",
+          "$186\u2013187M",
+          "$176\u2013184M",
+          "+$6M mid on Q1 flow-through",
+          "Stifel: encompasses cons $187M"
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "Segment",
+        "Revs",
+        "Margin Y/Y",
+        "Notes",
+        "Sell-Side"
+      ],
+      "rows": [
+        [
+          "**CAVA (brand)**",
+          "434 vs 328 +32%",
+          "RLM 25.1% flat",
+          "459 units (+20.2%); AUV $3.0M (vs $2.3M 1st-yr target); FB&P 29.1% (-20bps), Labor 25.7% (flat), Occupancy 6.9% (-50bps), Other OpEx 13.3% (+80bps, 3P)",
+          "RBC/Blair: RLM 25.1% vs 25.0% cons"
+        ],
+        [
+          "**Other**",
+          "3.9 vs 3.3 +16%",
+          "\u2014",
+          "CAVA Foods mfg + non-restaurant",
+          "RBC: immaterial to multiple"
+        ],
+        [
+          "**Digital (channel)**",
+          "~40% mix",
+          "profit-neutral",
+          "Mix 39.9% vs ~36% PY; digital rev +1,080bps q/q (1P+3P); KDS investment",
+          "Priced dollar-profit-neutral (optic)"
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "Metric",
+        "Value",
+        "Y/Y",
+        "Mgmt Explanation",
+        "Sell-side Cross-check"
+      ],
+      "rows": [
+        [
+          "**% CAVA SSS**",
+          "9.7%",
+          "(110) bps",
+          "Lapped +10.8% PY; traffic-led; 2-yr stack double-digit 3rd straight Q",
+          "RBC: beat Street 6.2% + buy-side ~8% whisper"
+        ],
+        [
+          "**% Traffic**",
+          "6.8%",
+          "\u2014",
+          "Below-CPI pricing drives visits",
+          "JPM: 6.8% vs 6.0%e \u2014 the surprise"
+        ],
+        [
+          "**% Price/Mix**",
+          "2.9%",
+          "\u2014",
+          "~1.4% Jan price (base bowl/pita flat) + mix",
+          "RBC: only 1.4% price \u2192 traffic quality"
+        ],
+        [
+          "**CAVA Units**",
+          "459",
+          "+20%",
+          "21 opens, 1 closure; 29 states + DC",
+          "RBC: 459 beat cons 455"
+        ],
+        [
+          "**Net New Openings**",
+          "20",
+          "+33%",
+          "16-wk Q1; Midwest entries; >100% productivity",
+          "RBC: 20 beat Street 16 \u2192 4.9% rev beat"
+        ],
+        [
+          "**AUV**",
+          "$3,027",
+          "+3%",
+          "System-wide $3.0M; new units >$3M vs $2.3M target",
+          "RBC/Blair: best-in-class unit econ"
+        ],
+        [
+          "**$ RLM**",
+          "25.1%",
+          "0 bps",
+          "Leverage offset by 3P-mix + wage",
+          "RBC: in-line w/ cons; flat = labor reinvest"
+        ],
+        [
+          "**Digital Mix**",
+          "39.9%",
+          "+~390 bps",
+          "3P + 1P up; KDS investment",
+          "Blair: digital rev +1,080bps q/q"
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "Saved Debate",
+        "What happened this quarter",
+        "Evidence (number + source)",
+        "Verdict"
+      ],
+      "rows": [
+        [
+          "**POS a) RLM cushion from reinvesting; easy comps rest of 2026**",
+          "RLM held flat, not expanded, despite 9.7% comp \u2014 cushion being reinvested, not banked. Easy-comp thesis intact.",
+          "RLM 25.1% flat [SE-PR]; guide +10bps top only [SE-PR]; \"leverage almost entirely offset by cost\" [SE-SS Stifel]",
+          "**Live \u2014 reinvested, not banked**"
+        ],
+        [
+          "**POS b) AGM and other investments made**",
+          "AGM rollout working \u2014 covered restaurants outperforming uncovered; scaling.",
+          "\"AGM coverage\u2026 outperforming those without\" [SE-CT]; \">50% of higher-volume locations\" [SE-CT]",
+          "**Resolving Bull**"
+        ],
+        [
+          "**POS c) Shrimp as next item; pipeline?**",
+          "Shrimp \u2192 market test (Nashville), last stage before national. Salmon launched as tent-pole.",
+          "Shrimp \"moved to market test\" [SE-CT]; salmon national, ~100bps headwind [SE-CT]",
+          "**Progressing**"
+        ],
+        [
+          "**POS d) Catering?**",
+          "Early/gated \u2014 Houston test \u2192 2nd market; not yet scaled, no $ contribution.",
+          "\"expand to a second market test\u2026 load balancing\" [SE-CT]; 20+ purpose-built kitchens",
+          "**Live \u2014 early, no $ yet**"
+        ],
+        [
+          "**NEG a) Lap comps in Q1-2027? Need more menu items?**",
+          "Unresolved (FY27 question) but de-risked \u2014 salmon \u22654Q, shrimp in test, loyalty/digital flywheel building.",
+          "2-yr traffic stack 7.2% (up seq from 7.1%) [SE-SS Blair]; salmon \u22654Q [SE-CT]",
+          "**Live \u2014 pipeline forming**"
+        ],
+        [
+          "**NEG b) Keep RLM flat next year again?**",
+          "Effectively YES for FY26 \u2014 guide implies flat-ish RLM (23.7\u201324.3%) as salmon/wage/energy absorb leverage. Bear confirmed by choice.",
+          "RLM guide +10bps top only [SE-PR]; salmon ~100bps + energy 20-40bps + wage [SE-SS]",
+          "**Resolving Bear (flat deliberately)**"
+        ],
+        [
+          "**NEG c) New-store honeymoon + tough-comp recur?**",
+          "Directly refuted \u2014 2024 class positive at 18mo, no cliff; productivity >100%. Biggest structural overhang weakened.",
+          "\"2024 class\u2026 outpacing at 18mo\" [SE-CT]; AUV $3.0M vs $2.3M target; Blair TAM ~2,000 units [SE-SS]",
+          "**Resolving Bull (bear weakened)**"
+        ]
+      ]
+    }
+  ],
+  "task8_md": "# Task 8 \u2014 Drivers Analysis: CAVA Q1 FY2026\n\n> The loop (DOMAIN_MODEL \u00a72) run AGAINST CAVA's saved Granite Drivers [SE-DR], with evidence cross-read from the quarter's book (PR / transcript / slides / 10-Q / 10-broker sell-side). This is the per-debate \"what happened this quarter\" \u2014 the product piece. Produced from the engine-assembled prompt (`analysis.run`, CAVA Q1-2026; [SE-DR] + 6 source keys in context).\n\n---\n\n## Section 1 \u2014 Per-Debate Progress (the core)\n\n| Saved Debate | What happened this quarter | Evidence (number + source) | Verdict |\n|:---|:---|:---|:---|\n| **POS a) RLM cushion from reinvesting; easy comps rest of 2026** | RLM held flat, NOT expanded, despite a 9.7% comp \u2014 the \"cushion\" is being spent on reinvestment, not banked. Easy-comp thesis intact (lapped +10.8%, still printed 9.7%). | RLM 25.1% flat y/y [SE-PR]; guide raised only +10bps at top to 23.7\u201324.3% [SE-PR]; \"leverage almost entirely offset by cost\" [SE-SS Stifel] | **Live \u2014 cushion being reinvested, not banked** |\n| **POS b) AGM and other investments made** | AGM rollout is working \u2014 covered restaurants outperforming uncovered; penetration scaling. | \"restaurants with AGM coverage are outperforming those without\" [SE-CT]; \">50% of (higher-volume) locations\" [SE-CT]; RBC/JPM cite as upside lever [SE-SS] | **Resolving Bull** |\n| **POS c) Shrimp as next item; what else in pipeline?** | Roasted garlic shrimp advanced to market test (Nashville) \u2014 last stage before national. Salmon launched nationally as the tent-pole. Pipeline visible + disciplined. | Shrimp \"moved to market test\" [SE-CT]; salmon national launch, ~100bps RLM headwind, \"penny-profit neutral\" [SE-CT] | **Progressing** |\n| **POS d) Catering?** | Still gated/early \u2014 Houston test expanding to a 2nd market; explicitly not yet scaled; demand acknowledged \"tremendous.\" An unquantified future lever, not a this-quarter contributor. | \"expand to a second market test later this year\u2026 load balancing\" [SE-CT]; 20+ purpose-built hybrid/digital kitchens [SE-CT] | **Live \u2014 early, no $ yet** |\n| **NEG a) How lap comps in Q1-2027? Need more menu items?** | Not resolved (it's a FY27 question) but de-risked at the margin: salmon runs \u22654Q, shrimp in test, loyalty/digital flywheel building \u2014 a menu pipeline is forming to lap this year's strength. | Salmon \u22654Q [SE-CT]; shrimp market test [SE-CT]; 2-yr traffic stack 7.2% (up seq from 7.1%) [SE-SS Blair] | **Live \u2014 pipeline forming, unresolved** |\n| **NEG b) Keep RLM flat next year again?** | Effectively YES for FY26 \u2014 guide implies flat-ish RLM (23.7\u201324.3% vs 25.1% Q1) as salmon (~100bps), 2% wage, and 20\u201340bps energy absorb the sales leverage. The bear is being confirmed, by choice. | RLM guide +10bps top only [SE-PR]; salmon ~100bps + energy 20\u201340bps + wage cited [SE-SS Stifel]; \"won't take price\" [SE-CT Citi] | **Resolving Bear (margin held flat deliberately)** |\n| **NEG c) New-store honeymoon + tough-comp issue recur?** | Directly refuted this quarter \u2014 2024 class still positive at 18 months, no honeymoon cliff; NRO productivity >100% across all geos/formats. The biggest structural overhang weakened. | \"2024 class\u2026 outpacing expectations at 18mo\" [SE-CT]; NRO productivity >100%, AUV $3.0M vs $2.3M 1st-yr target [SE-CT/SE-SS]; Blair TAM ~2,000 units [SE-SS] | **Resolving Bull (bear weakened)** |\n\n---\n\n## Section 2 \u2014 KPI Scorecard (vs the tracked KPIs in [SE-DR])\n\n| KPI (tracked) | Value | Y/Y | Read |\n|:---|:---|:---|:---|\n| % SSS | 9.7% | (110) bps | Beat Street 6.2% [SE-SS]; traffic-led = high quality |\n| % Traffic | 6.8% | \u2014 | The surprise; vs 6.0%e JPM [SE-SS] |\n| % Price | 2.9% | \u2014 | Only ~1.4% Jan price \u2192 traffic-driven, not price |\n| AUVs | $3,027k | +3% | New units >$3M vs $2.3M 1st-yr target |\n| RLMs | 25.1% | 0 bps | Flat \u2014 the central margin debate |\n| Food cost % rev | 29.1% | (20) bps | Favorable mix; salmon to pressure H2 |\n| Labor % rev | 25.7% | flat | 2% wage offset by leverage |\n| Occupancy % rev | 6.9% | (50) bps | Sales leverage |\n| Unit growth | 459 | +20.2% | 29 states + DC; Midwest entry |\n| New store openings | 20 | +33% | vs Street 16 [SE-SS] |\n| Key menu items | Salmon (national), White Sweet Potato (returned), Shrimp (test) | \u2014 | Tent-pole + seasonal cadence |\n\n---\n\n## Section 3 \u2014 Triggers Check\n\n| Trigger ([SE-DR]) | Status | Evidence |\n|:---|:---|:---|\n| **a) Watch for strong menu launch item** | **FIRED** | Glazed salmon \u2014 first-ever seafood, national launch, \"in line with market tests,\" driving dinner daypart [SE-CT]. White Sweet Potato return drove frequency + COGS leverage. |\n| **b) Watch for sell-side upgrade on good data** | **FIRED** | Piper PT\u2192$105 (raised); Blair/Baird/Roth raising estimates; Davidson PT $80\u2192$84 [SE-SS]. Constructive across the desk on the print. |\n\n---\n\n## Section 4 \u2014 New & Retiring Debates\n\n**New debate this quarter (Granite not yet tracking \u2014 should):**\n1. **Energy / fuel-surcharge margin drag (H2-weighted).** Newly explicit 20\u201340bps RLM headwind from fuel surcharges + polyethylene, Q3/Q4-loaded. Not in the current driver; it's the swing factor on the FY26 margin guide. *Why it matters: it's the difference between the low and high end of the RLM range.* [SE-CT/SE-SS]\n2. **Digital mix \u2192 margin optics (~40%).** Digital hit 39.9% (3P up), priced dollar-profit-neutral but optically deleveraging the Other-OpEx line (+80bps). A recurring \"is mix hurting margin?\" question worth formalizing. [SE-CT/SE-SS]\n3. **Data/AI platform (CAVA Core + Current).** Management flagged a \"decade of data transformation\" \u2014 predictive prep/labor/inventory. Long-dated, but a new structural lever (and a new execution risk) not in the driver. [SE-CT]\n\n**Retire / downgrade:** *NEG c) new-store honeymoon recurrence* \u2014 two consecutive quarters of evidence (2024 class + at 18mo) have largely answered it; downgrade from active bear to a quarterly watch-item (the 2-yr stack).\n\n---\n\n## Section 5 \u2014 Updated View & Quarter Recap Line\n\n**Current point of view (after Q1-2026):**\n* **Bull intact and strengthening on the top line** \u2014 traffic-led 9.7% comp, NRO productivity >100%, honeymoon-fade bear weakened, ~2,000-unit TAM (Blair). The growth algorithm is de-risked.\n* **Bear has migrated from growth to margin + valuation** \u2014 RLM is being held flat *by choice* (reinvestment + salmon/energy/wage), and at ~58x EBITDA the stock prices the bull case in. The debate is no longer \"can they grow?\" but \"will margin ever inflect, and is it already paid for?\"\n* **Net:** high-conviction on durability, gated on multiple. Watch the FY27-lap setup and the H2 energy headwind.\n\n**Append to [SE-DR] Quarter recaps:**\n> **Q1-26: Blowout, traffic-led.** 9.7% comp (6.8% traffic) beat Street 6.2%; Revs +4.5% / EBITDA +8.7% vs cons; RLM flat 25.1% (deliberate reinvestment). Guide raised (SSS mid +150bps to 5.5%) but reads conservative. Honeymoon-fade bear weakened (2024 class + at 18mo); salmon national, shrimp in test. Margin + ~58x valuation now the bear. Stock +7% AH.\n\n---\n\n> *Method note: Task 8 ran against the saved [SE-DR] driver; every verdict carries a number + source tag. Where [SE-DR] is absent for a company, the task instead bootstraps an AUTO-DRAFT driver (labeled, analyst-review-required) rather than fabricating a thesis \u2014 see MVP_PIPELINE_SPEC \u00a74 (open problem).*\n",
+  "task8_tables": [
+    {
+      "headers": [
+        "Saved Debate",
+        "What happened this quarter",
+        "Evidence (number + source)",
+        "Verdict"
+      ],
+      "rows": [
+        [
+          "**POS a) RLM cushion from reinvesting; easy comps rest of 2026**",
+          "RLM held flat, NOT expanded, despite a 9.7% comp \u2014 the \"cushion\" is being spent on reinvestment, not banked. Easy-comp thesis intact (lapped +10.8%, still printed 9.7%).",
+          "RLM 25.1% flat y/y [SE-PR]; guide raised only +10bps at top to 23.7\u201324.3% [SE-PR]; \"leverage almost entirely offset by cost\" [SE-SS Stifel]",
+          "**Live \u2014 cushion being reinvested, not banked**"
+        ],
+        [
+          "**POS b) AGM and other investments made**",
+          "AGM rollout is working \u2014 covered restaurants outperforming uncovered; penetration scaling.",
+          "\"restaurants with AGM coverage are outperforming those without\" [SE-CT]; \">50% of (higher-volume) locations\" [SE-CT]; RBC/JPM cite as upside lever [SE-SS]",
+          "**Resolving Bull**"
+        ],
+        [
+          "**POS c) Shrimp as next item; what else in pipeline?**",
+          "Roasted garlic shrimp advanced to market test (Nashville) \u2014 last stage before national. Salmon launched nationally as the tent-pole. Pipeline visible + disciplined.",
+          "Shrimp \"moved to market test\" [SE-CT]; salmon national launch, ~100bps RLM headwind, \"penny-profit neutral\" [SE-CT]",
+          "**Progressing**"
+        ],
+        [
+          "**POS d) Catering?**",
+          "Still gated/early \u2014 Houston test expanding to a 2nd market; explicitly not yet scaled; demand acknowledged \"tremendous.\" An unquantified future lever, not a this-quarter contributor.",
+          "\"expand to a second market test later this year\u2026 load balancing\" [SE-CT]; 20+ purpose-built hybrid/digital kitchens [SE-CT]",
+          "**Live \u2014 early, no $ yet**"
+        ],
+        [
+          "**NEG a) How lap comps in Q1-2027? Need more menu items?**",
+          "Not resolved (it's a FY27 question) but de-risked at the margin: salmon runs \u22654Q, shrimp in test, loyalty/digital flywheel building \u2014 a menu pipeline is forming to lap this year's strength.",
+          "Salmon \u22654Q [SE-CT]; shrimp market test [SE-CT]; 2-yr traffic stack 7.2% (up seq from 7.1%) [SE-SS Blair]",
+          "**Live \u2014 pipeline forming, unresolved**"
+        ],
+        [
+          "**NEG b) Keep RLM flat next year again?**",
+          "Effectively YES for FY26 \u2014 guide implies flat-ish RLM (23.7\u201324.3% vs 25.1% Q1) as salmon (~100bps), 2% wage, and 20\u201340bps energy absorb the sales leverage. The bear is being confirmed, by choice.",
+          "RLM guide +10bps top only [SE-PR]; salmon ~100bps + energy 20\u201340bps + wage cited [SE-SS Stifel]; \"won't take price\" [SE-CT Citi]",
+          "**Resolving Bear (margin held flat deliberately)**"
+        ],
+        [
+          "**NEG c) New-store honeymoon + tough-comp issue recur?**",
+          "Directly refuted this quarter \u2014 2024 class still positive at 18 months, no honeymoon cliff; NRO productivity >100% across all geos/formats. The biggest structural overhang weakened.",
+          "\"2024 class\u2026 outpacing expectations at 18mo\" [SE-CT]; NRO productivity >100%, AUV $3.0M vs $2.3M 1st-yr target [SE-CT/SE-SS]; Blair TAM ~2,000 units [SE-SS]",
+          "**Resolving Bull (bear weakened)**"
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "KPI (tracked)",
+        "Value",
+        "Y/Y",
+        "Read"
+      ],
+      "rows": [
+        [
+          "% SSS",
+          "9.7%",
+          "(110) bps",
+          "Beat Street 6.2% [SE-SS]; traffic-led = high quality"
+        ],
+        [
+          "% Traffic",
+          "6.8%",
+          "\u2014",
+          "The surprise; vs 6.0%e JPM [SE-SS]"
+        ],
+        [
+          "% Price",
+          "2.9%",
+          "\u2014",
+          "Only ~1.4% Jan price \u2192 traffic-driven, not price"
+        ],
+        [
+          "AUVs",
+          "$3,027k",
+          "+3%",
+          "New units >$3M vs $2.3M 1st-yr target"
+        ],
+        [
+          "RLMs",
+          "25.1%",
+          "0 bps",
+          "Flat \u2014 the central margin debate"
+        ],
+        [
+          "Food cost % rev",
+          "29.1%",
+          "(20) bps",
+          "Favorable mix; salmon to pressure H2"
+        ],
+        [
+          "Labor % rev",
+          "25.7%",
+          "flat",
+          "2% wage offset by leverage"
+        ],
+        [
+          "Occupancy % rev",
+          "6.9%",
+          "(50) bps",
+          "Sales leverage"
+        ],
+        [
+          "Unit growth",
+          "459",
+          "+20.2%",
+          "29 states + DC; Midwest entry"
+        ],
+        [
+          "New store openings",
+          "20",
+          "+33%",
+          "vs Street 16 [SE-SS]"
+        ],
+        [
+          "Key menu items",
+          "Salmon (national), White Sweet Potato (returned), Shrimp (test)",
+          "\u2014",
+          "Tent-pole + seasonal cadence"
+        ]
+      ]
+    },
+    {
+      "headers": [
+        "Trigger ([SE-DR])",
+        "Status",
+        "Evidence"
+      ],
+      "rows": [
+        [
+          "**a) Watch for strong menu launch item**",
+          "**FIRED**",
+          "Glazed salmon \u2014 first-ever seafood, national launch, \"in line with market tests,\" driving dinner daypart [SE-CT]. White Sweet Potato return drove frequency + COGS leverage."
+        ],
+        [
+          "**b) Watch for sell-side upgrade on good data**",
+          "**FIRED**",
+          "Piper PT\u2192$105 (raised); Blair/Baird/Roth raising estimates; Davidson PT $80\u2192$84 [SE-SS]. Constructive across the desk on the print."
+        ]
+      ]
+    }
+  ],
+  "drivers_md": "CAVA\n\nKey Debates Positives \na) RLM cushion from reinvesting. Easy comps for rest of 2026.\nb) AGM and other investments made.\nc) Shrimp as next item and what else is in the pipeline?\nd) Catering?\n\nKey debates Negatives\na) How are you going to lap comps in Q1 2027? Need more menu items?\nb) Are you going to keep restaurant level margin flat next year again?\nc) Will the new store honeymood period and tough comps issue show up again?\n\nKPIs\n% SSS\n% Traffic\n% Price\nMenu drivers\nAUVs\nRLMs\nFood costs as % of revs\nLabor costs as % of revs\nOccupancy costs as % of revs\nUnit growth\nNew store openings\nKey menu items\n\nQuarter recaps\n1) Q1-25. Strong print.\n2) Q2-25. Miss on tough steak comps. Blamed strong honeymoon period openings.\n3) Q3-25. Guide down. Blamed strong honeymoon period openings. Guidance reset.\n4) Q4-25 : Comp beat. RLM better than expected.\n5) Q1-25 : Blowout quarters.\n\nLessons learnt\n\nTrigger :\na) Watch for strong menu launch item.\nb) Watch for sell-side upgrade on good data.",
+  "generated_note": "All counts computed from the live corpus; nothing hardcoded."
+}

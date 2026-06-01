@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Granite — what we've built</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="topnav">
+  <div class="brand">GRANITE<span class="brand-sub">analysis engine</span></div>
+  <nav class="tabs">
+    <button class="tab active" data-screen="explore"><span class="num">1</span> Explore</button>
+    <button class="tab" data-screen="run"><span class="num">2</span> Run</button>
+    <button class="tab" data-screen="picture"><span class="num">3</span> The Picture</button>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="wrap">
+    <h1>You thought it was a data pipeline and a Gemini prompt.</h1>
+    <p class="lede">Click around — it's an analyst that reads the whole shelf of documents and argues your thesis back to you, quarter after quarter. Built and proven on real data for CAVA, Avery Dennison, and Goldman Sachs.</p>
+    <p class="sub">This is a working proof, not a finished product — and we've labeled exactly which is which.</p>
+    <button class="cta" id="startTour">Start here →</button>
+  </div>
+</section>
+
+<!-- SCREEN 1: EXPLORE -->
+<main id="explore" class="screen active">
+  <div class="wrap">
+    <h2>Every company has a shelf.</h2>
+    <p class="screen-sub">Filings, press releases, slides, transcripts, sell-side research — organized by company and quarter, with where each one came from. Click any company to see its real shelf.</p>
+
+    <div class="company-cards" id="companyCards"><!-- built by app.js --></div>
+
+    <div class="reframe">
+      <div class="reframe-head">
+        <h3>The realization</h3>
+        <label class="toggle">
+          <input type="checkbox" id="freeToggle">
+          <span>Show what we get <b>free</b> from EDGAR</span>
+        </label>
+      </div>
+      <p id="reframeLine" class="reframe-line">You assumed every document comes from FactSet. Toggle above — the green ones don't.</p>
+      <table class="vs">
+        <thead><tr><th>Document</th><th>The assumption</th><th>What we actually do</th></tr></thead>
+        <tbody>
+          <tr><td>10-K / 10-Q / 8-K</td><td>FactSet</td><td class="free">FREE — EDGAR</td></tr>
+          <tr><td>Press releases</td><td>FactSet</td><td class="free">FREE — EDGAR 8-K exhibit</td></tr>
+          <tr><td>Investor slides</td><td>FactSet</td><td class="free">FREE — EDGAR / IR site</td></tr>
+          <tr><td>Transcripts</td><td>FactSet</td><td class="vendor">Vendor — FactSet (high value, gated)</td></tr>
+          <tr><td>Sell-side research</td><td>FactSet</td><td class="vendor">Vendor — FactSet / AlphaSense</td></tr>
+          <tr><td>The Drivers thesis</td><td>—</td><td class="prop">Granite's own — no vendor has it</td></tr>
+        </tbody>
+      </table>
+      <p class="punch">This doesn't eliminate FactSet — it <b>reduces the dependency</b>. The high-value vendor docs still need the API; the backbone, we now get free.</p>
+    </div>
+
+    <div class="shelf-panel" id="shelfPanel" hidden>
+      <div class="shelf-head"><h3 id="shelfTitle"></h3><button class="close" id="shelfClose">✕</button></div>
+      <div class="legend">
+        <span class="pill free">FREE — EDGAR / public</span>
+        <span class="pill vendor">Vendor / internal</span>
+        <span class="pill prop">Granite proprietary</span>
+      </div>
+      <div class="shelf-grid" id="shelfGrid"></div>
+    </div>
+  </div>
+</main>
+
+<!-- SCREEN 2: RUN -->
+<main id="run" class="screen">
+  <div class="wrap">
+    <h2>Watch it think.</h2>
+    <p class="screen-sub">CAVA, Q1 2026. The system assembles the book, runs your framework, and — the part that's ours — scores your saved debates against the quarter.</p>
+    <div class="run-controls">
+      <div class="run-pick">Company: <b>CAVA</b> &nbsp;·&nbsp; Quarter: <b>Q1-2026</b></div>
+      <button class="cta" id="runBtn">Run the analysis ▷</button>
+      <span class="replay-tag" id="replayTag" hidden>Replaying a real run</span>
+    </div>
+
+    <div class="stage" id="stageBook">
+      <h4>1 · Assemble the book</h4>
+      <p class="stage-note">Free docs arrive automatically; vendor docs (transcript, sell-side) are dropped in by hand today — the FactSet API automates that, ~1 week out.</p>
+      <div class="funnel" id="funnel"></div>
+    </div>
+
+    <div class="stage" id="stagePrompt" hidden>
+      <h4>2 · The framework — 8 tasks</h4>
+      <div class="tasks" id="taskList"></div>
+    </div>
+
+    <div class="stage" id="stageOutput" hidden>
+      <h4>3 · The earnings review <span class="replay-tag">Replaying a real run</span></h4>
+      <div id="outputTables"></div>
+    </div>
+
+    <div class="stage task8" id="stageTask8" hidden>
+      <h4>★ Task 8 — the Drivers loop <span class="gold-tag">our edge · no vendor can do this</span></h4>
+      <p class="t8-transition">Now the part that's ours — your debates, scored against this quarter.</p>
+      <div id="task8Tables"></div>
+      <div class="carry">
+        <div class="carry-label">This line becomes part of the company's memory. Next quarter, the analysis starts from here.</div>
+        <div class="carry-line" id="carryLine"></div>
+        <div class="honest-tag">Designed; single-quarter loop proven. Multi-quarter carry-forward not yet automated.</div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- SCREEN 3: THE PICTURE -->
+<main id="picture" class="screen">
+  <div class="wrap">
+    <h2>The whole picture.</h2>
+    <p class="screen-sub">How it flows today, what's free vs. vendor, and where it graduates for production.</p>
+    <div id="diagram"><!-- inline SVG injected by app.js --></div>
+
+    <div class="quad">
+      <div class="q done"><h3>✅ Done — proven on real data</h3><ul id="qDone"></ul></div>
+      <div class="q build"><h3>🔨 Known build — we know how</h3><ul id="qBuild"></ul></div>
+      <div class="q open"><h3>❓ Open questions — need thought</h3><ul id="qOpen"></ul></div>
+      <div class="q yours"><h3>🫱 On your side</h3><ul id="qYours"></ul></div>
+    </div>
+
+    <h3 class="path-h">The path to production <span class="dir">(sizing is directional)</span></h3>
+    <table class="path" id="pathTable"></table>
+
+    <div class="bottomline">
+      <b>The brain works</b> — your framework plus the Drivers loop, on real data.
+      <b>The body</b> — the database, the automation, the delivery, the multi-user wrapper — is the next build:
+      mostly known work, one outside dependency (FactSet), and a few open questions we've flagged honestly rather than papered over.
+    </div>
+  </div>
+</main>
+
+<footer class="honesty">
+  Demo mode — real artifacts, pre-generated. Nothing here calls a live model.
+  Counts computed from the live corpus. Built on real data for CAVA, Avery Dennison, Goldman Sachs.
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
