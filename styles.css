@@ -197,7 +197,11 @@ code{background:var(--grey-bg);padding:1px 5px;border-radius:4px;font-size:.88em
 .ba-col li{margin:7px 0;font-size:.93rem}
 .hot{color:#c0392b}
 .cool{color:var(--free)}
-@media(max-width:720px){.ba{grid-template-columns:1fr}}
+/* three-column v1→v2→v3 */
+.ba3{grid-template-columns:1fr 1fr 1fr}
+.ba3 .ba-col.after:last-child{background:var(--prop-bg);border:1px solid #c2d0ee}
+.ba3 .ba-col.after:last-child .ba-tag{color:var(--prop)}
+@media(max-width:720px){.ba,.ba3{grid-template-columns:1fr}}
 
 /* punch line (reuse style if present, else define) */
 .pblock .punch{margin-top:14px;font-size:1rem;color:var(--ink);
