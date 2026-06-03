@@ -6,15 +6,19 @@ const reduce = matchMedia('(prefers-reduced-motion:reduce)').matches;
 const sleep = ms => new Promise(r => setTimeout(r, reduce ? 0 : ms));
 
 /* ---------- tab routing ---------- */
+const SCREENS = ['explore','run','picture','prompt'];
 function show(screen){
   $$('.screen').forEach(s=>s.classList.toggle('active', s.id===screen));
   $$('.tab').forEach(t=>t.classList.toggle('active', t.dataset.screen===screen));
   if(screen!=='explore') $('#hero').style.display='none';
   if(screen==='picture') drawDiagram();
+  if(history.replaceState) history.replaceState(null,'','#'+screen);
   window.scrollTo({top:0,behavior:reduce?'auto':'smooth'});
 }
 $$('.tab').forEach(t=>t.onclick=()=>show(t.dataset.screen));
 $('#startTour').onclick=()=>{ $('#hero').style.display='none'; show('explore'); };
+// Deep-link support: opening …/#prompt jumps straight to that tab (shareable).
+(function(){ const h=(location.hash||'').replace('#',''); if(SCREENS.includes(h)) show(h); })();
 
 /* ---------- render helpers ---------- */
 function mdTable(t){

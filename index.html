@@ -14,6 +14,7 @@
     <button class="tab active" data-screen="explore"><span class="num">1</span> Explore</button>
     <button class="tab" data-screen="run"><span class="num">2</span> Run</button>
     <button class="tab" data-screen="picture"><span class="num">3</span> The Picture</button>
+    <button class="tab" data-screen="prompt"><span class="num">4</span> The Prompt</button>
   </nav>
 </header>
 
@@ -132,6 +133,90 @@
       <b>The body</b> — the database, the automation, the delivery, the multi-user wrapper — is the next build:
       mostly known work, one outside dependency (FactSet), and a few open questions we've flagged honestly rather than papered over.
     </div>
+  </div>
+</main>
+
+<!-- SCREEN 4: THE PROMPT -->
+<main id="prompt" class="screen">
+  <div class="wrap">
+    <h2>The prompt is the product's brain.</h2>
+    <p class="screen-sub">The earnings review is only as good as the instructions we hand the model. Here's how we frame that instruction file, what changed from v1 to v2, and the quality it produces on real data.</p>
+
+    <!-- THE FRAMEWORK -->
+    <section class="pblock">
+      <h3>How we frame an instruction file — the 5 layers</h3>
+      <p class="pnote">Every doc that drives the model is built top-to-bottom in these layers. The point: a rule lives in <b>exactly one place</b>, every output has a checkable shape, and quality improves by editing the doc — not re-prompting from scratch.</p>
+      <ol class="layers">
+        <li><span class="ln">1</span><div><b>Purpose &amp; audience</b><br><span class="lt">One line: who reads it, what they produce, at what level. <i>"Hedge-fund-grade teardown; assume an expert; skip basics."</i> This calibrates everything below.</span></div></li>
+        <li><span class="ln">2</span><div><b>Operating protocol</b><br><span class="lt">How to <i>execute</i>, not what. <i>"One task at a time; reset context between tasks; validate before moving on."</i></span></div></li>
+        <li><span class="ln">3</span><div><b>Global conventions — the single source of truth</b><br><span class="lt">Every rule more than one task needs (sources, number formatting, table rules, reusable procedures) stated <b>once</b> and <b>numbered</b>, so tasks reference it (<code>per §1.3</code>) and never restate. <b>The highest-leverage layer.</b></span></div></li>
+        <li><span class="ln">4</span><div><b>Tasks, each with a contract</b><br><span class="lt">Objective → Sources (with priority) → field logic → <b>Output Contract</b> (the exact table template) → pre-flight check. Each task inherits §3 and states only what's unique.</span></div></li>
+        <li><span class="ln">5</span><div><b>Reference data, in its own file</b><br><span class="lt">Lookups too big to inline (our <code>master_kpi.md</code> — ~6,600 KPI definitions keyed by ticker) live separately, so the instruction file stays readable.</span></div></li>
+      </ol>
+      <p class="pnote pclosers">Plus two closers: a <b>failure-modes list</b> (negative examples catch the errors rules miss), and a <b>golden example</b> — one worked, <i>verified</i> output. The example is <b>earned, never invented</b>: a faked example teaches the model the wrong target, so it comes from a real output a human has marked up and blessed.</p>
+    </section>
+
+    <!-- BEFORE / AFTER -->
+    <section class="pblock">
+      <h3>v1 → v2: what changed, and why it matters</h3>
+      <div class="ba">
+        <div class="ba-col before">
+          <div class="ba-tag">v1 — the original</div>
+          <ul>
+            <li>The style guide &amp; formatting rules were <b>copy-pasted into every task</b> — the same blocks appeared <b class="hot">15 times</b>.</li>
+            <li>Change one formatting rule → you had to find and fix it in 15 places. Miss one and the output <b>drifts</b>.</li>
+            <li>Rules described in prose; no checkable output shape.</li>
+            <li>No failure-mode list; no graceful handling when data is missing.</li>
+          </ul>
+        </div>
+        <div class="ba-col after">
+          <div class="ba-tag">v2 — the rewrite</div>
+          <ul>
+            <li>All shared rules collapsed into <b>one §1 "Global Conventions"</b> — referenced everywhere, stated <b class="cool">once</b> (the repeated blocks: <b class="hot">15</b> → <b class="cool">2</b>).</li>
+            <li>Change a rule in <b>one place</b> → it applies to all 8 tasks. Drift becomes structurally impossible.</li>
+            <li>Every task ends in an <b>exact output contract</b> + a pre-flight check (<i>"every row has exactly 6 pipes"</i>).</li>
+            <li>Added a <b>failure-modes</b> section, <b>graceful KPI lookup</b>, and <b>Task 8</b> (the Drivers loop).</li>
+          </ul>
+        </div>
+      </div>
+      <p class="punch">The win isn't fewer lines (303 vs 308 — about the same). It's that the new file fits <b>more</b> — 8 tasks, failure modes, graceful fallbacks — into the same space, because nothing is repeated. <b>One source of truth, referenced, instead of fifteen copies that drift.</b></p>
+    </section>
+
+    <!-- REAL EXAMPLE -->
+    <section class="pblock">
+      <h3>The quality it produces — a real run</h3>
+      <p class="pnote">This is the actual model output for <b>Avery Dennison, Q1 2026</b>, Task 1 (P&amp;L) — generated by running the v2 prompt on the real document shelf. Not hand-written.</p>
+      <div class="ex">
+        <div class="ex-title">P&amp;L Summary: Avery Dennison · Q1 2026 · Adjusted/non-GAAP</div>
+        <table class="mdtable ex-table">
+          <thead><tr><th>Metric</th><th>$MMs</th><th>PY$</th><th>y/y %</th><th>vs Consensus</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td><b>Net Sales</b></td><td>2,299</td><td>2,148</td><td>7.0%</td><td>beat</td><td>+2.3% ex-FX, <b>+1.1% organic</b> — reported growth is FX + pricing, not volume</td></tr>
+            <tr><td><b>Gross Profit</b></td><td>665</td><td>622</td><td>7%</td><td>—</td><td>GM ~28.9% (flat); productivity offsetting higher employee costs</td></tr>
+            <tr><td><b>Adj EPS</b></td><td>2.47</td><td>2.30</td><td>7.4%</td><td>beat</td><td>~5¢ from March tariff pre-buy; productivity + favorable price/cost</td></tr>
+            <tr><td><b>Adj EBITDA</b></td><td>376.5</td><td>352.4</td><td>6.8%</td><td>—</td><td>Margin 16.4% (flat)</td></tr>
+            <tr><td><b>Adj FCF</b></td><td>104.4</td><td class="red">(53.1)</td><td>n/m</td><td>strong swing</td><td>Big working-capital improvement vs PY outflow</td></tr>
+          </tbody>
+        </table>
+        <p class="ex-read"><b>Read:</b> a quality beat on a soft top line. +7% reported sales but only +1.1% organic — the delta is FX and pricing. EPS growth is productivity + a one-time pre-buy benefit, not demand. The cash-flow swing (+$104M vs −$53M PY) is the underappreciated positive.</p>
+      </div>
+      <p class="pnote">Notice what the <i>contract</i> bought us: clean numbers in one format, a "vs Consensus" read, and a <b>Notes</b> column that explains <i>why</i> each line moved — organic-vs-reported, the pre-buy timing benefit. That last column is the difference between a data dump and an analyst's read.</p>
+    </section>
+
+    <!-- PLAIN-ENGLISH SUMMARY -->
+    <section class="pblock summary">
+      <h3>In plain English — what I changed and why</h3>
+      <ul class="sum">
+        <li><b>Stopped repeating the rules.</b> The formatting/style guide used to be pasted into every task (15 copies). I pulled it into one numbered section the tasks point at. Now a rule can't drift, and editing it is a one-line change.</li>
+        <li><b>Gave every task a contract.</b> Each task ends with the exact table it must output and a quick self-check. The model has a target to hit, not a vibe to interpret.</li>
+        <li><b>Fixed a real mismatch.</b> The prompt's P&amp;L table said 5 columns, but the actual output had added a 6th ("vs Consensus"). I made the rule explicit so prompt and output agree.</li>
+        <li><b>Made missing data fail gracefully.</b> If a company isn't in our KPI dictionary, the model now pulls the KPIs the company actually reported and flags it — instead of inventing metrics.</li>
+        <li><b>Added a failure-modes list.</b> Concrete "do NOT do this" examples (don't write N/A, don't invent guidance, don't pad columns) — these catch the mistakes that positive rules miss.</li>
+        <li><b>Added Task 8 — the Drivers loop.</b> The part that's ours: analyze the quarter <i>through our saved debates</i>, and if we have no thesis on file yet, skip it and say so rather than fake one. This is what turns a great earnings teardown into <i>our thinking, tracked quarter over quarter.</i></li>
+        <li><b>Left the example blank — on purpose.</b> The single best quality lever is a worked example, but a wrong one teaches the wrong thing. So it stays empty until you and Pankaj mark up a real output and bless it. Then it goes in.</li>
+      </ul>
+      <p class="punch">Bottom line: the v2 prompt is the same length but does more, can't drift, checks its own output, handles missing data honestly, and reaches toward the Drivers loop. Quality now compounds <b>in the document</b> — every quarter's mistakes become next quarter's guardrails.</p>
+    </section>
   </div>
 </main>
 

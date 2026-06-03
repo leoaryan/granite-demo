@@ -168,3 +168,53 @@ table.path td:first-child{font-weight:700;color:var(--navy);white-space:nowrap}
 
 @media(max-width:720px){.quad{grid-template-columns:1fr}#hero h1{font-size:1.6rem}}
 @media(prefers-reduced-motion:reduce){.fdoc{opacity:1;transform:none;transition:none}}
+
+/* ---------- SCREEN 4: the prompt ---------- */
+.pblock{background:var(--card);border:1px solid var(--line);border-radius:12px;
+  padding:22px 24px;margin:18px 0;box-shadow:0 1px 4px rgba(0,0,0,.04)}
+.pblock h3{font-size:1.15rem;margin-bottom:.5em}
+.pnote{color:var(--grey);font-size:.95rem;margin:.2em 0 1em}
+.pclosers{margin-top:1.1em;border-top:1px dashed var(--line);padding-top:1em}
+code{background:var(--grey-bg);padding:1px 5px;border-radius:4px;font-size:.88em;color:var(--navy)}
+
+/* the 5 layers */
+.layers{list-style:none;padding:0;margin:0;counter-reset:none}
+.layers li{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid var(--line)}
+.layers li:last-child{border-bottom:0}
+.layers .ln{flex:0 0 30px;height:30px;line-height:30px;text-align:center;border-radius:50%;
+  background:var(--accent);color:#fff;font-weight:700}
+.layers .lt{color:var(--grey);font-size:.93rem}
+
+/* before / after */
+.ba{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:6px 0 4px}
+.ba-col{border-radius:10px;padding:16px 18px}
+.ba-col.before{background:var(--amber-bg);border:1px solid #f0d9b0}
+.ba-col.after{background:var(--free-bg);border:1px solid #bfe3c9}
+.ba-tag{font-weight:700;font-size:.85rem;letter-spacing:.04em;margin-bottom:8px}
+.ba-col.before .ba-tag{color:var(--amber-d)}
+.ba-col.after .ba-tag{color:var(--free-d)}
+.ba-col ul{margin:0;padding-left:18px}
+.ba-col li{margin:7px 0;font-size:.93rem}
+.hot{color:#c0392b}
+.cool{color:var(--free)}
+@media(max-width:720px){.ba{grid-template-columns:1fr}}
+
+/* punch line (reuse style if present, else define) */
+.pblock .punch{margin-top:14px;font-size:1rem;color:var(--ink);
+  background:var(--prop-bg);border-left:3px solid var(--prop);padding:10px 14px;border-radius:0 8px 8px 0}
+
+/* the real example */
+.ex{border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:6px 0 2px}
+.ex-title{background:var(--navy);color:#fff;font-weight:600;font-size:.9rem;padding:8px 14px}
+.ex-table{width:100%;border-collapse:collapse;font-size:.86rem}
+.ex-table th{background:var(--grey-bg);text-align:left;padding:7px 10px;color:var(--navy)}
+.ex-table td{padding:6px 10px;border-top:1px solid var(--line);vertical-align:top}
+.ex-table td.red{color:#c0392b}
+.ex-read{padding:12px 14px;margin:0;background:#fbfcfe;font-size:.92rem;color:var(--ink);border-top:1px solid var(--line)}
+
+/* plain-english summary */
+.summary{background:linear-gradient(180deg,#fff, #fbfcfe)}
+.sum{margin:0;padding-left:0;list-style:none}
+.sum li{padding:9px 0 9px 26px;position:relative;border-bottom:1px solid var(--line);font-size:.95rem}
+.sum li:last-child{border-bottom:0}
+.sum li::before{content:"→";position:absolute;left:0;color:var(--accent);font-weight:700}
