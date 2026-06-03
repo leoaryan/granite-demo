@@ -213,8 +213,28 @@ code{background:var(--grey-bg);padding:1px 5px;border-radius:4px;font-size:.88em
 .ex-table{width:100%;border-collapse:collapse;font-size:.86rem}
 .ex-table th{background:var(--grey-bg);text-align:left;padding:7px 10px;color:var(--navy)}
 .ex-table td{padding:6px 10px;border-top:1px solid var(--line);vertical-align:top}
-.ex-table td.red{color:#c0392b}
+.ex-table td.red,.ex .red{color:#c0392b}
 .ex-read{padding:12px 14px;margin:0;background:#fbfcfe;font-size:.92rem;color:var(--ink);border-top:1px solid var(--line)}
+
+/* company selector + exec-summary + Q&A (real-run example) */
+.coseg{display:flex;gap:8px;margin:10px 0 8px}
+.cobtn{background:#fff;border:1px solid var(--line);color:var(--navy);font:inherit;font-size:.9rem;
+  font-weight:600;padding:7px 16px;border-radius:8px;cursor:pointer}
+.cobtn:hover{background:var(--grey-bg)}
+.cobtn.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.copanel[hidden]{display:none}
+.copanel .ex{margin:8px 0}
+.exsum .ex-title{background:var(--prop);}
+.ex-body{padding:12px 14px;font-size:.92rem;color:var(--ink)}
+.ex-body p{margin:0 0 9px}
+.ex-body p:last-child{margin-bottom:0}
+.ex3{background:var(--prop-bg);border-radius:6px;padding:8px 10px}
+.exwatch{color:var(--amber-d)}
+.qatag{font-weight:700;font-size:.82rem;letter-spacing:.03em;color:var(--navy);margin-top:4px}
+.qan{font-weight:400;color:var(--grey);letter-spacing:0}
+.qa{margin:6px 0 12px;padding-left:18px}
+.qa li{margin:7px 0;font-size:.9rem;line-height:1.45}
+.qa .an{color:var(--prop);font-weight:600}
 
 /* plain-english summary */
 .summary{background:linear-gradient(180deg,#fff, #fbfcfe)}

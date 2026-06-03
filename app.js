@@ -20,6 +20,16 @@ $('#startTour').onclick=()=>{ $('#hero').style.display='none'; show('explore'); 
 // Deep-link support: opening …/#prompt jumps straight to that tab (shareable).
 (function(){ const h=(location.hash||'').replace('#',''); if(SCREENS.includes(h)) show(h); })();
 
+/* ---------- Prompt tab: company selector (AVY / CAVA real-run example) ---------- */
+(function(){
+  const btns = $$('.cobtn'); if(!btns.length) return;
+  function pick(co){
+    $$('.cobtn').forEach(b=>b.classList.toggle('active', b.dataset.co===co));
+    $$('.copanel').forEach(p=>p.hidden = p.dataset.co!==co);
+  }
+  btns.forEach(b=>b.onclick=()=>pick(b.dataset.co));
+})();
+
 /* ---------- render helpers ---------- */
 function mdTable(t){
   const th = t.headers.map(h=>`<th>${esc(h)}</th>`).join('');

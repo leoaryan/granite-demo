@@ -192,23 +192,114 @@
     <!-- REAL EXAMPLE -->
     <section class="pblock">
       <h3>The quality it produces — a real run</h3>
-      <p class="pnote"><b>Avery Dennison, Q1 2026</b>, Task 1 (P&amp;L) — the target shape v3 codifies, built from the real document shelf (press release, transcript, slides, sell-side). Every number is recomputed from the financial schedule, not copied. The <code>vs Consensus</code> cell carries a <b>real Street bar</b> ($2.43 from the post-print sell-side note) — under the v3 rule, if no consensus is in the corpus the cell reads <code>pending</code>, never a guessed number.</p>
-      <div class="ex">
-        <div class="ex-title">P&amp;L Summary: Avery Dennison · Q1 2026 · Adjusted/non-GAAP</div>
-        <table class="mdtable ex-table">
-          <thead><tr><th>Metric</th><th>$MMs</th><th>PY$</th><th>y/y %</th><th>vs Consensus</th><th>Notes</th></tr></thead>
-          <tbody>
-            <tr><td><b>Revs</b></td><td>2,299</td><td>2,148</td><td>7.0%</td><td>beat — ex-FX +2.3%</td><td>Organic <b>+1.1%</b>; FX + price drove reported; Materials +11.4%, Solutions <span class="red">(2.8%)</span></td></tr>
-            <tr><td><b>GP$</b></td><td>665</td><td>622</td><td>7.0%</td><td>—</td><td>GM ~28.9% (flat); productivity offsetting higher employee costs</td></tr>
-            <tr><td><b>Adj EPS</b></td><td>2.47</td><td>2.30</td><td>7.4%</td><td><b>$2.47 vs $2.43 — beat</b></td><td>~5¢ from March tariff pre-buy; productivity + favorable price/cost</td></tr>
-            <tr><td><b>OP</b></td><td>290</td><td>275</td><td>5.5%</td><td>—</td><td>Adj op income; productivity + price/cost, offset by mix + employee costs</td></tr>
-            <tr><td><b>Adj EBITDA</b></td><td>377</td><td>352</td><td>6.8%</td><td>—</td><td>Margin 16.4% (flat)</td></tr>
-            <tr><td><b>Adj FCF</b></td><td>104.4</td><td class="red">(53.1)</td><td>n/m</td><td>strong swing</td><td>Big working-capital improvement vs PY outflow</td></tr>
-          </tbody>
-        </table>
-        <p class="ex-read"><b>Read:</b> a quality beat on a soft top line — +7.0% reported sales but only +1.1% organic; the delta is FX and price. EPS cleared the $2.43 bar on productivity + a one-time pre-buy, not demand; margins broadly flat. The cash-flow swing (+$104M vs −$53M PY) is the underappreciated positive.</p>
+      <p class="pnote">A real v3 run, built from the actual document shelf (press release, transcript, slides, sell-side). Every number is recomputed from the financial schedule, not copied; every <code>vs Consensus</code> cell carries a <b>real Street bar</b> from the post-print sell-side note (under the v3 rule, no consensus in the corpus → the cell reads <code>pending</code>, never a guess). Pick a company:</p>
+
+      <div class="coseg" role="tablist">
+        <button class="cobtn active" data-co="AVY" role="tab">Avery Dennison</button>
+        <button class="cobtn" data-co="CAVA" role="tab">CAVA</button>
       </div>
-      <p class="pnote">Notice what the v3 <i>contract</i> bought us. The old run vaguely said EPS "beat"; v3 forces the <b>verified bar — $2.47 vs $2.43</b>, source-tagged. The <b>Read</b> line is now mandatory on every task — it's the so-what, not a restatement. And the <b>Notes</b> column explains <i>why</i> each line moved (organic-vs-reported, the pre-buy timing benefit). Mandatory Read + verified consensus + a why-column is the difference between a data dump and an analyst's read.</p>
+
+      <!-- ============ AVERY DENNISON ============ -->
+      <div class="copanel" data-co="AVY">
+        <div class="ex exsum">
+          <div class="ex-title">Executive Summary — The View · Avery Dennison Q1 2026</div>
+          <div class="ex-body">
+            <p>A productivity-driven <b>quality beat</b> in a soft, deflationary quarter: adj EPS <b>$2.47</b> (+7.4%) above the <b>$2.43</b> Street bar, on net sales of $2,298.5M (+7.0% reported but only <b>+1.1% organic</b>). The growth is earnings quality, not volume — Materials productivity plus a ~5¢ March tariff pre-buy carried the print while organic demand stayed sluggish. Materials resilient (EBITDA margin +10bps to 17.8%) vs Solutions weak (−80bps). The debate is no longer "can they grow earnings?" but "what's the organic-demand floor once the pre-buy and FX tailwinds fade?"</p>
+            <p class="ex3"><b>The three that matter:</b> (1) +7.0% reported but <b>+1.1% organic</b> — the delta is FX + price; (2) EPS $2.47 vs $2.43 cons on productivity + a one-time pre-buy, not run-rate; (3) the FCF swing to <b>+$104.4M from −$53.1M</b> PY.</p>
+            <p class="exwatch"><b>Watch:</b> the ~5¢ pre-buy unwinds in 2Q; Intelligent Labels adoption pace; deflation price cuts vs raw-material inflation that flipped mid-March.</p>
+          </div>
+        </div>
+
+        <div class="ex">
+          <div class="ex-title">Task 1 · P&amp;L Summary: Avery Dennison · Q1 2026 · Adjusted/non-GAAP</div>
+          <table class="mdtable ex-table">
+            <thead><tr><th>Metric</th><th>$MMs</th><th>PY$</th><th>y/y %</th><th>vs Consensus</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr><td><b>Revs</b></td><td>2,299</td><td>2,148</td><td>7.0%</td><td>beat — ex-FX +2.3%</td><td>Organic <b>+1.1%</b>; FX + price drove reported; Materials +11.4%, Solutions <span class="red">(2.8%)</span></td></tr>
+              <tr><td><b>GP$</b></td><td>665</td><td>622</td><td>7.0%</td><td>—</td><td>GM ~28.9% (flat); productivity offsetting higher employee costs</td></tr>
+              <tr><td><b>Adj EPS</b></td><td>2.47</td><td>2.30</td><td>7.4%</td><td><b>$2.47 vs $2.43 — beat</b></td><td>~5¢ from March tariff pre-buy; productivity + favorable price/cost</td></tr>
+              <tr><td><b>OP</b></td><td>290</td><td>275</td><td>5.5%</td><td>—</td><td>Adj op income; productivity + price/cost, offset by mix + employee costs</td></tr>
+              <tr><td><b>Adj EBITDA</b></td><td>377</td><td>352</td><td>6.8%</td><td>—</td><td>Margin 16.4% (flat)</td></tr>
+              <tr><td><b>Adj FCF</b></td><td>104.4</td><td class="red">(53.1)</td><td>n/m</td><td>strong swing</td><td>Big working-capital improvement vs PY outflow</td></tr>
+            </tbody>
+          </table>
+          <p class="ex-read"><b>Read:</b> a quality beat on a soft top line — +7.0% reported sales but only +1.1% organic; the delta is FX and price. EPS cleared the $2.43 bar on productivity + a one-time pre-buy, not demand; margins broadly flat. The cash-flow swing (+$104M vs −$53M PY) is the underappreciated positive.</p>
+        </div>
+
+        <div class="ex">
+          <div class="ex-title">Task 5 · The Call — Management Discussion &amp; Q&amp;A</div>
+          <div class="ex-body">
+            <p class="qatag">Management discussion (prepared remarks)</p>
+            <ul class="qa">
+              <li>Organic +1%, adj EPS +7%; <i>"strength and resilience of our portfolio… in a dynamic environment"</i> — Materials strong, Solutions soft.</li>
+              <li>Raw-material inflation shifted mid-March (geopolitical); responding with price + material re-engineering: <i>"high confidence in our ability to protect our profits."</i></li>
+              <li>Wiliot +$75M investment deepens the Intelligent Labels / RFID platform; +75bn-unit condition-monitoring TAM.</li>
+              <li>2Q guide: organic 0–2%, adj EPS $2.43–2.53 (~3% midpoint); FY26 factors held.</li>
+            </ul>
+            <p class="qatag">Q&amp;A — analyst-raised themes <span class="qan">(each flagged with why it matters to a shareholder)</span></p>
+            <ul class="qa">
+              <li><b>Intelligent Labels vs expectations</b> <span class="an">(Panjabi)</span> — <i>matters: IL is the growth/multiple driver.</i> Mgmt: 1Q slightly lower (logistics volume + a customer chip transition); full-year growth still &gt; 2025, 2H-weighted on Walmart food + apparel. <b>Takeaway:</b> the miss is timing/logistics, not apparel demand — thesis intact but back-half loaded (execution risk).</li>
+              <li><b>Pricing vs cost cadence</b> <span class="an">(Staphos)</span> — <i>matters: is the inflation offset real?</i> Mgmt: high-single-digit sequential inflation in 2Q, price low-to-mid single; <i>"we don't anticipate any real gap."</i> <b>Takeaway:</b> AVY claims the historical ~1-quarter price lag is gone — the key margin-defense variable.</li>
+              <li><b>2Q flat vs 1Q / seasonality</b> <span class="an">(Zekauskas)</span> — <i>matters: why no seasonal step-up?</i> Mgmt: a $0.05 pre-buy → $0.10 Q1→Q2 swing offsets the usual seasonal benefit. <b>Takeaway:</b> the flat 2Q is a pre-buy artifact, not deterioration.</li>
+              <li><b>Buyback pace</b> <span class="an">(Cacanando)</span> — <i>matters: capital-return support.</i> Mgmt: return-based grid; bought more in March on the dip, capacity intact at 2.4x leverage.</li>
+            </ul>
+            <p class="ex-read"><b>Read:</b> the whole call is a "don't extrapolate the beat" message — the 1Q upside is pre-buy + FX timing; the real tells are the IL back-half ramp and management's claim that the price/cost lag has closed.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============ CAVA ============ -->
+      <div class="copanel" data-co="CAVA" hidden>
+        <div class="ex exsum">
+          <div class="ex-title">Executive Summary — The View · CAVA Q1 2026</div>
+          <div class="ex-body">
+            <p>A clean, <b>traffic-led beat</b> across every Street line into a soft, promotional QSR tape: revenue $438.3M (+32.1%) vs $419M cons, adj EBITDA $61.7M (+37.7%) vs $57.3M cons, EPS $0.20 vs $0.17 cons. The 9.7% comp was <b>traffic-led (6.8% of it)</b> and printed ~350bps above the Street's 6.2% — share gain through execution, not price. Management raised the FY26 comp guide (midpoint +150bps to 5.5%) yet barely touched RLM — a deliberately conservative posture. The print de-risks the growth algorithm; at ~58x EBITDA, <b>valuation is now the debate, not growth.</b></p>
+            <p class="ex3"><b>The three that matter:</b> (1) <b>9.7% comp, 6.8% traffic</b> vs 6.2% cons — quality (traffic, not price) is the tell; (2) <b>RLM flat at 25.1%</b> despite the comp — deliberate reinvestment, not a miss; (3) the <b>raise reads conservative</b> — 5.5% mid vs a ~10% run-rate, leaving re-raise optionality.</p>
+            <p class="exwatch"><b>Watch:</b> ~58x EBITDA prices the bull in; H2 salmon (~100bps) + energy (20–40bps) RLM headwinds; the guide implies an H2 deceleration not yet seen; salmon permanence unresolved.</p>
+          </div>
+        </div>
+
+        <div class="ex">
+          <div class="ex-title">Task 1 · P&amp;L Summary: CAVA · Q1 2026 · GAAP P&amp;L; Adj. EBITDA non-GAAP</div>
+          <table class="mdtable ex-table">
+            <thead><tr><th>Metric</th><th>$MMs</th><th>PY$</th><th>y/y %</th><th>vs Consensus</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr><td><b>Revs</b></td><td>438</td><td>332</td><td>32%</td><td><b>$438 vs $419 — +4.5% beat</b></td><td>Traffic +6.8%, price/mix +2.9%; 9.7% comp vs 6.2% cons; 20 net new units → 459</td></tr>
+              <tr><td><b>RLP</b></td><td>109</td><td>82.3</td><td>32%</td><td>in-line</td><td>Restaurant-Level Profit +32.3%; COGS beat ~60bps on mix</td></tr>
+              <tr><td><b>RLM %</b></td><td>25.1%</td><td>25.1%</td><td>0 bps</td><td>25.1% vs 25.0% — in-line, flat</td><td>Leverage offset by 3P-mix + 2% wage; JPM 80bps below JPMe</td></tr>
+              <tr><td><b>EPS</b></td><td>0.20</td><td>0.22</td><td><span class="red">(9%)</span></td><td><b>$0.20 vs $0.17 — beat</b></td><td>Beat despite y/y drop; tax optic (lower equity-comp benefit); PBT +48%</td></tr>
+              <tr><td><b>G&amp;A</b></td><td>51.6</td><td>41.4</td><td>25%</td><td>in-line (JPM)</td><td>11.8% of rev vs 12.5% <span class="red">(70) bps</span> leverage; ex-SBC 9.9% vs 10.5%</td></tr>
+              <tr><td><b>OP</b></td><td>25.3</td><td>15.7</td><td>61%</td><td>—</td><td>RLP growth + G&amp;A leverage; pre-opening 6.2 vs 4.5</td></tr>
+              <tr><td><b>Adj EBITDA</b></td><td>61.7</td><td>44.9</td><td>38%</td><td><b>$61.7 vs $57.3 — +8.7% beat</b></td><td>RBC: +49bps margin ahead; top-line upside flowed through</td></tr>
+              <tr><td><b>EM %</b></td><td>14.1%</td><td>13.5%</td><td>+57 bps</td><td>ahead</td><td>Flow-through on the comp beat</td></tr>
+            </tbody>
+          </table>
+          <p class="ex-read"><b>Read:</b> clean beat on every line vs Street; the only non-beat is RLM (in-line/flat) — deliberate (3P-mix + wage reinvestment), not a miss. EPS-down y/y is a tax-line optic (PBT +48%), not an earnings problem.</p>
+        </div>
+
+        <div class="ex">
+          <div class="ex-title">Task 5 · The Call — Management Discussion &amp; Q&amp;A</div>
+          <div class="ex-body">
+            <p class="qatag">Management discussion (prepared remarks)</p>
+            <ul class="qa">
+              <li>Revs +32% $438M; adj EBITDA +38% $61.7M; SSS 9.7% on 6.8% traffic — <i>"a clear industry leader… meet the moment for the modern consumer."</i></li>
+              <li>20 net new units → 459 (+20.2%); Midwest entries; honeymoon NOT fading — 2024 class still positive at 18 months.</li>
+              <li>Salmon national launch (first seafood; ~100bps RLM headwind, "penny-profit neutral"); shrimp in Nashville market test.</li>
+              <li>Zero debt, $403M cash; OCF $64.1M, FCF $15.5M (vs $2.7M PY).</li>
+            </ul>
+            <p class="qatag">Q&amp;A — analyst-raised themes <span class="qan">(each flagged with why it matters to a shareholder)</span></p>
+            <ul class="qa">
+              <li><b>Comp sustainability</b> <span class="an">(analyst)</span> — <i>matters: is 9.7% repeatable?</i> Mgmt: Q2-to-date tracking ~Q1 (~9.7%), above the guide; buffer built for tougher comps + macro. <b>Takeaway:</b> the conservative guide is a sandbag — the run-rate is well ahead of it.</li>
+              <li><b>Honeymoon fade</b> <span class="an">(BofA / Baird)</span> — <i>matters: the biggest structural bear on the unit model.</i> Mgmt: 2024 class outpacing expectations at 18 months; NRO productivity &gt;100%. <b>Takeaway:</b> the fade-bear is directly refuted — de-risks the growth algorithm, which matters to the multiple more than the print.</li>
+              <li><b>Margin mechanics / RLM flat</b> <span class="an">(Stifel)</span> — <i>matters: will margin ever inflect?</i> Mgmt: flat by choice — 3P-mix (profit-neutral) + 2% wage + H2 energy absorb the leverage; would not take price. <b>Takeaway:</b> flat RLM is reinvestment, not pressure — but the bear has migrated from growth to margin.</li>
+              <li><b>Pricing power</b> <span class="an">(Citi)</span> — <i>matters: demand risk from price.</i> Mgmt: chose NOT to price (only ~1.4% list); traffic outperformed — the AB1228 precedent. <b>Takeaway:</b> pricing power is held in reserve, a future lever, not a current crutch.</li>
+            </ul>
+            <p class="ex-read"><b>Read:</b> the call dismantled the honeymoon-fade bear and reframed the debate as margin + valuation — management is deliberately reinvesting the comp upside rather than banking it, and sandbagging the guide.</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="pnote">Notice what the v3 <i>contract</i> bought us across both. The old runs vaguely said "beat"; v3 forces the <b>verified bar</b> (AVY $2.47 vs $2.43; CAVA $61.7 vs $57.3), source-tagged. The <b>Read</b> line is mandatory on every task — the so-what, not a restatement. And the Q&amp;A isn't a transcript dump: every theme is flagged <i>analyst-raised</i>, given a one-line <i>why it matters to a shareholder</i>, and closed with a <i>takeaway</i> that reads between the lines. That structure is the difference between a data dump and an analyst's read.</p>
     </section>
 
     <!-- PLAIN-ENGLISH SUMMARY -->
