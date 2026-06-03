@@ -20,14 +20,42 @@ $('#startTour').onclick=()=>{ $('#hero').style.display='none'; show('explore'); 
 // Deep-link support: opening …/#prompt jumps straight to that tab (shareable).
 (function(){ const h=(location.hash||'').replace('#',''); if(SCREENS.includes(h)) show(h); })();
 
-/* ---------- Prompt tab: company selector (AVY / CAVA real-run example) ---------- */
+/* ---------- Prompt tab: full-report renderer + company selector ---------- */
 (function(){
-  const btns = $$('.cobtn'); if(!btns.length) return;
-  function pick(co){
-    $$('.cobtn').forEach(b=>b.classList.toggle('active', b.dataset.co===co));
-    $$('.copanel').forEach(p=>p.hidden = p.dataset.co!==co);
+  const host = $('#report'); const btns = $$('.cobtn');
+  if(!host || !btns.length || !window.REPORTS) return;
+
+  function tableHTML(s){
+    const th = s.head.map(h=>`<th>${h}</th>`).join('');
+    const rows = s.rows.map(r=>'<tr>'+r.map(c=>`<td>${c}</td>`).join('')+'</tr>').join('');
+    return `<table class="mdtable ex-table"><thead><tr>${th}</tr></thead><tbody>${rows}</tbody></table>`
+      + (s.read?`<p class="ex-read"><b>Read:</b> ${s.read}</p>`:'');
   }
-  btns.forEach(b=>b.onclick=()=>pick(b.dataset.co));
+  function qaHTML(s){
+    const prep = s.prepared.map(p=>`<li>${p}</li>`).join('');
+    const qa = s.qa.map(([topic,an,why,resp,take])=>
+      `<li><b>${topic}</b> <span class="an">(${an})</span> — <i>matters: ${why}.</i> Mgmt: ${resp} <b>Takeaway:</b> ${take}</li>`).join('');
+    return `<div class="ex-body"><p class="qatag">Management discussion (prepared remarks)</p>`
+      + `<ul class="qa">${prep}</ul>`
+      + `<p class="qatag">Q&A — analyst-raised themes <span class="qan">(each flagged with why it matters to a shareholder)</span></p>`
+      + `<ul class="qa">${qa}</ul>`
+      + (s.read?`<p class="ex-read"><b>Read:</b> ${s.read}</p>`:'') + `</div>`;
+  }
+  function sectionHTML(s){
+    let inner;
+    if(s.kind==='table') inner = tableHTML(s);
+    else if(s.kind==='qa') inner = qaHTML(s);
+    else inner = `<div class="ex-body">${s.body}</div>`;
+    return `<div class="ex"><div class="ex-title">${s.t}</div>${inner}</div>`;
+  }
+  function render(co){
+    const r = window.REPORTS[co]; if(!r) return;
+    host.innerHTML = `<p class="repnote"><b>${r.name} · ${r.period}.</b> ${r.note}</p>`
+      + r.sections.map(sectionHTML).join('');
+    $$('.cobtn').forEach(b=>b.classList.toggle('active', b.dataset.co===co));
+  }
+  btns.forEach(b=>b.onclick=()=>render(b.dataset.co));
+  render('AVY');
 })();
 
 /* ---------- render helpers ---------- */

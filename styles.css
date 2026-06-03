@@ -235,6 +235,11 @@ code{background:var(--grey-bg);padding:1px 5px;border-radius:4px;font-size:.88em
 .qa{margin:6px 0 12px;padding-left:18px}
 .qa li{margin:7px 0;font-size:.9rem;line-height:1.45}
 .qa .an{color:var(--prop);font-weight:600}
+.draftbanner{background:#FEF3E0;border:1px solid #f0d9b0;color:#7A4A00;
+  border-radius:8px;padding:11px 14px;font-size:.9rem;line-height:1.5;margin:6px 0 12px}
+.draftbanner b{color:#9a3b00}
+.repnote{font-size:.86rem;color:var(--grey);margin:4px 0 12px;line-height:1.5}
+#report .ex{margin:8px 0}
 
 /* plain-english summary */
 .summary{background:linear-gradient(180deg,#fff, #fbfcfe)}
