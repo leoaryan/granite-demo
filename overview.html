@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Granite Terminal — Coverage Overview</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,900&family=Spline+Sans+Mono:wght@400;500;600;700&family=Spline+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0d1117; --bg-2:#11161f; --panel:#151b26; --panel-2:#1a212e; --panel-3:#202938;
+  --line:#232c3b; --line-2:#2e3a4d;
+  --ink:#e8edf4; --ink-2:#aab6c6; --ink-3:#6b7686; --ink-4:#4a5462;
+  --amber:#e8a33d; --amber-2:#f5c06b; --amber-dim:#3a2f1c;
+  --up:#3fb968; --up-bg:rgba(63,185,104,.12);
+  --down:#e2574e; --down-bg:rgba(226,87,78,.12);
+  --flat:#6b7686;
+  --serif:'Fraunces',Georgia,serif;
+  --sans:'Spline Sans',-apple-system,sans-serif;
+  --mono:'Spline Sans Mono',ui-monospace,monospace;
+  /* density (driven by body.compact) */
+  --row-py:7px; --num-fs:.82rem;
+  --head-h:52px; --strip-h:88px;
+}
+body.compact{--row-py:3px; --num-fs:.78rem}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:14px;line-height:1.45;
+  -webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(1000px 460px at 92% -10%,rgba(232,163,61,.06),transparent 60%);
+  background-attachment:fixed;min-height:100vh}
+::selection{background:var(--amber);color:#1a130a}
+
+/* ============ header (tier 0) ============ */
+.term-head{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);
+  background:linear-gradient(180deg,rgba(13,17,23,.95),rgba(13,17,23,.82));
+  border-bottom:1px solid var(--line);height:var(--head-h);display:flex;align-items:center}
+.head-inner{max-width:1440px;width:100%;margin:0 auto;padding:0 24px;
+  display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:baseline;gap:11px;min-width:0}
+.brand .mark{font-family:var(--serif);font-weight:900;font-size:1.22rem;letter-spacing:-.01em;white-space:nowrap}
+.brand .mark em{font-style:italic;color:var(--amber)}
+.brand .tag{font-family:var(--mono);font-size:.64rem;letter-spacing:.06em;color:var(--ink-3);
+  border-left:1px solid var(--line-2);padding-left:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.brand .tag b{color:var(--ink-2);font-weight:500}
+.head-right{display:flex;align-items:center;gap:16px;flex:none}
+.livedot{display:flex;align-items:center;gap:6px;font-family:var(--mono);font-size:.64rem;
+  letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3)}
+.livedot .d{width:6px;height:6px;border-radius:50%;background:var(--up);animation:pulse 2.4s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(63,185,104,.5)}70%{box-shadow:0 0 0 6px rgba(63,185,104,0)}100%{box-shadow:0 0 0 0 rgba(63,185,104,0)}}
+.head-link{color:var(--ink-2);text-decoration:none;font-size:.78rem;font-weight:500;transition:color .15s;white-space:nowrap}
+.head-link:hover{color:var(--amber-2)}
+
+/* ============ command strip (tier 1: KPIs · tier 2: filters) ============ */
+.cmd{position:sticky;top:var(--head-h);z-index:40;backdrop-filter:blur(14px);
+  background:linear-gradient(180deg,rgba(17,22,31,.96),rgba(13,17,23,.9));border-bottom:1px solid var(--line)}
+.cmd-inner{max-width:1440px;margin:0 auto;padding:0 24px}
+/* tier 1 — KPI strip */
+.kpis{display:flex;align-items:center;gap:6px 22px;flex-wrap:wrap;height:42px;
+  font-family:var(--mono);font-size:.72rem;border-bottom:1px solid var(--line)}
+.kpi{display:inline-flex;align-items:center;gap:7px;color:var(--ink-3);letter-spacing:.03em;
+  cursor:pointer;border:0;background:transparent;font:inherit;padding:3px 0;transition:color .15s;white-space:nowrap}
+.kpi:hover{color:var(--amber-2)}
+.kpi .lbl{text-transform:uppercase;font-size:.62rem;letter-spacing:.1em}
+.kpi .val{color:var(--ink);font-weight:600;font-variant-numeric:tabular-nums}
+.kpi .val.up{color:var(--up)} .kpi .val.down{color:var(--down)}
+.kpi.static{cursor:default} .kpi.static:hover{color:var(--ink-3)}
+.kpi .count{color:var(--amber-2)}
+/* tier 2 — filters, one row, no stacked labels */
+.bar{display:flex;align-items:center;gap:9px;height:46px;flex-wrap:wrap}
+.bar select,.bar input{font-family:var(--sans);font-size:.8rem;color:var(--ink);
+  background:var(--bg-2);border:1px solid var(--line-2);border-radius:7px;padding:6px 10px;transition:.15s}
+.bar select{min-width:118px;cursor:pointer}
+.bar input{flex:1;min-width:150px}
+.bar select:focus,.bar input:focus{outline:none;border-color:var(--amber);box-shadow:0 0 0 3px rgba(232,163,61,.14)}
+.bar input::placeholder{color:var(--ink-4)}
+.seg{display:inline-flex;border:1px solid var(--line-2);border-radius:7px;overflow:hidden}
+.seg button{font-family:var(--mono);font-size:.68rem;letter-spacing:.04em;color:var(--ink-3);
+  background:transparent;border:0;padding:6px 10px;cursor:pointer;transition:.12s}
+.seg button.on{background:var(--amber);color:#1a130a;font-weight:600}
+.seg button:not(.on):hover{color:var(--ink);background:var(--panel-3)}
+.iconbtn{font-family:var(--mono);font-size:.7rem;color:var(--ink-2);background:transparent;
+  border:1px solid var(--line-2);border-radius:7px;padding:6px 11px;cursor:pointer;transition:.15s;white-space:nowrap}
+.iconbtn:hover{border-color:var(--amber);color:var(--amber-2)}
+
+/* ============ table ============ */
+.wrap{max-width:1440px;margin:0 auto;padding:0 24px 56px}
+table.term{width:100%;border-collapse:separate;border-spacing:0;margin-top:0}
+table.term thead th{position:sticky;top:calc(var(--head-h) + var(--strip-h));z-index:20;
+  background:var(--panel-2);font-family:var(--mono);font-size:.6rem;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ink-3);text-align:left;padding:9px 12px;border-bottom:1px solid var(--line-2);cursor:pointer;
+  user-select:none;white-space:nowrap;transition:color .15s}
+table.term thead th:hover{color:var(--amber-2)}
+table.term thead th.num{text-align:right}
+table.term thead th.sorted{color:var(--amber);box-shadow:inset 0 -2px 0 var(--amber)}
+table.term thead th .ar{margin-left:3px;font-size:.9em}
+table.term tbody td{padding:var(--row-py) 12px;border-bottom:1px solid var(--line);font-size:.86rem;vertical-align:middle}
+tbody tr.row{transition:background .1s}
+tbody tr.row:hover{background:var(--panel-2)}
+tbody tr.row.sel{background:var(--panel-3);box-shadow:inset 2px 0 0 var(--amber)}
+tbody tr.row.open{background:var(--panel-2)}
+.chev{display:inline-block;width:12px;color:var(--ink-4);font-size:.7rem;transition:transform .15s;transform:rotate(0)}
+tr.row.open .chev{transform:rotate(90deg);color:var(--amber)}
+.num{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums;font-size:var(--num-fs)}
+.tkcell{white-space:nowrap;max-width:280px;overflow:hidden;text-overflow:ellipsis}
+.tk{font-family:var(--mono);font-weight:700;font-size:.88rem;color:var(--ink);letter-spacing:.02em}
+.tk .gem{color:var(--amber);font-size:.7em;margin-left:5px}
+.co{color:var(--ink-3);font-size:.78rem;margin-left:7px}
+.sec{display:inline-flex;align-items:center;gap:7px;color:var(--ink-2);font-size:.78rem;white-space:nowrap}
+.sec .dot{width:6px;height:6px;border-radius:50%;flex:none}
+.date{font-family:var(--mono);color:var(--ink-2);font-size:.78rem;white-space:nowrap}
+.date .none{color:var(--ink-4)}
+.delta{font-family:var(--mono);font-weight:600;display:inline-flex;align-items:center;gap:4px;
+  justify-content:flex-end;font-variant-numeric:tabular-nums}
+.delta.up{color:var(--up)} .delta.down{color:var(--down)} .delta.flat{color:var(--flat)}
+.delta .tri{font-size:.66em}
+.pill{font-family:var(--mono);font-weight:600;font-variant-numeric:tabular-nums}
+.pill.up{color:var(--up)} .pill.down{color:var(--down)} .pill.na{color:var(--ink-4);font-weight:400}
+.mcap{font-family:var(--mono);color:var(--ink-2)}
+.ret{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.ret.up{color:var(--up)} .ret.down{color:var(--down)} .ret.flat{color:var(--flat)}
+
+/* group section header rows */
+tr.ghead td{background:var(--bg-2);border-bottom:1px solid var(--line-2);border-top:1px solid var(--line-2);
+  padding:8px 12px;font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;color:var(--ink-2);cursor:pointer}
+tr.ghead .gname{color:var(--amber-2);font-weight:600;text-transform:uppercase;letter-spacing:.08em}
+tr.ghead .gmeta{color:var(--ink-3);margin-left:12px}
+tr.ghead .gavg{font-weight:600}
+
+/* expanded detail */
+tr.detail td{padding:0;border-bottom:1px solid var(--line-2);background:#0f141d}
+.detail-inner{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:22px;padding:16px 20px 18px 30px;
+  animation:slidein .2s ease}
+@keyframes slidein{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+.dblock h4{font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-3);font-weight:600;margin-bottom:9px}
+.drow{display:flex;justify-content:space-between;gap:14px;font-family:var(--mono);font-size:.78rem;
+  padding:3px 0;color:var(--ink-2)}
+.drow b{color:var(--ink);font-weight:600}
+.drow .up{color:var(--up)} .drow .down{color:var(--down)}
+/* 52w range bar */
+.rangebar{margin-top:4px}
+.rangebar .track{position:relative;height:7px;border-radius:4px;
+  background:linear-gradient(90deg,var(--down-bg),var(--panel-3),var(--up-bg));border:1px solid var(--line-2)}
+.rangebar .mark{position:absolute;top:-3px;width:3px;height:13px;border-radius:2px;background:var(--amber);
+  box-shadow:0 0 6px rgba(232,163,61,.6)}
+.rangebar .ends{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.64rem;
+  color:var(--ink-3);margin-top:5px}
+.retrow{display:flex;gap:18px;margin-top:2px}
+.retrow .r{font-family:var(--mono);font-size:.78rem}
+.retrow .r .k{display:block;font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.retrow .r .v{font-weight:600;font-variant-numeric:tabular-nums}
+.retrow .r .v.up{color:var(--up)} .retrow .r .v.down{color:var(--down)} .retrow .r .v.flat{color:var(--ink-2)}
+.viewbtn{font-family:var(--mono);font-size:.7rem;letter-spacing:.04em;color:var(--amber-2);text-decoration:none;
+  border:1px solid var(--amber-dim);border-radius:6px;padding:6px 12px;display:inline-flex;align-items:center;gap:5px;
+  transition:.15s;margin-top:8px}
+.viewbtn:hover{background:var(--amber);color:#1a130a;border-color:var(--amber)}
+.nonote{font-family:var(--mono);font-size:.7rem;color:var(--ink-4);margin-top:8px;display:inline-block}
+.srctag{font-family:var(--mono);font-size:.58rem;color:var(--ink-4);border:1px solid var(--line-2);
+  border-radius:4px;padding:1px 5px;margin-left:6px;text-transform:uppercase;letter-spacing:.06em}
+
+.countline{font-family:var(--mono);font-size:.66rem;color:var(--ink-3);letter-spacing:.04em;padding:9px 2px 0}
+.countline b{color:var(--amber-2)}
+.empty{padding:34px;text-align:center;font-family:var(--mono);color:var(--ink-3)}
+.kbd{font-family:var(--mono);font-size:.6rem;color:var(--ink-4);border:1px solid var(--line-2);
+  border-radius:4px;padding:1px 5px}
+
+@media(max-width:1180px){ th.hide,td.hide{display:none} .detail-inner{grid-template-columns:1fr 1fr} }
+@media(max-width:760px){ th.hide2,td.hide2{display:none} .co{display:none} .detail-inner{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+
+<header class="term-head">
+  <div class="head-inner">
+    <div class="brand">
+      <span class="mark">Granite<em>·</em>Terminal</span>
+      <span class="tag" id="headTag">Coverage Overview</span>
+    </div>
+    <div class="head-right">
+      <span class="livedot"><span class="d"></span> Live · Finnhub + EDGAR</span>
+      <a class="head-link" href="index.html">← Build demo</a>
+    </div>
+  </div>
+</header>
+
+<div class="cmd">
+  <div class="cmd-inner">
+    <!-- tier 1: clickable KPI strip -->
+    <div class="kpis" id="kpis"></div>
+    <!-- tier 2: filters in one row -->
+    <div class="bar">
+      <select id="fGroup"><option value="">All groups</option></select>
+      <select id="fSector"><option value="">All sectors</option></select>
+      <select id="fReact">
+        <option value="">Day: any</option><option value="up">▲ Up</option>
+        <option value="down">▼ Down</option><option value="big">|move| ≥ 3%</option>
+      </select>
+      <select id="fSurp">
+        <option value="">Earnings: any</option><option value="beat">EPS beat</option>
+        <option value="miss">EPS miss</option><option value="reported">Reported</option>
+      </select>
+      <select id="fCap">
+        <option value="">Any size</option><option value="mega">Mega ≥ $200B</option>
+        <option value="large">$10–200B</option><option value="mid">&lt; $10B</option>
+      </select>
+      <input id="fTicker" type="text" placeholder="/ search ticker or name…" autocomplete="off">
+      <div class="seg" id="groupToggle" title="Group by peer set">
+        <button data-v="flat" class="on">Flat</button><button data-v="grouped">Grouped</button>
+      </div>
+      <div class="seg" id="densToggle" title="Row density">
+        <button data-v="comfortable" class="on">◇</button><button data-v="compact">≣</button>
+      </div>
+      <button class="iconbtn" id="reset">Reset ⨯</button>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="countline" id="count"></div>
+  <table class="term">
+    <thead>
+      <tr id="headrow">
+        <th data-k="earnings_date">Earnings <span class="ar"></span></th>
+        <th data-k="sector" class="hide2">Sector <span class="ar"></span></th>
+        <th data-k="ticker">Ticker <span class="ar"></span></th>
+        <th data-k="day_pct" class="num">Day <span class="ar"></span></th>
+        <th data-k="eps_surprise_pct" class="num">EPS Surp <span class="ar"></span></th>
+        <th data-k="rev_surprise_pct" class="num hide">Rev Surp <span class="ar"></span></th>
+        <th data-k="ret_3m" class="num hide">3M Ret <span class="ar"></span></th>
+        <th data-k="market_cap_m" class="num hide2">Mkt Cap <span class="ar"></span></th>
+      </tr>
+    </thead>
+    <tbody id="rows"></tbody>
+  </table>
+</div>
+
+<script>
+let DATA=null, sortK="day_pct", sortDir=-1, grouped=false, openTk=null, selIdx=-1, flatList=[];
+const $=s=>document.querySelector(s);
+const NCOL=8;
+const SECTOR_COLOR={Technology:"#5b9cff",Financials:"#3fb968","Consumer Discretionary":"#e8a33d",
+  "Consumer Staples":"#c98bdb","Real Estate":"#4fd1c5",Materials:"#e2574e",Industrials:"#94a3b8","Health Care":"#f06595"};
+
+/* ---- data helpers ---- */
+function validSurprise(r){
+  if(r.eps_surprise_pct==null) return null;
+  if(r.eps_est!=null && Math.abs(r.eps_est)<0.05) return null;
+  if(r.eps_actual!=null && r.eps_est!=null && (r.eps_actual<0)!==(r.eps_est<0)) return null;
+  if(Math.abs(r.eps_surprise_pct)>=100) return null;
+  return r.eps_surprise_pct;
+}
+function mcap(m){ if(m==null) return "—";
+  if(m>=1e6) return "$"+(m/1e6).toFixed(2)+"T";
+  if(m>=1e3) return "$"+(m/1e3).toFixed(1)+"B";
+  return "$"+m.toFixed(0)+"M"; }
+function fmtMoney(v){ if(v==null) return "—";
+  if(Math.abs(v)>=1e9) return "$"+(v/1e9).toFixed(2)+"B";
+  if(Math.abs(v)>=1e6) return "$"+(v/1e6).toFixed(1)+"M";
+  return "$"+v.toLocaleString(); }
+function heat(v,cap){ if(v==null) return "";
+  const a=Math.min(Math.abs(v)/cap,1)*0.18;
+  return v>0.05?`background:rgba(63,185,104,${a.toFixed(3)})`:v<-0.05?`background:rgba(226,87,78,${a.toFixed(3)})`:""; }
+
+/* ---- cell renderers ---- */
+function deltaCell(v){ if(v==null) return '<span class="delta flat">—</span>';
+  const c=v>0.05?"up":v<-0.05?"down":"flat", t=v>0.05?"▲":v<-0.05?"▼":"▬";
+  return `<span class="delta ${c}"><span class="tri">${t}</span>${v>0?"+":""}${v.toFixed(2)}%</span>`; }
+function pill(v){ if(v==null) return '<span class="pill na">—</span>';
+  return `<span class="pill ${v>0?"up":"down"}">${v>0?"+":""}${v.toFixed(1)}%</span>`; }
+function retCell(v){ if(v==null) return '<span class="ret flat">—</span>';
+  const c=v>0.05?"up":v<-0.05?"down":"flat";
+  return `<span class="ret ${c}">${v>0?"+":""}${v.toFixed(1)}%</span>`; }
+
+/* ---- filtering & sorting ---- */
+function filtered(){
+  const g=$("#fGroup").value, sec=$("#fSector").value, react=$("#fReact").value,
+        surp=$("#fSurp").value, cap=$("#fCap").value, q=$("#fTicker").value.trim().toUpperCase();
+  return DATA.rows.filter(r=>{
+    if(g && r.group!==g) return false;
+    if(sec && r.sector!==sec) return false;
+    if(q && !(r.ticker.includes(q)||(r.name||"").toUpperCase().includes(q))) return false;
+    const dp=r.day_pct;
+    if(react==="up"&&!(dp>0.05))return false;
+    if(react==="down"&&!(dp<-0.05))return false;
+    if(react==="big"&&!(dp!=null&&Math.abs(dp)>=3))return false;
+    const s=validSurprise(r);
+    if(surp==="beat"&&!(s!=null&&s>0))return false;
+    if(surp==="miss"&&!(s!=null&&s<0))return false;
+    if(surp==="reported"&&!r.earnings_date)return false;
+    const mc=r.market_cap_m;
+    if(cap==="mega"&&!(mc>=200000))return false;
+    if(cap==="large"&&!(mc>=10000&&mc<200000))return false;
+    if(cap==="mid"&&!(mc<10000))return false;
+    return true;
+  });
+}
+function val(r,k){ return k==="eps_surprise_pct" ? validSurprise(r) : r[k]; }
+function cmp(a,b){ let x=val(a,sortK),y=val(b,sortK);
+  if(x==null)return 1; if(y==null)return -1;
+  if(typeof x==="string")return sortDir*x.localeCompare(y);
+  return sortDir*(x-y); }
+
+/* ---- row HTML ---- */
+function rowHTML(r){
+  const col=SECTOR_COLOR[r.sector]||"#6b7686";
+  const gem=r.summary_link?`<span class="gem" title="Granite analysis available">◆</span>`:"";
+  return `<tr class="row${openTk===r.ticker?' open':''}" data-tk="${r.ticker}">
+    <td><span class="chev">▶</span> <span class="date">${r.earnings_date||'<span class="none">—</span>'}</span></td>
+    <td class="hide2"><span class="sec"><span class="dot" style="background:${col}"></span>${r.sector}</span></td>
+    <td class="tkcell"><span class="tk">${r.ticker}${gem}</span><span class="co">${r.name||""}</span></td>
+    <td class="num" style="${heat(r.day_pct,8)}">${deltaCell(r.day_pct)}</td>
+    <td class="num" style="${heat(validSurprise(r),15)}">${pill(validSurprise(r))}</td>
+    <td class="num hide" style="${heat(r.rev_surprise_pct,12)}">${pill(r.rev_surprise_pct)}</td>
+    <td class="num hide" style="${heat(r.ret_3m,40)}">${retCell(r.ret_3m)}</td>
+    <td class="num hide2"><span class="mcap">${mcap(r.market_cap_m)}</span></td>
+  </tr>${openTk===r.ticker?detailHTML(r):""}`;
+}
+function detailHTML(r){
+  // 52w range anchor from price + ret_52w
+  let bar="";
+  if(r.price!=null && r.ret_52w!=null){
+    const ago=r.price/(1+r.ret_52w/100);
+    const lo=Math.min(r.price,ago), hi=Math.max(r.price,ago);
+    const pos=hi>lo?((r.price-lo)/(hi-lo)*100):50;
+    bar=`<div class="rangebar" title="52-week-return anchored range (not intraday hi/lo)">
+      <div class="track"><span class="mark" style="left:${pos.toFixed(0)}%"></span></div>
+      <div class="ends"><span>$${lo.toFixed(2)}</span><span>now $${r.price.toFixed(2)}</span><span>$${hi.toFixed(2)}</span></div></div>`;
+  }
+  const sv=validSurprise(r);
+  const cta=r.summary_link
+    ? `<a class="viewbtn" href="${r.summary_link}" target="_blank">View Granite analysis →</a>`
+    : `<span class="nonote">No Granite note yet</span>`;
+  return `<tr class="detail" data-detail="${r.ticker}"><td colspan="${NCOL}"><div class="detail-inner">
+    <div class="dblock">
+      <h4>Earnings ${r.earnings_src?`<span class="srctag">${r.earnings_src}</span>`:""}</h4>
+      <div class="drow"><span>Reported</span><b>${r.earnings_date||"—"}</b></div>
+      <div class="drow"><span>EPS actual / est</span><b>${r.eps_actual??"—"} ${r.eps_est!=null?`<span style="color:var(--ink-3)">/ ${r.eps_est}</span>`:""}</b></div>
+      <div class="drow"><span>EPS surprise</span><b class="${sv>0?'up':sv<0?'down':''}">${sv!=null?(sv>0?"+":"")+sv.toFixed(1)+"%":"—"}</b></div>
+      <div class="drow"><span>Revenue actual / est</span><b>${fmtMoney(r.rev_actual)}</b></div>
+      <div class="drow"><span>Rev surprise</span><b class="${r.rev_surprise_pct>0?'up':r.rev_surprise_pct<0?'down':''}">${r.rev_surprise_pct!=null?(r.rev_surprise_pct>0?"+":"")+r.rev_surprise_pct.toFixed(1)+"%":"—"}</b></div>
+    </div>
+    <div class="dblock">
+      <h4>Price · 52-week range</h4>
+      <div class="drow"><span>Last</span><b>${r.price!=null?"$"+r.price.toFixed(2):"—"}</b></div>
+      ${bar}
+      <div class="retrow">
+        <div class="r"><span class="k">Day</span><span class="v ${r.day_pct>0?'up':r.day_pct<0?'down':'flat'}">${r.day_pct!=null?(r.day_pct>0?"+":"")+r.day_pct.toFixed(2)+"%":"—"}</span></div>
+        <div class="r"><span class="k">3-Month</span><span class="v ${r.ret_3m>0?'up':r.ret_3m<0?'down':'flat'}">${r.ret_3m!=null?(r.ret_3m>0?"+":"")+r.ret_3m.toFixed(1)+"%":"—"}</span></div>
+        <div class="r"><span class="k">52-Week</span><span class="v ${r.ret_52w>0?'up':r.ret_52w<0?'down':'flat'}">${r.ret_52w!=null?(r.ret_52w>0?"+":"")+r.ret_52w.toFixed(1)+"%":"—"}</span></div>
+      </div>
+    </div>
+    <div class="dblock">
+      <h4>Classification</h4>
+      <div class="drow"><span>Sector</span><b>${r.sector||"—"}</b></div>
+      <div class="drow"><span>Industry</span><b>${r.industry||"—"}</b></div>
+      <div class="drow"><span>Peer group</span><b>${r.group||"—"}</b></div>
+      <div class="drow"><span>Market cap</span><b>${mcap(r.market_cap_m)}</b></div>
+      ${cta}
+    </div>
+  </div></td></tr>`;
+}
+function gheadHTML(name,members){
+  const days=members.map(r=>r.day_pct).filter(v=>v!=null);
+  const avg=days.length?days.reduce((a,b)=>a+b,0)/days.length:null;
+  const cls=avg>0.05?"up":avg<-0.05?"down":"flat";
+  return `<tr class="ghead" data-g="${name}"><td colspan="${NCOL}">
+    <span class="gname">${name}</span>
+    <span class="gmeta">${members.length} names · avg day <span class="gavg ${cls==='up'?'':''}" style="color:${avg>0.05?'var(--up)':avg<-0.05?'var(--down)':'var(--ink-2)'}">${avg!=null?(avg>0?"+":"")+avg.toFixed(2)+"%":"—"}</span></span>
+  </td></tr>`;
+}
+
+/* ---- render ---- */
+function render(){
+  const rows=filtered();
+  let html="", fl=[];
+  if(grouped){
+    const groups={};
+    rows.forEach(r=>{(groups[r.group]=groups[r.group]||[]).push(r);});
+    Object.keys(groups).sort().forEach(g=>{
+      const mem=groups[g].slice().sort(cmp);
+      html+=gheadHTML(g,mem);
+      mem.forEach(r=>{html+=rowHTML(r);fl.push(r);});
+    });
+  } else {
+    const srt=rows.slice().sort(cmp);
+    srt.forEach(r=>{html+=rowHTML(r);fl.push(r);});
+  }
+  $("#rows").innerHTML = html || `<tr><td colspan="${NCOL}" class="empty">No companies match these filters — <a href="#" id="emptyReset" style="color:var(--amber-2)">Reset</a></td></tr>`;
+  flatList=fl;
+  $("#count").innerHTML=`<b>${rows.length}</b> of ${DATA.rows.length} companies${grouped?" · grouped by peer set":""} &nbsp;·&nbsp; <span class="kbd">/</span> search &nbsp; <span class="kbd">j</span>/<span class="kbd">k</span> move &nbsp; <span class="kbd">↵</span> expand`;
+  const er=$("#emptyReset"); if(er) er.onclick=e=>{e.preventDefault();doReset();};
+  wireRows();
+  if(selIdx>=flatList.length) selIdx=-1;
+}
+function wireRows(){
+  document.querySelectorAll("tr.row").forEach(tr=>{
+    tr.addEventListener("click",()=>toggleRow(tr.dataset.tk));
+  });
+  document.querySelectorAll("tr.ghead").forEach(tr=>{
+    tr.addEventListener("click",()=>{ const sel=$("#fGroup"); sel.value=tr.dataset.g;
+      setGrouped(false); sel.dispatchEvent(new Event("change")); });
+  });
+}
+function toggleRow(tk){ openTk = openTk===tk ? null : tk; render(); }
+
+/* ---- KPI strip ---- */
+function kpis(){
+  const rs=DATA.rows, rep=rs.filter(r=>r.earnings_date);
+  const beats=rep.filter(r=>{const s=validSurprise(r);return s!=null&&s>0;}).length;
+  const repSurp=rep.filter(r=>validSurprise(r)!=null).length;
+  const up=rs.filter(r=>r.day_pct>0.05).length;
+  const big=rs.reduce((m,r)=>Math.abs(r.day_pct||0)>Math.abs(m.day_pct||0)?r:m,rs[0]);
+  $("#kpis").innerHTML=`
+    <button class="kpi static"><span class="lbl">Universe</span><span class="val">${rs.length}</span></button>
+    <button class="kpi" data-act="adv"><span class="lbl">Advancing</span><span class="val up">${up}</span><span style="color:var(--ink-4)">/ ${rs.length}</span></button>
+    <button class="kpi" data-act="beats"><span class="lbl">EPS beats</span><span class="val">${beats}</span><span style="color:var(--ink-4)">/ ${repSurp}</span></button>
+    <button class="kpi" data-act="big"><span class="lbl">Biggest move</span><span class="val ${big.day_pct>0?'up':'down'}">${big.day_pct>0?"+":""}${big.day_pct.toFixed(1)}%</span><span class="count">${big.ticker}</span></button>`;
+  $("#kpis").querySelectorAll(".kpi[data-act]").forEach(b=>b.addEventListener("click",()=>{
+    const a=b.dataset.act;
+    if(a==="adv"){ $("#fReact").value="up"; }
+    if(a==="beats"){ $("#fSurp").value="beat"; }
+    if(a==="big"){ $("#fTicker").value=big.ticker; }
+    render();
+  }));
+}
+
+/* ---- toggles & reset ---- */
+function setGrouped(on){ grouped=on;
+  $("#groupToggle").querySelectorAll("button").forEach(b=>b.classList.toggle("on",(b.dataset.v==="grouped")===on)); }
+function doReset(){
+  ["fGroup","fSector","fReact","fSurp","fCap"].forEach(id=>$("#"+id).value="");
+  $("#fTicker").value=""; openTk=null; selIdx=-1; render();
+}
+
+/* ---- sorting ---- */
+function applySortHeader(th){
+  document.querySelectorAll("th[data-k]").forEach(x=>{x.classList.toggle("sorted",x===th);
+    const a=x.querySelector(".ar"); if(a) a.textContent = x===th ? (sortDir>0?"↑":"↓") : "";});
+}
+function setSort(k,th){
+  if(sortK===k) sortDir*=-1; else { sortK=k; sortDir=(["ticker","sector","earnings_date"].includes(k))?1:-1; }
+  applySortHeader(th); render();
+}
+
+/* ---- keyboard ---- */
+function moveSel(d){
+  if(!flatList.length) return;
+  selIdx=Math.max(0,Math.min(flatList.length-1,selIdx<0?0:selIdx+d));
+  document.querySelectorAll("tr.row").forEach((tr,i)=>tr.classList.toggle("sel",flatList[i]&&flatList[selIdx]&&tr.dataset.tk===flatList[selIdx].ticker));
+  const cur=[...document.querySelectorAll("tr.row")].find(tr=>tr.dataset.tk===flatList[selIdx].ticker);
+  if(cur) cur.scrollIntoView({block:"nearest"});
+}
+document.addEventListener("keydown",e=>{
+  const t=e.target.tagName;
+  if(t==="INPUT"){ if(e.key==="Escape"){e.target.blur();} return; }
+  if(e.key==="/"){ e.preventDefault(); $("#fTicker").focus(); }
+  else if(e.key==="j"||e.key==="ArrowDown"){ e.preventDefault(); moveSel(1); }
+  else if(e.key==="k"||e.key==="ArrowUp"){ e.preventDefault(); moveSel(-1); }
+  else if(e.key==="Enter"||e.key===" "){ if(selIdx>=0&&flatList[selIdx]){ e.preventDefault(); toggleRow(flatList[selIdx].ticker);} }
+  else if(e.key==="Escape"){ if(openTk){openTk=null;render();} }
+});
+
+/* ---- init ---- */
+function init(){
+  Object.keys(DATA.peer_groups).forEach(g=>$("#fGroup").insertAdjacentHTML("beforeend",`<option>${g}</option>`));
+  DATA.sectors.forEach(s=>$("#fSector").insertAdjacentHTML("beforeend",`<option>${s}</option>`));
+  ["fGroup","fSector","fReact","fSurp","fCap"].forEach(id=>$("#"+id).addEventListener("change",render));
+  $("#fTicker").addEventListener("input",render);
+  $("#reset").addEventListener("click",doReset);
+  $("#groupToggle").querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{setGrouped(b.dataset.v==="grouped");render();}));
+  $("#densToggle").querySelectorAll("button").forEach(b=>b.addEventListener("click",()=>{
+    const c=b.dataset.v==="compact"; document.body.classList.toggle("compact",c);
+    $("#densToggle").querySelectorAll("button").forEach(x=>x.classList.toggle("on",x===b));
+    try{localStorage.setItem("granite_density",b.dataset.v);}catch(e){}
+  }));
+  try{ if(localStorage.getItem("granite_density")==="compact"){ document.body.classList.add("compact");
+    $("#densToggle").querySelectorAll("button").forEach(x=>x.classList.toggle("on",x.dataset.v==="compact")); } }catch(e){}
+  document.querySelectorAll("th[data-k]").forEach(th=>th.addEventListener("click",()=>setSort(th.dataset.k,th)));
+  $("#headTag").innerHTML=`<b>Coverage Overview</b> · ${DATA.rows.length} names · ${Object.keys(DATA.peer_groups).length} groups · ${DATA.sectors.length} sectors · ${DATA.generated_at||""}`;
+  applySortHeader(document.querySelector('th[data-k="day_pct"]'));
+  kpis(); render();
+}
+fetch("overview.json").then(r=>r.json()).then(d=>{DATA=d;init();})
+  .catch(()=>{$("#rows").innerHTML=`<tr><td colspan="${NCOL}" class="empty" style="color:var(--down)">overview.json not found — run <span class="kbd">python3 build_overview.py</span> first.</td></tr>`;});
+</script>
+</body>
+</html>
