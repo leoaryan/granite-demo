@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Granite · Meeting Console</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Sohne:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f4f5f8;            /* soft off-white canvas */
+  --bg2:#eceef3;
+  --card:#ffffff;
+  --ink:#16181d;          /* near-black text */
+  --ink2:#3c4150;
+  --dim:#7b8194;          /* muted */
+  --line:#e6e8ee;
+  --line2:#eef0f4;
+  --accent:#3b3bdc;       /* electric indigo — the one strong accent */
+  --accent-soft:#ececfb;
+  --accent-ink:#2a2ab0;
+  --up:#0f9d58; --up-bg:#e6f5ec;
+  --down:#e0463e; --down-bg:#fdecea;
+  --warn:#c77f12; --warn-bg:#fdf3e0;
+  --violet:#7a5cff; --violet-bg:#efecff;
+  --disp:'Fraunces',Georgia,serif;        /* characterful display */
+  --body:'IBM Plex Sans',system-ui,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+  --shadow:0 1px 2px rgba(20,24,40,.04),0 8px 24px rgba(20,24,40,.06);
+  --shadow-lg:0 2px 4px rgba(20,24,40,.05),0 18px 48px rgba(20,24,40,.10);
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:
+    radial-gradient(120% 60% at 100% 0,#eef0fb 0,transparent 55%),
+    radial-gradient(90% 50% at 0 100%,#eef6f1 0,transparent 50%),
+    var(--bg);
+  color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.55;-webkit-text-size-adjust:100%;
+  min-height:100vh}
+.tnum{font-variant-numeric:tabular-nums}
+
+/* ===== top bar ===== */
+.bar{position:sticky;top:0;z-index:20;background:rgba(244,245,248,.82);backdrop-filter:saturate(1.4) blur(12px);
+  border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;
+  padding:0 clamp(16px,4vw,40px);height:58px}
+.brand{font-family:var(--disp);font-weight:600;font-size:1.18rem;letter-spacing:-.01em}
+.brand b{color:var(--accent)}
+.bar-r{display:flex;align-items:center;gap:14px}
+.bar-meta{font-size:.78rem;color:var(--dim);letter-spacing:.02em}
+.back{background:var(--card);border:1px solid var(--line);color:var(--ink2);font:inherit;font-size:.82rem;
+  font-weight:600;padding:7px 14px;border-radius:9px;cursor:pointer;box-shadow:var(--shadow)}
+.back:hover{border-color:var(--accent);color:var(--accent)}
+.draft{background:var(--warn-bg);color:var(--warn);border-bottom:1px solid #f0dcae;font-size:.76rem;
+  padding:7px clamp(16px,4vw,40px);letter-spacing:.01em}
+
+.page{max-width:1320px;margin:0 auto;padding:clamp(16px,3vw,32px) clamp(16px,4vw,40px) 64px}
+
+/* ===== schedule ===== */
+.daytabs{display:flex;gap:8px;margin:6px 0 20px}
+.dtab{background:var(--card);border:1px solid var(--line);color:var(--ink2);font:inherit;font-weight:600;
+  font-size:.86rem;padding:9px 20px;border-radius:11px;cursor:pointer;box-shadow:var(--shadow)}
+.dtab.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+.schedgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:12px}
+.mcard{display:flex;flex-direction:column;gap:6px;text-align:left;background:var(--card);border:1px solid var(--line);
+  border-radius:14px;padding:16px 18px;cursor:pointer;font:inherit;color:var(--ink);box-shadow:var(--shadow);
+  transition:transform .14s,box-shadow .14s,border-color .14s}
+.mcard:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);border-color:#d9dcfb}
+.mcard.live{border-top:3px solid var(--up)}
+.mc-top{display:flex;justify-content:space-between;align-items:baseline}
+.mc-time{font-family:var(--mono);font-size:.82rem;color:var(--accent);font-weight:600}
+.mc-st{font-size:.66rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:20px}
+.mc-st.rdy{background:var(--up-bg);color:var(--up)} .mc-st.pend{background:var(--bg2);color:var(--dim)} .mc-st.nob{background:var(--down-bg);color:var(--down)}
+.mc-co{font-family:var(--disp);font-size:1.28rem;line-height:1.1;font-weight:500}
+.mc-tic{font-family:var(--mono);font-size:.72rem;color:var(--dim);letter-spacing:.06em}
+.mc-ex{font-size:.8rem;color:var(--dim)}
+
+/* ===== brief: hero ===== */
+.hero{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:clamp(18px,2.4vw,28px);
+  box-shadow:var(--shadow-lg);margin-bottom:18px;
+  background-image:radial-gradient(80% 120% at 100% -20%,#f1f1fe,transparent 60%)}
+.hero-top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap}
+.h-meta{font-family:var(--mono);font-size:.74rem;color:var(--accent);letter-spacing:.06em;text-transform:uppercase}
+.h-co{font-family:var(--disp);font-size:clamp(1.9rem,3.6vw,2.9rem);line-height:1.02;font-weight:600;letter-spacing:-.015em;margin:6px 0 2px}
+.h-tic{font-family:var(--mono);font-size:.82rem;color:var(--dim);letter-spacing:.1em}
+.h-do{font-family:var(--disp);font-style:italic;color:var(--ink2);font-size:1.02rem;max-width:62ch;margin-top:8px}
+/* scorestrip — lives in the hero, right side on desktop */
+.scores{display:grid;grid-template-columns:repeat(3,minmax(110px,1fr));gap:10px;min-width:min(100%,400px)}
+.score{border:1px solid var(--line);border-radius:14px;padding:12px 12px;text-align:left;background:var(--bg)}
+.score.up{background:var(--up-bg);border-color:#cfeeda} .score.down{background:var(--down-bg);border-color:#f6cfcb}
+.s-l{font-size:.66rem;font-weight:700;letter-spacing:.08em;color:var(--dim);text-transform:uppercase}
+.s-vd{font-size:.78rem;font-weight:800;margin:5px 0 2px}
+.score.up .s-vd{color:var(--up)} .score.down .s-vd{color:var(--down)}
+.s-v{font-family:var(--disp);font-size:1.6rem;font-weight:600;letter-spacing:-.01em}
+.s-s{font-size:.68rem;color:var(--dim);margin-top:1px}
+.h-read{margin-top:18px;padding-top:16px;border-top:1px solid var(--line2);font-size:1.06rem;line-height:1.6;color:var(--ink);max-width:90ch}
+.h-read .fl{display:inline-block;font-family:var(--mono);font-size:.62rem;font-weight:600;letter-spacing:.1em;
+  color:#fff;background:var(--accent);padding:3px 8px;border-radius:6px;text-transform:uppercase;margin-right:8px;vertical-align:middle}
+
+/* ===== the composed grid ===== */
+.grid{display:grid;gap:18px;grid-template-columns:1fr;align-items:start}
+@media(min-width:780px){.grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1120px){.grid{grid-template-columns:1.05fr 1.25fr 1fr}}
+.col{display:flex;flex-direction:column;gap:18px}
+
+.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:var(--shadow)}
+.p-h{display:flex;align-items:center;gap:8px;margin:0 0 14px}
+.p-h h2{font-family:var(--disp);font-weight:600;font-size:1.18rem;margin:0;letter-spacing:-.01em}
+.p-h .sub{font-size:.72rem;color:var(--dim);font-weight:500}
+.p-h .num{font-family:var(--mono);font-size:.72rem;color:var(--accent);font-weight:600;background:var(--accent-soft);
+  width:24px;height:24px;display:grid;place-items:center;border-radius:7px}
+
+/* metric wall */
+.mwall{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.metric{border:1px solid var(--line);border-radius:13px;padding:13px 14px;position:relative;background:var(--bg)}
+.metric.up{border-left:3px solid var(--up)} .metric.down{border-left:3px solid var(--down)}
+.m-l{font-size:.68rem;font-weight:700;letter-spacing:.04em;color:var(--dim);text-transform:uppercase}
+.m-v{font-family:var(--disp);font-size:1.5rem;font-weight:600;margin:4px 0 1px;letter-spacing:-.01em}
+.metric.up .m-v{color:var(--up)} .metric.down .m-v{color:var(--down)}
+.m-s{font-size:.74rem;color:var(--ink2);line-height:1.35}
+
+/* expandable tables */
+details.ex{border:1px solid var(--line);border-radius:12px;margin:10px 0 0;background:var(--bg);overflow:hidden}
+details.ex>summary{list-style:none;cursor:pointer;padding:12px 14px;font-size:.78rem;font-weight:700;
+  letter-spacing:.03em;color:var(--ink2);display:flex;justify-content:space-between;text-transform:uppercase}
+details.ex>summary::-webkit-details-marker{display:none}
+details.ex>summary::after{content:"+";color:var(--accent);font-weight:700}
+details.ex[open]>summary{border-bottom:1px solid var(--line);color:var(--accent)}
+details.ex[open]>summary::after{content:"–"}
+.exb{padding:14px}
+table.dt{width:100%;border-collapse:collapse;font-size:.82rem}
+table.dt th{text-align:left;color:var(--dim);font-size:.66rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+  padding:7px 9px;border-bottom:1px solid var(--line)}
+table.dt td{padding:8px 9px;border-bottom:1px solid var(--line2);vertical-align:top;line-height:1.4}
+table.dt td.k{font-weight:700;color:var(--ink);white-space:nowrap}
+.cb{color:var(--up);font-weight:700;white-space:nowrap} .cm{color:var(--down);font-weight:700;white-space:nowrap}
+.note{font-style:italic;color:var(--dim);font-size:.84rem;margin:0 0 10px}
+.read{margin-top:12px;font-size:.92rem;line-height:1.55;color:var(--ink2)}
+.read b{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;color:var(--accent);text-transform:uppercase}
+
+/* who's in the room */
+.target{border:1px solid #d9dcfb;background:linear-gradient(180deg,#fafaff,var(--card));border-radius:15px;padding:17px}
+.tg-h{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+.tg-n{font-family:var(--disp);font-size:1.4rem;font-weight:600;letter-spacing:-.01em}
+.tg-tag{font-size:.6rem;font-weight:800;letter-spacing:.06em;color:#fff;background:var(--up);padding:3px 9px;border-radius:20px;text-transform:uppercase}
+.tg-ti{font-size:.82rem;color:var(--dim);font-weight:500;margin:2px 0 10px}
+.tg-bio{font-size:.9rem;line-height:1.55;color:var(--ink2)}
+.kbox{border-radius:12px;padding:11px 13px;margin-top:11px;font-size:.86rem;line-height:1.5}
+.kbox .kl{display:block;font-family:var(--mono);font-size:.6rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px}
+.kbox.tell{background:var(--warn-bg)} .kbox.tell .kl{color:var(--warn)}
+.kbox.commit{background:var(--bg)} .kbox.commit .kl{color:var(--ink2)}
+.kbox.dodge{background:var(--down-bg)} .kbox.dodge .kl{color:var(--down)}
+.kbox ul{margin:4px 0 0;padding-left:17px}.kbox li{margin:3px 0}
+.roster{font-size:.78rem;color:var(--dim);margin-top:12px;line-height:1.5}
+.roster .rl{font-weight:700;color:var(--ink2);text-transform:uppercase;font-size:.64rem;letter-spacing:.05em}
+
+/* questions */
+.qc{border:1px solid var(--line);border-radius:14px;padding:15px;margin-bottom:12px;position:relative;background:var(--card);
+  overflow:hidden;box-shadow:var(--shadow)}
+.qc::before{content:"";position:absolute;inset:0 auto 0 0;width:4px}
+.qc.one::before{background:var(--accent)} .qc.rev::before{background:var(--up)}
+.qc.bear::before{background:var(--down)} .qc.angle::before{background:var(--violet)}
+.q-tag{display:inline-flex;align-items:center;gap:5px;font-size:.64rem;font-weight:800;letter-spacing:.04em;
+  padding:4px 10px;border-radius:20px;margin-bottom:9px;text-transform:uppercase}
+.qc.one .q-tag{background:var(--accent-soft);color:var(--accent-ink)}
+.qc.rev .q-tag{background:var(--up-bg);color:var(--up)}
+.qc.bear .q-tag{background:var(--down-bg);color:var(--down)}
+.qc.angle .q-tag{background:var(--violet-bg);color:#5a3fd6}
+.q-tag .n{color:var(--dim);font-weight:600;margin-left:3px}
+.q-q{font-size:.98rem;line-height:1.45;font-weight:500}
+.q-l{background:var(--bg);border:1px solid var(--line2);border-radius:10px;padding:10px 12px;margin-top:11px;font-size:.84rem;line-height:1.5;color:var(--ink2)}
+.q-l .ll{display:block;font-family:var(--mono);font-size:.6rem;font-weight:600;letter-spacing:.08em;color:var(--accent);text-transform:uppercase;margin-bottom:4px}
+.q-l .good{color:var(--up);font-weight:600} .q-l .evas{color:var(--down);font-weight:600}
+
+/* drivers */
+.panel.drivers{border-color:#f0dcae;background:linear-gradient(180deg,#fffdf8,var(--card))}
+.dwarn{font-size:.78rem;line-height:1.5;color:var(--warn);background:var(--warn-bg);border:1px solid #f0dcae;
+  border-radius:11px;padding:11px 13px;margin-bottom:14px}
+.drow{border:1px solid var(--line);border-radius:12px;margin-bottom:9px;background:var(--card);overflow:hidden}
+.drow>summary{list-style:none;cursor:pointer;padding:12px 14px;display:flex;align-items:center;gap:11px}
+.drow>summary::-webkit-details-marker{display:none}
+.dr-q{font-size:.92rem;font-weight:500;line-height:1.35}
+.dr-b{padding:0 14px 13px;font-size:.85rem;line-height:1.5;color:var(--ink2)}
+.vp{flex:none;font-size:.6rem;font-weight:800;letter-spacing:.05em;padding:4px 9px;border-radius:20px;text-transform:uppercase}
+.vp.bull{background:var(--up-bg);color:var(--up)} .vp.bear{background:var(--down-bg);color:var(--down)} .vp.open{background:var(--warn-bg);color:var(--warn)}
+.pov{margin-top:14px;padding-top:13px;border-top:1px dashed #f0dcae;font-size:.94rem;line-height:1.6;color:var(--ink2)}
+.pov b{font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;color:var(--warn);text-transform:uppercase}
+
+/* chips + misc */
+.chip{font-size:.58rem;font-weight:700;letter-spacing:.04em;padding:1px 6px;border-radius:5px;text-transform:uppercase;vertical-align:middle}
+.chip.book{background:var(--up-bg);color:var(--up)} .chip.web{background:var(--accent-soft);color:var(--accent-ink)}
+.src{font-size:.74rem;color:var(--dim);line-height:1.5;margin-top:20px;padding-top:14px;border-top:1px solid var(--line)}
+.foot{text-align:center;color:var(--dim);font-size:.74rem;padding:24px 16px 48px;letter-spacing:.02em}
+
+/* full-width zone helper */
+.span-all{grid-column:1/-1}
+
+/* staggered reveal */
+.brief>*{animation:rise .5s cubic-bezier(.2,.7,.3,1) backwards}
+.brief>*:nth-child(1){animation-delay:.03s}.brief>*:nth-child(2){animation-delay:.09s}.brief>*:nth-child(n+3){animation-delay:.15s}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.brief>*{animation:none}}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="brand">GRANITE<b>·</b>Console</div>
+  <div class="bar-r"><span class="bar-meta" id="meta">Wells Fargo Industrials</span>
+    <button class="back" id="back" hidden>‹ Schedule</button></div>
+</header>
+<div class="draft" id="draft">⚑ DRAFT — not yet Pankaj-approved · financials [book] · bios [web] · no [book] tag = not shown</div>
+
+<div class="page">
+  <section id="sched"></section>
+  <section id="brief" class="brief" hidden></section>
+</div>
+<footer class="foot" id="foot">Granite Investment Partners · Wells Fargo 16th Industrials & Materials · Chicago</footer>
+
+<a id="abtoggle" href="conference.html">Switch design ⇄</a>
+<style>
+#abtoggle{position:fixed;right:16px;bottom:16px;z-index:40;background:var(--accent);color:#fff;
+  font-family:var(--body);font-size:.78rem;font-weight:700;text-decoration:none;padding:11px 16px;border-radius:12px;
+  box-shadow:0 8px 28px rgba(59,59,220,.35)}
+#abtoggle:hover{filter:brightness(1.06)}
+</style>
+
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const esc=s=>(s||'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+const chips=s=>esc(s).replace(/\[book\]/g,'<span class="chip book">book</span>')
+  .replace(/\[web\]/g,'<span class="chip web">web</span>').replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
+let DATA=null,DAY=null;
+
+function verdict(s){s=(s||'').toLowerCase();
+  if(/rais/.test(s))return{c:'up',m:'▲',l:'RAISED'};
+  if(/beat|ahead|above/.test(s))return{c:'up',m:'▲',l:'BEAT'};
+  if(/miss|below|cut|lower|fell|drag|down/.test(s))return{c:'down',m:'▼',l:'MISS'};
+  return{c:'',m:'',l:'IN LINE'};}
+const QT={one:{c:'one',i:'◆',l:'The One'},rev:{c:'rev',i:'$',l:'Revenue Driver'},
+  bear:{c:'bear',i:'🛡',l:'Pressure-test Bear'},angle:{c:'angle',i:'⚡',l:'Unexpected Angle'}};
+function qtag(q){if(q.tag&&QT[q.tag])return QT[q.tag];const w=(q.why||'').toLowerCase();
+  if(/durab|reverse|quality/.test(w))return QT.one;if(/tariff|headwind|risk/.test(w))return QT.bear;
+  if(/margin|mix|region|growth/.test(w))return QT.rev;return QT.angle;}
+function vpill(v){const s=(v||'').toLowerCase();let c='open',l='OPEN';
+  if(/^bull|bull pillar/.test(s)){c='bull';l='BULL';}else if(/^bear|cycle not/.test(s)){c='bear';l='BEAR';}
+  const ln=/leans bear/.test(s)?' ·bear':/leans bull/.test(s)?' ·bull':'';return `<span class="vp ${c}">${l}${ln}</span>`;}
+function cellc(c){let h=chips(c);if(/\bbeat\b/i.test(c))h=h.replace(/\bbeat\b/i,'<span class="cb">▲ beat</span>');
+  else if(/\bmiss\b/i.test(c))h=h.replace(/\bmiss\b/i,'<span class="cm">▼ miss</span>');return h;}
+
+async function load(){
+  try{DATA=await(await fetch('conference_data.json?cb='+Date.now())).json();}
+  catch(e){$('#sched').innerHTML='<p class="note">Could not load conference data.</p>';return;}
+  $('#meta').textContent=DATA.dates||'Wells Fargo Industrials';
+  days();schedule();
+  const h=(location.hash||'').replace('#','');if(h&&DATA.meetings.find(m=>m.ticker===h))openB(h);
+}
+function days(){const ds=[...new Set(DATA.meetings.map(m=>m.day))];DAY=DAY||ds[0];
+  $('#sched').innerHTML=`<div class="daytabs">${ds.map(d=>`<button class="dtab${d===DAY?' on':''}" data-d="${d}">${d}</button>`).join('')}</div><div class="schedgrid" id="mg"></div>`;
+  $$('.dtab').forEach(b=>b.onclick=()=>{DAY=b.dataset.d;days();schedule();});
+}
+function schedule(){
+  $('#sched').hidden=false;$('#brief').hidden=true;$('#back').hidden=true;
+  const items=DATA.meetings.filter(m=>m.day===DAY);
+  $('#mg').innerHTML=items.map(m=>{const built=!!m.brief,nob=!m.has_book;
+    const ex=(m.execs||[]).slice(0,1).map(e=>e.name+' · '+e.title).join('')||m.type;
+    return `<button class="mcard${built?' live':''}" data-t="${m.ticker}">
+      <div class="mc-top"><span class="mc-time">${m.start}</span>
+        <span class="mc-st ${built?'rdy':nob?'nob':'pend'}">${built?'Brief':nob?'No book':'Pending'}</span></div>
+      <div class="mc-co">${esc(m.company)}</div><div class="mc-tic">${m.ticker}</div>
+      <div class="mc-ex">${esc(ex)}</div></button>`;}).join('')||'<p class="note">No meetings.</p>';
+  $$('.mcard').forEach(b=>b.onclick=()=>openB(b.dataset.t));
+}
+function ph(n,t,sub){return `<div class="p-h"><span class="num">${n}</span><h2>${t}</h2>${sub?`<span class="sub">${sub}</span>`:''}</div>`;}
+
+function scores(b){
+  const td=b.teardown||{},cb=b.company_brief;
+  const rows=td.task1_pnl?td.task1_pnl.rows:(cb&&cb.pnl?cb.pnl.rows:[]);
+  const find=re=>rows.find(r=>re.test(r[0]))||[];
+  const eps=find(/adj eps|^eps/i),sales=find(/net sales|revs|revenue/i),g=td.task2_guidance;
+  const cell=(lab,r)=>{if(!r.length)return'';const v=verdict(r[4]);
+    const sub=(r[4]||'').replace(/\[book\]/g,'').replace(/—/,'').trim().slice(0,20)||('y/y '+r[3]);
+    return `<div class="score ${v.c}"><div class="s-l">${lab}</div><div class="s-vd">${v.m} ${v.l}</div>
+      <div class="s-v tnum">${esc(r[1])}</div><div class="s-s">${esc(sub)}</div></div>`;};
+  let gc='';if(g){const gv=verdict(g.posture);const val=(g.table&&g.table.rows[0])?g.table.rows[0][1]:'';
+    gc=`<div class="score ${gv.c}"><div class="s-l">Guide</div><div class="s-vd">${gv.m} ${gv.l||'HELD'}</div>
+      <div class="s-v tnum">${esc(val)}</div><div class="s-s">FY26 adj EPS</div></div>`;}
+  return `<div class="scores">${cell('EPS',eps)}${cell('Sales',sales)}${gc}</div>`;
+}
+function tbl(t){const note=t.note?`<p class="note">${chips(t.note)}</p>`:'';
+  const th=t.headers.map(h=>`<th>${esc(h)}</th>`).join('');
+  const rows=t.rows.map(r=>'<tr>'+r.map((c,i)=>`<td class="${i===0?'k':'tnum'}">${i===0?chips(c):cellc(c)}</td>`).join('')+'</tr>').join('');
+  return `${note}<table class="dt"><thead><tr>${th}</tr></thead><tbody>${rows}</tbody></table>`+(t.read?`<p class="read"><b>Read</b> ${chips(t.read)}</p>`:'');}
+function guid(g){let h=`<p class="note">${chips(g.posture)}</p>`;if(g.table)h+=tbl({headers:g.table.headers,rows:g.table.rows});if(g.read)h+=`<p class="read"><b>Read</b> ${chips(g.read)}</p>`;return h;}
+function sells(s){return `<p class="read"><b>Bull</b></p><ul>${(s.bullish||[]).map(x=>`<li>${chips(x)}</li>`).join('')}</ul>`
+  +`<p class="read"><b>Bear</b></p><ul>${(s.bearish||[]).map(x=>`<li>${chips(x)}</li>`).join('')}</ul>`+(s.read?`<p class="read"><b>Read</b> ${chips(s.read)}</p>`:'');}
+function stock(s){return `<ul>${(s.drivers||[]).map(x=>`<li>${chips(x)}</li>`).join('')}</ul>`+(s.read?`<p class="read"><b>Read</b> ${chips(s.read)}</p>`:'');}
+function callb(b){const p=b.room.people.find(x=>x.is_primary)||{};
+  return (p.tells_from_call?`<p class="read"><b>${esc(p.name)} on the call</b> ${chips(p.tells_from_call)}</p>`:'')
+    +((p.last_q_commitments||[]).length?`<p class="read"><b>Committed last Q</b></p><ul>${p.last_q_commitments.map(c=>`<li>${chips(c)}</li>`).join('')}</ul>`:'');}
+function ex(title,inner){return `<details class="ex"><summary>${title}</summary><div class="exb">${inner}</div></details>`;}
+
+function metricWall(b){const td=b.teardown||{},dr=b.drivers_autodraft;const sc=(dr&&dr.kpi_scorecard)||[];
+  const mw=sc.slice(0,4).map(r=>{const t=r[1]+(r[2]||'');const dir=/\+|beat|ahead|engine/i.test(t)?'up':/\(|down|drag|fell|−|-\$/i.test(t)?'down':'';
+    return `<div class="metric ${dir}"><div class="m-l">${esc(r[0])}</div>
+      <div class="m-v tnum">${chips(r[1])} ${dir==='up'?'▲':dir==='down'?'▼':''}</div><div class="m-s">${chips(r[2]||'')}</div></div>`;}).join('');
+  let tabs='';if(td.task1_pnl)tabs+=ex('Full P&amp;L · 6 lines',tbl(td.task1_pnl));if(td.task2_guidance)tabs+=ex('Guidance',guid(td.task2_guidance));
+  if(td.task3_segments)tabs+=ex('Segments',tbl(td.task3_segments));if(td.task4_kpis)tabs+=ex('KPIs',tbl(td.task4_kpis));
+  if(td.task6_sellside)tabs+=ex('Sell-side',sells(td.task6_sellside));if(td.task7_stock)tabs+=ex('Stock reaction',stock(td.task7_stock));
+  tabs+=ex('Call &amp; Q&amp;A',callb(b));
+  return `<div class="mwall">${mw}</div>${tabs}`;}
+
+function room(rm){const ppl=rm.people||[],pr=ppl.find(p=>p.is_primary),oth=ppl.filter(p=>!p.is_primary);
+  let h=`<p class="note">${esc(rm.note)}</p>`;
+  if(pr){const dodge=pr.dodged_last_call?`<div class="kbox dodge"><span class="kl">⛔ Dodged last call</span>${chips(pr.dodged_last_call)}</div>`:'';
+    const tell=pr.tells_from_call?`<div class="kbox tell"><span class="kl">◆ His tell</span>${chips(pr.tells_from_call)}</div>`:'';
+    const com=(pr.last_q_commitments||[]).length?`<div class="kbox commit"><span class="kl">✋ Committed last Q</span><ul>${pr.last_q_commitments.map(c=>`<li>${chips(c)}</li>`).join('')}</ul></div>`:'';
+    h+=`<div class="target"><div class="tg-h"><span class="tg-n">${esc(pr.name)}</span><span class="tg-tag">your meeting</span></div>
+      <div class="tg-ti">${esc(pr.title)}</div>${pr.bio?`<div class="tg-bio">${chips(pr.bio)}</div>`:''}${tell}${dodge}${com}</div>`;}
+  if(oth.length)h+=`<div class="roster"><span class="rl">Also in room:</span> ${oth.map(p=>esc(p.name)+' · '+esc(p.title)).join('  ·  ')}</div>`;
+  (rm.not_in_room||[]).forEach(p=>h+=ex('Not in room: '+esc(p.name)+' · '+esc(p.title),p.bio?chips(p.bio):esc(p.why_relevant||'')));
+  return h;}
+
+function questions(b){return (b.smart_questions||[]).map((q,i)=>{const t=qtag(q);
+  let listen;if(q.listen_for){const lf=esc(q.listen_for).replace(/Good:/i,'<span class="good">Good:</span>').replace(/Evasive:/i,'<span class="evas">Evasive:</span>');
+    listen=`<div class="q-l"><span class="ll">👂 Listen for</span>${lf}</div>`;}else listen=`<div class="q-l"><span class="ll">Why ask</span>${chips(q.why)}</div>`;
+  return `<div class="qc ${t.c}"><span class="q-tag">${t.i} ${t.l}<span class="n">${i+1}/${b.smart_questions.length}</span></span>
+    <div class="q-q">${chips(q.q)}</div>${listen}</div>`;}).join('');}
+
+function drivers(dr){const deb=(dr.debates||[]).map(d=>`<details class="drow"><summary>${vpill(d.verdict)}<span class="dr-q">${chips(d.debate)}</span></summary>
+    <div class="dr-b">${chips(d.this_quarter)}</div></details>`).join('');
+  const extra=((dr.triggers||[]).length||(dr.new_debates||[]).length)?ex('Triggers &amp; new debates',
+    ((dr.triggers||[]).length?`<p class="read"><b>Triggers</b></p><ul>${dr.triggers.map(t=>`<li>${chips(t)}</li>`).join('')}</ul>`:'')+
+    ((dr.new_debates||[]).length?`<p class="read"><b>New</b></p><ul>${dr.new_debates.map(t=>`<li>${chips(t)}</li>`).join('')}</ul>`:'')):'';
+  return `<div class="dwarn">⚑ ${chips(dr.status)}</div>${deb}${extra}
+    <p class="pov"><b>Working view (auto-draft)</b> ${chips(dr.updated_pov)}</p>`;}
+
+function openB(tic){const m=DATA.meetings.find(x=>x.ticker===tic);if(!m)return;const b=m.brief;
+  let h='';
+  // hero band — full width
+  h+=`<div class="hero"><div class="hero-top">
+    <div><div class="h-meta">${m.day} · ${m.start}–${m.end} · ${esc(m.type)}</div>
+      <div class="h-co">${esc(m.company)}</div><div class="h-tic">${m.ticker}${b?' · '+esc(b.quarter):''}</div>
+      ${b?`<div class="h-do">${chips(b.what_they_do)}</div>`:''}</div>
+    ${b?scores(b):''}</div>`;
+  if(b){const td=b.teardown||{};
+    const read=(td.task1_pnl&&td.task1_pnl.read)||(b.company_brief&&b.company_brief.the_view)||'';
+    h+=`<div class="h-read"><span class="fl">The Read</span>${chips(read)}</div>`;}
+  h+=`</div>`;
+
+  if(!b){h+=`<div class="panel"><p class="note">${m.has_book?'Brief not built yet.':'No FactSet book — financials N/F (pending). Ask Pankaj to drop the PDF.'}</p>
+    <div class="roster">${(m.execs||[]).map(e=>esc(e.name)+' · '+esc(e.title)).join('  ·  ')}</div></div>`;}
+  else{
+    const dr=b.drivers_autodraft;
+    h+=`<div class="grid">
+      <div class="col">
+        <div class="panel">${ph('01','Who\'s in the room')}${room(b.room)}</div>
+        ${dr?`<div class="panel drivers">${ph('04','Drivers loop','our thesis, tracked')}${drivers(dr)}</div>`:''}
+      </div>
+      <div class="col">
+        <div class="panel">${ph('02','What printed')}${metricWall(b)}</div>
+      </div>
+      <div class="col">
+        <div class="panel">${ph('03','Questions to ask','tagged by intent')}${questions(b)}</div>
+      </div>
+    </div>`;
+    h+=`<p class="src">${chips(b.sourcing)}</p>`;
+  }
+  $('#brief').innerHTML=h;$('#sched').hidden=true;$('#brief').hidden=false;$('#back').hidden=false;
+  if(history.replaceState)history.replaceState(null,'','#'+tic);window.scrollTo(0,0);
+}
+$('#back').onclick=()=>{if(history.replaceState)history.replaceState(null,'',location.pathname);schedule();};
+$('#abtoggle').addEventListener('click',function(){if(location.hash)this.href='conference.html'+location.hash;});
+load();
+</script>
+</body>
+</html>
