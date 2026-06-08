@@ -1,0 +1,905 @@
+{
+  "conference": "Wells Fargo 16th Industrials & Materials Conference",
+  "dates": "June 8-11, 2026 \u00b7 Loews Chicago Hotel",
+  "attendee": "Pankaj Chandak (with Jeff Hoo) \u00b7 Granite Investment Partners",
+  "status": "DRAFT \u2014 not yet approved by Pankaj",
+  "meetings": [
+    {
+      "day": "Tuesday",
+      "date": 9,
+      "start": "08:00 AM",
+      "end": "08:35 AM",
+      "type": "1on1 Meeting",
+      "ticker": "ASTE",
+      "company": "Astec Industries Inc",
+      "attendees": [
+        "Jeff Hoo",
+        "Pankaj Chandak"
+      ],
+      "execs": [
+        {
+          "name": "Officer\nBrian Harris",
+          "title": "Chief Financial Officer"
+        },
+        {
+          "name": "Steve Anderson",
+          "title": "Senior Vice President of Administration and Investor Relations"
+        }
+      ],
+      "room": "TBD",
+      "brief": null,
+      "has_book": true
+    },
+    {
+      "day": "Tuesday",
+      "date": 9,
+      "start": "08:45 AM",
+      "end": "09:20 AM",
+      "type": "3on1 Meeting",
+      "ticker": "MLI",
+      "company": "Mueller Industries",
+      "attendees": [
+        "Pankaj Chandak"
+      ],
+      "execs": [
+        {
+          "name": "Jeff Martin",
+          "title": "Chief Financial Officer, Mueller"
+        },
+        {
+          "name": "Industries\nDaniel Pieralisi",
+          "title": "Executive Vice President, Mueller Industries"
+        }
+      ],
+      "room": "TBD",
+      "brief": null,
+      "has_book": false
+    },
+    {
+      "day": "Tuesday",
+      "date": 9,
+      "start": "09:30 AM",
+      "end": "10:05 AM",
+      "type": "1on1 Meeting",
+      "ticker": "RXO",
+      "company": "RXO Inc",
+      "attendees": [
+        "Pankaj Chandak"
+      ],
+      "execs": [
+        {
+          "name": "Drew Wilkerson",
+          "title": "Chairman and Chief Executive Officer"
+        },
+        {
+          "name": "Jared Weisfeld",
+          "title": "Chief Strategy Officer"
+        },
+        {
+          "name": "Kevin Sterling",
+          "title": "Senior Market Strategist"
+        }
+      ],
+      "room": "TBD",
+      "brief": null,
+      "has_book": true
+    },
+    {
+      "day": "Tuesday",
+      "date": 9,
+      "start": "10:15 AM",
+      "end": "10:50 AM",
+      "type": "2on1 Meeting",
+      "ticker": "AGCO",
+      "company": "AGCO Corp",
+      "attendees": [
+        "Jeff Hoo",
+        "Pankaj Chandak"
+      ],
+      "execs": [
+        {
+          "name": "Damon Audia",
+          "title": "Chief Financial Officer"
+        },
+        {
+          "name": "Greg Peterson",
+          "title": "VP Investor Relations"
+        },
+        {
+          "name": "Steven King",
+          "title": "Senior Mgr. IR"
+        }
+      ],
+      "room": "TBD",
+      "brief": {
+        "ticker": "AGCO",
+        "company": "AGCO Corporation",
+        "what_they_do": "Global maker of agricultural equipment \u2014 high-horsepower tractors, combines, and precision-ag technology (brands: Fendt, Massey Ferguson, Valtra, PTx). [book]",
+        "quarter": "Q1 2026 (reported May 5, 2026)",
+        "company_brief": {
+          "the_view": "A big Q1 earnings beat in a still-soft ag market \u2014 adj EPS $0.94 vs $0.44 consensus [book], on sales of $2,342.9M (+14.3% y/y, but only +4.7% ex-FX) [book]. The beat was driven by strong Europe (EME) margins, FX, a lower tax rate, and channel revenue that ran ahead of end-user demand \u2014 i.e. quality is mixed, not pure demand. Management RAISED the FY26 adj-EPS outlook to ~$6.00 (from $5.50\u20136.00) [book], hiked the dividend to $0.30, and announced $350M of Q2 buybacks. Yet the stock reaction was negative \u2014 the debate is whether the 1Q beat is durable or front-loaded, against a higher tariff bill (~$135M in 2026) and a softer Q2.",
+          "pnl": {
+            "headers": [
+              "Metric",
+              "$MM",
+              "PY$",
+              "y/y %",
+              "vs Consensus",
+              "Notes"
+            ],
+            "rows": [
+              [
+                "Net sales",
+                "2,342.9",
+                "2,050.5",
+                "14.3%",
+                "beat (~$2,204 cons)",
+                "ex-FX +4.7%; FX +9.6pts; EME +20%, LATAM (30%) ex-FX [book]"
+              ],
+              [
+                "Gross profit",
+                "581.4",
+                "520.6",
+                "11.7%",
+                "\u2014",
+                "GM 24.8% vs 25.4% \u2014 (60) bps; cost inputs incl. tariffs [book]"
+              ],
+              [
+                "Income from ops",
+                "80.7",
+                "49.4",
+                "63.4%",
+                "\u2014",
+                "Reported OM 3.4% vs 2.4% [book]"
+              ],
+              [
+                "Adj op income",
+                "107.4",
+                "83.4",
+                "28.8%",
+                "beat ($90.6 cons)",
+                "Adj OM 4.6% vs 4.1% \u2014 +50 bps; EME the driver [book]"
+              ],
+              [
+                "Adj EPS",
+                "0.94",
+                "0.41",
+                "129%",
+                "beat \u2014 $0.94 vs $0.44 cons",
+                "FX + lower tax + EME volume leverage; ~$0.50 of the beat [book]"
+              ],
+              [
+                "Reported EPS",
+                "0.76",
+                "0.14",
+                "443%",
+                "\u2014",
+                "Net income attrib. $55.0M vs $10.5M PY [book]"
+              ]
+            ],
+            "read": "a headline blowout, but read the quality: of the ~$0.50 beat, much is FX, tax, and channel revenue that 'ran ahead of end-user demand' [book]. Underlying ag demand is still soft (NA & Brazil retail tractor units down y/y); the real earnings power is the EME margin and the structural-cost program, not a demand recovery."
+          },
+          "guidance": "FY26 RAISED: adj EPS ~$6.00 (prior $5.50\u20136.00; ~$5.77 cons) [book]; net sales $10.5\u201310.7bn; adj op margin guide up. But it embeds a higher tariff cost of ~$135M in 2026 (+$90M y/y, and $25M above the prior estimate) on the Section 232 methodology change [book], and a softer Q2 (2Q EPS guide below the 1Q run-rate). The raise is mostly the 1Q beat + buyback flow-through, not a demand-led upgrade.",
+          "sell_side": "Split desk on the SAME print [book]: Jefferies Buy $145 \u00b7 JPMorgan Overweight $143 \u00b7 Morgan Stanley Overweight \u00b7 BMO Market Perform \u00b7 Baird Neutral $120. Bulls: EME margin resilience, structural transformation, capital return, 'stress-case' valuation. Bears: beat is FX/tax/timing-aided, tariff headwind rising, demand still down, Q2 softer \u2014 hence the negative stock reaction despite the beat."
+        },
+        "room": {
+          "note": "Pankaj's 2on1 meeting is with the CFO (the CEO is NOT in this room).",
+          "people": [
+            {
+              "name": "Damon Audia",
+              "title": "Chief Financial Officer & SVP",
+              "in_room": true,
+              "is_primary": true,
+              "tells_from_call": "On the Q1 call, Audia framed the tariff math precisely \u2014 ~$135M 2026 tariff cost, +$90M y/y, $25M above prior estimate (Section 232) [book] \u2014 and tied the raised guide to the 1Q beat + buyback, not demand. A numbers-forward, bridge-the-walk CFO; he volunteers the offsets (tariffs, mix) rather than only the positives. [book]",
+              "last_q_commitments": [
+                "~$135M FY26 tariff cost; could change as the year evolves [book]",
+                "$350M buyback to commence in Q2; dividend raised to $0.30 [book]",
+                "Continued dealer/company inventory alignment and structural cost savings [book]"
+              ],
+              "bio": "AGCO SVP & CFO since July 2022 (succeeded 20-year CFO Andy Beck). A seasoned industrials CFO with **two prior public-company CFO seats** \u2014 Kennametal (2018\u20132022) and Carpenter Technology \u2014 plus ~10 years at Goodyear (ending as SVP Finance, North America) and earlier roles at Delphi/GM. MBA, Carnegie Mellon; undergrad, University of Michigan. [web]",
+              "bio_status": "done"
+            },
+            {
+              "name": "Greg Peterson",
+              "title": "VP, Investor Relations",
+              "in_room": true,
+              "is_primary": false,
+              "bio": null,
+              "bio_status": "not_researched_ir"
+            },
+            {
+              "name": "Steven King",
+              "title": "Senior Mgr., IR",
+              "in_room": true,
+              "is_primary": false,
+              "bio": null,
+              "bio_status": "not_researched_ir"
+            }
+          ],
+          "not_in_room": [
+            {
+              "name": "Eric Hansotia",
+              "title": "Chairman, President & CEO",
+              "why_relevant": "Drove the prepared-remarks narrative (Farmer-First, precision ag, market-share gains in high-HP). Bio researched for context even though not in the room.",
+              "bio": "Chairman, President & CEO since January 2021. Joined AGCO in 2013 and was SVP & COO before the top job; the **architect of the 'Farmer-First' / precision-ag strategy** (the IDEAL combine program). Spent ~20 years at John Deere prior, in global harvesting / crop-care leadership. BSME + MSME, University of Wisconsin\u2013Madison; MBA, University of Iowa. [web]",
+              "bio_status": "done"
+            }
+          ]
+        },
+        "smart_questions": [
+          {
+            "q": "How much of the 1Q adjusted EPS beat ($0.94 vs $0.44) was channel revenue that 'ran ahead of end-user demand,' and does that reverse in 2H \u2014 i.e. did you pull forward sales rather than see demand inflect?",
+            "why": "Brokers flagged rev-rec timing as part of the beat; this is the durability question. [book]"
+          },
+          {
+            "q": "The FY26 tariff cost jumped to ~$135M (+$25M vs your prior estimate) on the Section 232 change. What's the offset path \u2014 price, sourcing, or margin absorption \u2014 and is $135M now conservative or still moving?",
+            "why": "Tariffs are the rising headwind partly offsetting the beat in the bridge. [book]"
+          },
+          {
+            "q": "EME carried the quarter (margin ~16%, +$104.6M op income y/y) while North America op income fell. How sustainable is EME margin, and what inflects NA from here?",
+            "why": "Regional mix is the whole quality-of-beat debate. [book]"
+          },
+          {
+            "q": "You raised the dividend and announced $350M of Q2 buybacks plus a ~$190M JV stake sale to Rabobank funding repurchases \u2014 how should we think about capital-return pace vs. reinvestment given still-soft demand?",
+            "why": "Capital return is a key bull pillar; the JV monetization is new. [book]"
+          },
+          {
+            "q": "Retail tractor units are still down in NA and Brazil. What's your read on when the ag down-cycle troughs, and what's the first sign you'd point us to?",
+            "why": "The cycle call underlies every estimate; ask the CFO for the leading indicator. [book]"
+          }
+        ],
+        "granite_pov": {
+          "stance": "DRAFT / unblessed",
+          "line": "A high-quality franchise printing a low-quality-of-source beat: own the EME margin and structural-cost story, but the 1Q upside is FX + tax + channel timing, not a demand turn, and the tariff bill is climbing. The capital-return step-up (dividend + $350M buyback + JV monetization) is the cleanest positive. Watch the rev-rec reversal risk into 2H and the ag-cycle trough signal."
+        },
+        "sourcing": "All financials [book] = AGCO FactSet Public Information Book (Q1 2026: press release, transcript, 5 broker notes). Numbers recomputed from the book's financial schedule. Exec bios pending web research (bio only; no insider data in v1)."
+      },
+      "has_book": true
+    },
+    {
+      "day": "Tuesday",
+      "date": 9,
+      "start": "11:00 AM",
+      "end": "11:35 AM",
+      "type": "1on1 Meeting",
+      "ticker": "MTUS",
+      "company": "Metallus Inc",
+      "attendees": [
+        "Jeff Hoo",
+        "Pankaj Chandak"
+      ],
+      "execs": [
+        {
+          "name": "Mike Williams",
+          "title": "Chief Executive Officer"
+        },
+        {
+          "name": "Kris Westbrooks",
+          "title": "President and Chief Operating Officer"
+        },
+        {
+          "name": "John Zaranec",
+          "title": "Executive Vice President & Chief Financial Officer"
+        }
+      ],
+      "room": "TBD",
+      "brief": null,
+      "has_book": true
+    },
+    {
+      "day": "Tuesday",
+      "date": 9,
+      "start": "12:00 PM",
+      "end": "12:35 PM",
+      "type": "1on1 Meeting",
+      "ticker": "CTRI",
+      "company": "Centuri Holdings",
+      "attendees": [
+        "Jeff Hoo",
+        "Pankaj Chandak"
+      ],
+      "execs": [
+        {
+          "name": "Christian Brown",
+          "title": "President & Chief Executive Officer, Centuri Holdings Inc"
+        },
+        {
+          "name": "Greg Izenstark",
+          "title": "EVP & Chief Financial Officer, Centuri Holdings Inc"
+        },
+        {
+          "name": "Katie Goode",
+          "title": "Investor Relations, Centuri Holdings Inc"
+        }
+      ],
+      "room": "TBD",
+      "brief": null,
+      "has_book": false
+    },
+    {
+      "day": "Tuesday",
+      "date": 9,
+      "start": "01:30 PM",
+      "end": "02:05 PM",
+      "type": "2on1 Meeting",
+      "ticker": "ARCB",
+      "company": "ArcBest Corp",
+      "attendees": [
+        "Jeff Hoo",
+        "Pankaj Chandak"
+      ],
+      "execs": [
+        {
+          "name": "Matt Beasley",
+          "title": "Chief Financial Officer"
+        },
+        {
+          "name": "Eddie Sorg",
+          "title": "Chief Commercial Officer"
+        },
+        {
+          "name": "Amy Mendenhall",
+          "title": "VP, Treasury & Investor Relations"
+        },
+        {
+          "name": "Matthew Meyer",
+          "title": "SVP, Finance & Chief Accounting Officer"
+        },
+        {
+          "name": "Lorie Tekorius",
+          "title": "Chief Executive Officer &"
+        },
+        {
+          "name": "President\nTravis Williams",
+          "title": "Investor Relations"
+        },
+        {
+          "name": "Greer Aviv",
+          "title": "Head of Investor Relations"
+        }
+      ],
+      "room": "TBD",
+      "brief": null,
+      "has_book": true
+    },
+    {
+      "day": "Tuesday",
+      "date": 9,
+      "start": "03:00 PM",
+      "end": "03:35 PM",
+      "type": "3on1 Meeting",
+      "ticker": "ALSN",
+      "company": "Allison Transmission Holdings",
+      "attendees": [
+        "Jeff Hoo",
+        "Pankaj Chandak"
+      ],
+      "execs": [
+        {
+          "name": "G. Frederick Bohley",
+          "title": "Chief Operating"
+        },
+        {
+          "name": "Officer\nJackie Bolles",
+          "title": "Executive Director, Treasury and Investor Relations"
+        }
+      ],
+      "room": "TBD",
+      "brief": null,
+      "has_book": true
+    },
+    {
+      "day": "Tuesday",
+      "date": 9,
+      "start": "04:30 PM",
+      "end": "05:05 PM",
+      "type": "Small Group Meeting",
+      "ticker": "EQPT",
+      "company": "Equipmentshare.Com Inc",
+      "attendees": [
+        "Pankaj Chandak"
+      ],
+      "execs": [
+        {
+          "name": "Mark Wopata",
+          "title": "Chief Data Officer and EVP"
+        },
+        {
+          "name": "Finance\nRhett Butler",
+          "title": "VP of Investor Relations"
+        },
+        {
+          "name": "Kaley Burleson",
+          "title": "Program Manager"
+        }
+      ],
+      "room": "TBD",
+      "brief": null,
+      "has_book": true
+    },
+    {
+      "day": "Wednesday",
+      "date": 10,
+      "start": "08:00 AM",
+      "end": "08:35 AM",
+      "type": "1on1 Meeting",
+      "ticker": "ROCK",
+      "company": "Gibraltar Industries Inc",
+      "attendees": [
+        "Jeff Hoo",
+        "Pankaj Chandak"
+      ],
+      "execs": [
+        {
+          "name": "Bill Bosway",
+          "title": "Chairman of the Board, President & Chief Executive Officer"
+        },
+        {
+          "name": "Joseph Lovechio",
+          "title": "Chief Financial Officer"
+        }
+      ],
+      "room": "TBD",
+      "brief": null,
+      "has_book": true
+    },
+    {
+      "day": "Wednesday",
+      "date": 10,
+      "start": "08:45 AM",
+      "end": "09:20 AM",
+      "type": "1on1 Meeting",
+      "ticker": "RUSHB",
+      "company": "Rush Enterprises Inc",
+      "attendees": [
+        "Pankaj Chandak"
+      ],
+      "execs": [
+        {
+          "name": "M. Rusty Rush",
+          "title": "Chairman, President & Chief Executive Officer"
+        },
+        {
+          "name": "Steven Keller",
+          "title": "Chief Financial Officer & Treasurer"
+        }
+      ],
+      "room": "TBD",
+      "brief": null,
+      "has_book": true
+    },
+    {
+      "day": "Wednesday",
+      "date": 10,
+      "start": "10:15 AM",
+      "end": "10:50 AM",
+      "type": "2on1 Meeting",
+      "ticker": "CSW",
+      "company": "CSW Industrials Inc",
+      "attendees": [
+        "Pankaj Chandak"
+      ],
+      "execs": [
+        {
+          "name": "Joe Armes",
+          "title": "Chairman of the Board"
+        },
+        {
+          "name": "James Perry",
+          "title": "EVP & Chief Financial Officer"
+        },
+        {
+          "name": "Alexa Huerta",
+          "title": "VP, Investor Relations"
+        }
+      ],
+      "room": "TBD",
+      "brief": null,
+      "has_book": false
+    },
+    {
+      "day": "Wednesday",
+      "date": 10,
+      "start": "11:00 AM",
+      "end": "11:35 AM",
+      "type": "2on1 Meeting",
+      "ticker": "POOL",
+      "company": "Pool Corp",
+      "attendees": [
+        "Jeff Hoo",
+        "Pankaj Chandak"
+      ],
+      "execs": [
+        {
+          "name": "Melanie Housey Hart",
+          "title": "Chief Financial"
+        },
+        {
+          "name": "Officer\nKristin Byars",
+          "title": "Director, Investor Relations"
+        }
+      ],
+      "room": "TBD",
+      "brief": null,
+      "has_book": true
+    },
+    {
+      "day": "Wednesday",
+      "date": 10,
+      "start": "12:00 PM",
+      "end": "12:35 PM",
+      "type": "1on1 Meeting",
+      "ticker": "VOYG",
+      "company": "Voyager Technologies Inc",
+      "attendees": [
+        "Jeff Hoo",
+        "Pankaj Chandak"
+      ],
+      "execs": [
+        {
+          "name": "Phil De Sousa",
+          "title": "Chief Financial Officer"
+        }
+      ],
+      "room": "TBD",
+      "brief": null,
+      "has_book": true
+    },
+    {
+      "day": "Wednesday",
+      "date": 10,
+      "start": "12:45 PM",
+      "end": "01:20 PM",
+      "type": "2on1 Meeting",
+      "ticker": "ACA",
+      "company": "Arcosa Inc",
+      "attendees": [
+        "Pankaj Chandak"
+      ],
+      "execs": [
+        {
+          "name": "Erin Drabek",
+          "title": "VP Investor Relations, Arcosa Inc"
+        }
+      ],
+      "room": "TBD",
+      "brief": null,
+      "has_book": true
+    },
+    {
+      "day": "Wednesday",
+      "date": 10,
+      "start": "01:30 PM",
+      "end": "02:05 PM",
+      "type": "2on1 Meeting",
+      "ticker": "AIN",
+      "company": "Albany International Corp",
+      "attendees": [
+        "Jeff Hoo",
+        "Pankaj Chandak"
+      ],
+      "execs": [
+        {
+          "name": "Gunnar Kleveland",
+          "title": "President & CEO"
+        },
+        {
+          "name": "Will Station",
+          "title": "EVP & Chief Financial Officer"
+        },
+        {
+          "name": "Karen Blomquist",
+          "title": "Director, IR"
+        }
+      ],
+      "room": "TBD",
+      "brief": null,
+      "has_book": true
+    },
+    {
+      "day": "Wednesday",
+      "date": 10,
+      "start": "02:15 PM",
+      "end": "02:50 PM",
+      "type": "Small Group Meeting",
+      "ticker": "EXP",
+      "company": "Eagle Materials Inc",
+      "attendees": [
+        "Pankaj Chandak"
+      ],
+      "execs": [
+        {
+          "name": "Craig Kesler",
+          "title": "EVP & Chief Financial Officer"
+        },
+        {
+          "name": "Alex Haddock",
+          "title": "Senior Vice President, Investor Relations, Strategy and Corporate Development"
+        }
+      ],
+      "room": "TBD",
+      "brief": null,
+      "has_book": true
+    },
+    {
+      "day": "Wednesday",
+      "date": 10,
+      "start": "03:00 PM",
+      "end": "03:35 PM",
+      "type": "1on1 Meeting",
+      "ticker": "DORM",
+      "company": "Dorman Products Inc",
+      "attendees": [
+        "Pankaj Chandak"
+      ],
+      "execs": [
+        {
+          "name": "Charles Rayfield",
+          "title": "Chief Financial Officer"
+        },
+        {
+          "name": "Alex Whitelam",
+          "title": "Vice President, investor Relations"
+        }
+      ],
+      "room": "TBD",
+      "brief": null,
+      "has_book": true
+    },
+    {
+      "day": "Wednesday",
+      "date": 10,
+      "start": "03:45 PM",
+      "end": "04:20 PM",
+      "type": "3on1 Meeting",
+      "ticker": "OSK",
+      "company": "Oshkosh Corp",
+      "attendees": [
+        "Pankaj Chandak"
+      ],
+      "execs": [
+        {
+          "name": "John Pfeifer",
+          "title": "President & CEO"
+        },
+        {
+          "name": "Pat Davidson",
+          "title": "SVP, Investor Relations"
+        },
+        {
+          "name": "Greg Schrimpf",
+          "title": "Sr Manager, Investor Relations"
+        }
+      ],
+      "room": "TBD",
+      "brief": null,
+      "has_book": true
+    },
+    {
+      "day": "Wednesday",
+      "date": 10,
+      "start": "04:30 PM",
+      "end": "05:05 PM",
+      "type": "1on1 Meeting",
+      "ticker": "IBP",
+      "company": "Installed Building Products Inc",
+      "attendees": [
+        "Pankaj Chandak"
+      ],
+      "execs": [
+        {
+          "name": "Michael Miller",
+          "title": "EVP, Chief Financial Officer"
+        },
+        {
+          "name": "Jeff Hire",
+          "title": "President of External Affairs"
+        },
+        {
+          "name": "Ryan Ricketts",
+          "title": "Director, Financial Planning & Analysis"
+        }
+      ],
+      "room": "TBD",
+      "brief": null,
+      "has_book": true
+    },
+    {
+      "day": "Thursday",
+      "date": 11,
+      "start": "08:00 AM",
+      "end": "08:35 AM",
+      "type": "1on1 Meeting",
+      "ticker": "OEC",
+      "company": "Orion SA",
+      "attendees": [
+        "Jeff Hoo",
+        "Pankaj Chandak"
+      ],
+      "execs": [
+        {
+          "name": "Corning Painter",
+          "title": "Chief Executive Officer"
+        },
+        {
+          "name": "Jon Puckett",
+          "title": "Chief Financial Officer"
+        },
+        {
+          "name": "Chris Kapsch",
+          "title": "VP - Investor Relations"
+        }
+      ],
+      "room": "TBD",
+      "brief": null,
+      "has_book": true
+    },
+    {
+      "day": "Thursday",
+      "date": 11,
+      "start": "08:45 AM",
+      "end": "09:20 AM",
+      "type": "1on1 Meeting",
+      "ticker": "GVA",
+      "company": "Granite Construction Inc",
+      "attendees": [
+        "Pankaj Chandak"
+      ],
+      "execs": [
+        {
+          "name": "Kyle Larkin",
+          "title": "President and CEO"
+        },
+        {
+          "name": "Michael Barker",
+          "title": "VP, IR"
+        },
+        {
+          "name": "Wenjun Xu",
+          "title": "Senior Analyst"
+        }
+      ],
+      "room": "TBD",
+      "brief": null,
+      "has_book": true
+    },
+    {
+      "day": "Thursday",
+      "date": 11,
+      "start": "09:30 AM",
+      "end": "10:05 AM",
+      "type": "3on1 Meeting",
+      "ticker": "GXO",
+      "company": "GXO Logistics Inc",
+      "attendees": [
+        "Jeff Hoo",
+        "Pankaj Chandak"
+      ],
+      "execs": [
+        {
+          "name": "Kristine Kubacki",
+          "title": "Chief Strategy Officer"
+        }
+      ],
+      "room": "TBD",
+      "brief": null,
+      "has_book": true
+    },
+    {
+      "day": "Thursday",
+      "date": 11,
+      "start": "10:15 AM",
+      "end": "10:50 AM",
+      "type": "Small Group Meeting",
+      "ticker": "SAIA",
+      "company": "Saia Inc",
+      "attendees": [
+        "Pankaj Chandak"
+      ],
+      "execs": [
+        {
+          "name": "Frederick Holzgrefe",
+          "title": "President & Chief Executive Officer"
+        },
+        {
+          "name": "Matt Batteh",
+          "title": "EVP & Chief Financial Officer"
+        }
+      ],
+      "room": "TBD",
+      "brief": null,
+      "has_book": true
+    },
+    {
+      "day": "Thursday",
+      "date": 11,
+      "start": "12:45 PM",
+      "end": "01:20 PM",
+      "type": "1on1 Meeting",
+      "ticker": "VSTS",
+      "company": "Vestis Corp",
+      "attendees": [
+        "Pankaj Chandak"
+      ],
+      "execs": [
+        {
+          "name": "Adam Bowen",
+          "title": "Chief Financial Officer"
+        },
+        {
+          "name": "Keith Payne",
+          "title": "Vice President & Treasurer"
+        },
+        {
+          "name": "Stefan Neely",
+          "title": "Investor Relations"
+        }
+      ],
+      "room": "TBD",
+      "brief": null,
+      "has_book": false
+    },
+    {
+      "day": "Thursday",
+      "date": 11,
+      "start": "02:15 PM",
+      "end": "02:50 PM",
+      "type": "1on1 Meeting",
+      "ticker": "AVAV",
+      "company": "AeroVironment Inc",
+      "attendees": [
+        "Pankaj Chandak"
+      ],
+      "execs": [
+        {
+          "name": "Rob Smith",
+          "title": "Chief Operating Officer"
+        },
+        {
+          "name": "Denise Pacioni",
+          "title": "Vice President, Head of Investor Relations"
+        }
+      ],
+      "room": "TBD",
+      "brief": null,
+      "has_book": false
+    },
+    {
+      "day": "Thursday",
+      "date": 11,
+      "start": "03:00 PM",
+      "end": "03:35 PM",
+      "type": "3on1 Meeting",
+      "ticker": "ATMU",
+      "company": "Atmus Filtration Technologies Inc",
+      "attendees": [
+        "Jeff Hoo",
+        "Pankaj Chandak"
+      ],
+      "execs": [
+        {
+          "name": "Jack Kienzler",
+          "title": "Chief Financial Officer"
+        },
+        {
+          "name": "Rakesh Gangwani",
+          "title": "Senior Vice President, Strategy and President, Industrial Solutions"
+        },
+        {
+          "name": "Ryan Copa",
+          "title": "Senior Director - Finance"
+        },
+        {
+          "name": "Todd Chirillo",
+          "title": "Executive Director - Investor Relations"
+        }
+      ],
+      "room": "TBD",
+      "brief": null,
+      "has_book": true
+    }
+  ],
+  "briefs_built": [
+    "AGCO"
+  ]
+}

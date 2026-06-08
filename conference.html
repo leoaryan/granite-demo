@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Granite · Conference Brief</title>
+<link rel="stylesheet" href="conference.css?v=1">
+</head>
+<body>
+
+<header class="cbar">
+  <div class="cbar-in">
+    <div class="cbar-t">Conference Brief</div>
+    <div class="cbar-s" id="confSub">Wells Fargo Industrials</div>
+  </div>
+  <button class="cbar-back" id="backBtn" hidden>‹ Schedule</button>
+</header>
+
+<div class="draft" id="draftBanner">⚠ DRAFT — not yet approved by Pankaj. Financials from FactSet books; bios from web. Numbers without a [book] tag are not shown.</div>
+
+<main id="confMain">
+  <!-- SCHEDULE (now/next spine) -->
+  <section id="scheduleView">
+    <div class="dayfilter" id="dayFilter"></div>
+    <div id="scheduleList"></div>
+  </section>
+
+  <!-- A SINGLE MEETING BRIEF -->
+  <section id="briefView" hidden></section>
+</main>
+
+<footer class="cfoot">
+  Granite Investment Partners · Pankaj Chandak (with Jeff Hoo). Demo — real FactSet books, pre-generated; bios web-researched. Not investment advice.
+</footer>
+
+<script src="conference.js?v=1"></script>
+</body>
+</html>
