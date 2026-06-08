@@ -252,7 +252,304 @@
           "stance": "DRAFT / unblessed",
           "line": "A high-quality franchise printing a low-quality-of-source beat: own the EME margin and structural-cost story, but the 1Q upside is FX + tax + channel timing, not a demand turn, and the tariff bill is climbing. The capital-return step-up (dividend + $350M buyback + JV monetization) is the cleanest positive. Watch the rev-rec reversal risk into 2H and the ag-cycle trough signal."
         },
-        "sourcing": "All financials [book] = AGCO FactSet Public Information Book (Q1 2026: press release, transcript, 5 broker notes). Numbers recomputed from the book's financial schedule. Exec bios pending web research (bio only; no insider data in v1)."
+        "sourcing": "All financials [book] = AGCO FactSet Public Information Book (Q1 2026: press release, transcript, 5 broker notes). Numbers recomputed from the book's financial schedule. Exec bios [web] (bio only; no insider data in v1).",
+        "teardown": {
+          "task1_pnl": {
+            "title": "Task 1 \u00b7 P&L",
+            "headers": [
+              "Metric",
+              "$MM",
+              "PY$",
+              "y/y %",
+              "vs Consensus",
+              "Notes"
+            ],
+            "rows": [
+              [
+                "Net sales",
+                "2,342.9",
+                "2,050.5",
+                "14.3%",
+                "beat (~$2,204 cons)",
+                "ex-FX +4.7%; FX +9.6pts [book]"
+              ],
+              [
+                "Gross profit",
+                "581.4",
+                "520.6",
+                "11.7%",
+                "\u2014",
+                "GM 24.8% vs 25.4% \u2014 (60) bps; tariff/input cost [book]"
+              ],
+              [
+                "Income from ops",
+                "80.7",
+                "49.4",
+                "63.4%",
+                "\u2014",
+                "Reported OM 3.4% vs 2.4% [book]"
+              ],
+              [
+                "Adj op income",
+                "107.4",
+                "83.4",
+                "28.8%",
+                "beat ($90.6 cons)",
+                "Adj OM 4.6% vs 4.1% \u2014 +50 bps; EME-led [book]"
+              ],
+              [
+                "Adj EPS",
+                "0.94",
+                "0.41",
+                "129%",
+                "beat \u2014 $0.94 vs $0.44 cons",
+                "FX + lower tax + EME leverage; ~$0.50 beat [book]"
+              ],
+              [
+                "Reported EPS",
+                "0.76",
+                "0.14",
+                "443%",
+                "\u2014",
+                "Net income attrib. $55.0M vs $10.5M [book]"
+              ]
+            ],
+            "read": "a headline blowout, but read the quality \u2014 much of the ~$0.50 beat is FX, tax, and channel revenue that ran ahead of end-user demand [book]. The real earnings power is the EME margin + structural-cost program, not a demand recovery."
+          },
+          "task2_guidance": {
+            "title": "Task 2 \u00b7 Guidance",
+            "posture": "Cautious raise \u2014 the FY guide went up but mostly on the 1Q beat + buyback, not a demand upgrade; it absorbs a higher tariff bill. [book]",
+            "table": {
+              "headers": [
+                "Metric",
+                "Guidance (FY26)",
+                "Prior",
+                "Consensus",
+                "Mgmt Explanation"
+              ],
+              "rows": [
+                [
+                  "Adj EPS",
+                  "~$6.00",
+                  "$5.50\u20136.00",
+                  "~$5.77",
+                  "Raised on 1Q beat + ~$0.15 buyback; offset by ~$0.15 tariff [book]"
+                ],
+                [
+                  "Net sales",
+                  "$10.5\u201310.7bn",
+                  "\u2014",
+                  "\u2014",
+                  "Moderate increase; positive pricing + FX [book]"
+                ],
+                [
+                  "Adj op margin",
+                  "~14% area",
+                  "\u2014",
+                  "\u2014",
+                  "Structural-cost program + EME mix [book]"
+                ],
+                [
+                  "FY26 tariff cost",
+                  "~$135M",
+                  "~$110M",
+                  "\u2014",
+                  "+$90M y/y; +$25M vs prior on Section 232 method change [book]"
+                ]
+              ]
+            },
+            "read": "holding-to-slightly-raising after a 129% EPS beat IS the signal: management is telling you the 1Q upside is timing (FX, tax, channel), and a rising tariff bill + softer Q2 caps the full-year flow-through. [book]"
+          },
+          "task3_segments": {
+            "title": "Task 3 \u00b7 Regional segments",
+            "note": "AGCO reports by region, not product segment \u2014 table adapts. [book]",
+            "headers": [
+              "Region",
+              "Net sales $MM",
+              "y/y %",
+              "Op margin",
+              "Read"
+            ],
+            "rows": [
+              [
+                "EME (Europe/ME)",
+                "1,600.8 vs 1,330.5",
+                "+20.3% rpt (+9.0% cc)",
+                "16.2%",
+                "The engine \u2014 op income $259.0M vs $154.4M (+$104.6M) [book]"
+              ],
+              [
+                "North America",
+                "406.4 vs 369.5",
+                "+10.0% rpt (+9.0% cc)",
+                "(12.5)%",
+                "Op income FELL $47.4M y/y; tariffs + destocking drag [book]"
+              ],
+              [
+                "LATAM",
+                "211.7 vs 256.0",
+                "(17.3)% rpt ((30.3)% cc)",
+                "(19.3)%",
+                "Brazil weak \u2014 the soft spot; retail units down [book]"
+              ],
+              [
+                "APA (Asia/Pac/Africa)",
+                "124.0 vs 94.5",
+                "+31.2% rpt (+20.9% cc)",
+                "3.2%",
+                "Small base, op income +$6.7M [book]"
+              ]
+            ],
+            "read": "this is a one-region quarter: EME margin (16.2%) carried the whole beat while North America swung to a (12.5)% op margin and LATAM stayed deeply negative. The bull case lives or dies on EME holding. [book]"
+          },
+          "task4_kpis": {
+            "title": "Task 4 \u00b7 KPIs",
+            "note": "AGCO's master KPI list is granular FactSet revenue metric-IDs (region\u00d7product) not broken out in the PR \u2014 degraded to the operating KPIs management actually reported this quarter. [book]",
+            "headers": [
+              "KPI",
+              "Value",
+              "y/y",
+              "Read"
+            ],
+            "rows": [
+              [
+                "Industry retail tractors \u2014 N.A.",
+                "(8)%",
+                "\u2014",
+                "End demand still down [book]"
+              ],
+              [
+                "Industry retail tractors \u2014 Brazil",
+                "(10)%",
+                "\u2014",
+                "LATAM the weak spot [book]"
+              ],
+              [
+                "Industry retail tractors \u2014 W.Europe",
+                "+7%",
+                "\u2014",
+                "Supports the EME strength [book]"
+              ],
+              [
+                "Adj op margin",
+                "4.6%",
+                "+50 bps",
+                "Structural-cost gains despite soft volume [book]"
+              ],
+              [
+                "Dividend / share",
+                "$0.30",
+                "+$0.01",
+                "Raised from $0.29 [book]"
+              ],
+              [
+                "Buyback (Q2)",
+                "$350M",
+                "new",
+                "Funded partly by ~$190M Rabobank JV stake sale [book]"
+              ]
+            ],
+            "read": "the operating KPIs say the cycle hasn't turned \u2014 retail units down in NA + Brazil; the beat is margin/cost execution + capital return, not unit demand. [book]"
+          },
+          "task6_sellside": {
+            "title": "Task 6 \u00b7 Sell-side",
+            "bullish": [
+              "EME margin resilience (16.2%) + the structural-cost transformation is delivering [book]",
+              "Capital-return step-up: dividend raise + $350M buyback + ~$190M JV monetization [book]",
+              "FY26 EPS guide raised to ~$6.00, ~4% above the ~$5.77 consensus [book]",
+              "Several desks see 'stress-case' valuation \u2014 downside seen as limited [book]",
+              "Jefferies Buy $145 / JPM Overweight $143 / Morgan Stanley Overweight [book]"
+            ],
+            "bearish": [
+              "The beat is FX + tax + channel revenue that ran ahead of end demand \u2014 low quality of source [book]",
+              "FY26 tariff cost rising to ~$135M (+$25M vs prior) on Section 232 [book]",
+              "North America op margin swung to (12.5)%; demand still soft [book]",
+              "Implied softer Q2 vs the 1Q run-rate [book]",
+              "BMO Market Perform / Baird Neutral $120 \u2014 weak farmer sentiment risk [book]"
+            ],
+            "read": "the desk is split on the SAME print \u2014 bulls buy the margin/capital-return story, bears flag a low-quality beat into a rising tariff bill. That split is exactly why the stock fell on a beat. [book]"
+          },
+          "task7_stock": {
+            "title": "Task 7 \u00b7 Stock reaction",
+            "drivers": [
+              "Negative reaction DESPITE the beat + raise \u2014 the market read the beat as FX/tax/channel-timing, not demand [book]",
+              "Rising tariff headwind (~$135M) + a softer implied Q2 undercut the raise [book]",
+              "Broader ag-sentiment / macro overhang weighed regardless of the print [book]"
+            ],
+            "read": "a 'sell the beat' quarter: the print was good but low-quality, the raise was mechanical (beat + buyback), and the cycle hasn't turned \u2014 so the stock faded. [book]"
+          }
+        },
+        "drivers_autodraft": {
+          "status": "AUTO-DRAFT \u2014 machine-extracted from this quarter's Q&A + sell-side. NOT a Granite-authored thesis. Needs analyst review before it becomes a tracked Driver.",
+          "debates": [
+            {
+              "debate": "Is the 1Q beat durable, or front-loaded channel revenue that reverses in 2H?",
+              "this_quarter": "Brokers + mgmt acknowledge revenue 'ran ahead of end-user demand'; ~$0.50 of the beat is timing/FX/tax, not demand. [book]",
+              "verdict": "OPEN \u2014 leans bear on quality",
+              "draft": true
+            },
+            {
+              "debate": "Can EME margin (16.2%) hold and carry the company while NA/LATAM stay negative?",
+              "this_quarter": "EME op income +$104.6M y/y did all the work; NA op income fell $47.4M, LATAM (19.3)% margin. [book]",
+              "verdict": "BULL pillar \u2014 but concentration risk",
+              "draft": true
+            },
+            {
+              "debate": "Is the rising tariff bill (~$135M, +$25M vs prior) containable via price/sourcing?",
+              "this_quarter": "Section 232 method change drove the +$25M; mgmt building offsets into the guide but flagged it 'could change.' [book]",
+              "verdict": "OPEN \u2014 a moving headwind",
+              "draft": true
+            },
+            {
+              "debate": "Has the ag down-cycle troughed?",
+              "this_quarter": "Industry retail tractors still down \u2014 NA (8)%, Brazil (10)%; only W.Europe +7%. No trough signal yet. [book]",
+              "verdict": "BEAR \u2014 cycle not yet turned",
+              "draft": true
+            },
+            {
+              "debate": "Is the capital-return step-up (dividend + $350M buyback + JV sale) a real value lever?",
+              "this_quarter": "Dividend raised to $0.30; $350M Q2 buyback partly funded by ~$190M Rabobank JV monetization. [book]",
+              "verdict": "BULL \u2014 cleanest positive",
+              "draft": true
+            }
+          ],
+          "kpi_scorecard": [
+            [
+              "Adj EPS",
+              "$0.94",
+              "vs $0.44 cons \u2014 big beat [book]"
+            ],
+            [
+              "Adj op margin",
+              "4.6%",
+              "+50 bps y/y [book]"
+            ],
+            [
+              "EME op income",
+              "$259.0M",
+              "+$104.6M y/y \u2014 the engine [book]"
+            ],
+            [
+              "NA op income",
+              "down $47.4M",
+              "the drag [book]"
+            ],
+            [
+              "FY26 tariff cost",
+              "~$135M",
+              "+$25M vs prior [book]"
+            ]
+          ],
+          "triggers": [
+            "Watch 2H for whether the 'ran-ahead-of-demand' channel revenue reverses (de-stock).",
+            "Watch the tariff number \u2014 flagged as still moving (Section 232)."
+          ],
+          "new_debates": [
+            "Rabobank JV monetization \u2014 is this a one-off or a recurring capital-efficiency lever?",
+            "Does the structural-cost program offset a still-soft demand cycle long enough to matter?"
+          ],
+          "updated_pov": "AUTO-DRAFT working view: a high-quality franchise printing a low-quality-of-source beat. Bull pillars = EME margin + capital return; bear pillars = demand cycle hasn't turned + rising tariffs + the beat's composition. The room question is durability: press the CFO on the 2H channel-reversal risk. (Needs Pankaj to confirm/replace as a real Driver.)"
+        }
       },
       "has_book": true
     },
