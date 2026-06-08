@@ -148,6 +148,9 @@ body{background:
 @media(min-width:780px){.grid{grid-template-columns:1fr 1fr}}
 @media(min-width:1120px){.grid{grid-template-columns:1.05fr 1.25fr 1fr}}
 .col{display:flex;flex-direction:column;gap:18px}
+/* single-layout brief: one readable centered column */
+.brief-col{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:18px}
+.brief-col .hero{margin-bottom:0}
 
 .panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:var(--shadow)}
 .p-h{display:flex;align-items:center;gap:8px;margin:0 0 14px}
@@ -444,8 +447,8 @@ function drivers(dr){const deb=(dr.debates||[]).map(d=>`<div class="drow open">
 function openB(tic){const m=DATA.meetings.find(x=>x.ticker===tic);if(!m)return;const b=m.brief;DAY=m.day;
   let h='';
   const full=b&&!b.no_book;  // a real teardown vs a people-only "no book" brief
-  // hero band — full width
-  h+=`<div class="hero"><div class="hero-top">
+  // hero band — constrained to the same column as the brief below
+  h+=`<div class="brief-col"><div class="hero"><div class="hero-top">
     <div><div class="h-meta">${m.day} · ${m.start}–${m.end} · ${esc(m.type)}</div>
       <div class="h-co">${esc(m.company)}</div><div class="h-tic">${m.ticker}${b&&b.quarter?' · '+esc(b.quarter):''}</div>
       ${b?`<div class="h-do">${chips(b.what_they_do)}</div>`:''}</div>
@@ -453,31 +456,26 @@ function openB(tic){const m=DATA.meetings.find(x=>x.ticker===tic);if(!m)return;c
   if(full){const td=b.teardown||{};
     const read=(td.task1_pnl&&td.task1_pnl.read)||(b.company_brief&&b.company_brief.the_view)||'';
     h+=`<div class="h-read"><span class="fl">The Read</span>${chips(read)}</div>`;}
-  h+=`</div>`;
+  h+=`</div></div>`;
 
+  // Single-layout: one centered column, stacked in reading order (Pankaj's ask).
   if(!full){
     const note=(b&&b.no_book)?(b.company_brief?b.company_brief.the_view:'No FactSet book — financials N/F (pending).')
       :(m.has_book?'Brief not built yet.':'No FactSet book — financials N/F (pending). Ask Pankaj to drop the PDF.');
     const rm=(b&&b.room)?b.room:{people:(m.execs||[]).map(e=>({name:e.name,title:e.title,in_room:true})),note:''};
-    h+=`<div class="grid"><div class="col span-all"><div class="panel">
+    h+=`<div class="brief-col"><div class="panel">
       <div class="dwarn" style="background:var(--down-bg);border-color:#f6cfcb;color:var(--down)">⚑ ${chips(note)}</div>
-      ${ph('—','Who\'s in the room')}${room(rm)}</div></div></div>`;
+      ${ph('—','Who\'s in the room')}${room(rm)}</div></div>`;
   }
   else{
     const dr=b.drivers_autodraft;
-    h+=`<div class="grid">
-      <div class="col">
-        <div class="panel">${ph('01','Who\'s in the room')}${room(b.room)}</div>
-        ${dr?`<div class="panel drivers">${ph('04','Drivers loop','our thesis, tracked')}${drivers(dr)}</div>`:''}
-      </div>
-      <div class="col">
-        <div class="panel">${ph('02','What printed')}${metricWall(b)}</div>
-      </div>
-      <div class="col">
-        <div class="panel">${ph('03','Questions to ask','tagged by intent')}${questions(b)}</div>
-      </div>
+    h+=`<div class="brief-col">
+      <div class="panel">${ph('01','What printed')}${metricWall(b)}</div>
+      <div class="panel">${ph('02','Who\'s in the room')}${room(b.room)}</div>
+      <div class="panel">${ph('03','Questions to ask','tagged by intent')}${questions(b)}</div>
+      ${dr?`<div class="panel drivers">${ph('04','Drivers loop','our thesis, tracked')}${drivers(dr)}</div>`:''}
+      <p class="src">${chips(b.sourcing)}</p>
     </div>`;
-    h+=`<p class="src">${chips(b.sourcing)}</p>`;
   }
   $('#brief').innerHTML=h;$('#sched').hidden=true;$('#brief').hidden=false;$('#back').hidden=false;
   if(history.replaceState)history.replaceState(null,'','#'+tic);window.scrollTo(0,0);
