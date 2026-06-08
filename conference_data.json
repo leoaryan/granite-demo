@@ -229,23 +229,33 @@
         "smart_questions": [
           {
             "q": "How much of the 1Q adjusted EPS beat ($0.94 vs $0.44) was channel revenue that 'ran ahead of end-user demand,' and does that reverse in 2H \u2014 i.e. did you pull forward sales rather than see demand inflect?",
-            "why": "Brokers flagged rev-rec timing as part of the beat; this is the durability question. [book]"
+            "why": "Brokers flagged rev-rec timing as part of the beat; this is the durability question. [book]",
+            "tag": "one",
+            "listen_for": "Good: a hard number on the pull-forward + a sign demand actually inflected. Evasive: 'timing normalizes through the year' with no figure \u2192 the beat was borrowed from 2H and reverses."
           },
           {
             "q": "The FY26 tariff cost jumped to ~$135M (+$25M vs your prior estimate) on the Section 232 change. What's the offset path \u2014 price, sourcing, or margin absorption \u2014 and is $135M now conservative or still moving?",
-            "why": "Tariffs are the rising headwind partly offsetting the beat in the bridge. [book]"
+            "why": "Tariffs are the rising headwind partly offsetting the beat in the bridge. [book]",
+            "tag": "bear",
+            "listen_for": "Good: a concrete offset bridge (price X, sourcing Y) and '$135M is our conservative number.' Evasive: 'we're monitoring it' \u2192 the headwind is still open and the guide is at risk."
           },
           {
             "q": "EME carried the quarter (margin ~16%, +$104.6M op income y/y) while North America op income fell. How sustainable is EME margin, and what inflects NA from here?",
-            "why": "Regional mix is the whole quality-of-beat debate. [book]"
+            "why": "Regional mix is the whole quality-of-beat debate. [book]",
+            "tag": "rev",
+            "listen_for": "Good: a structural reason EME holds (mix, Fendt, cost program) + a dated NA inflection. Evasive: leaning on FX/comps \u2192 the margin is cyclical, not structural, and concentration risk is real."
           },
           {
             "q": "You raised the dividend and announced $350M of Q2 buybacks plus a ~$190M JV stake sale to Rabobank funding repurchases \u2014 how should we think about capital-return pace vs. reinvestment given still-soft demand?",
-            "why": "Capital return is a key bull pillar; the JV monetization is new. [book]"
+            "why": "Capital return is a key bull pillar; the JV monetization is new. [book]",
+            "tag": "angle",
+            "listen_for": "Good: a clear capital-allocation framework + whether the JV sale is repeatable. Evasive: vague on pace \u2192 buyback is opportunistic optics, not a committed lever."
           },
           {
             "q": "Retail tractor units are still down in NA and Brazil. What's your read on when the ag down-cycle troughs, and what's the first sign you'd point us to?",
-            "why": "The cycle call underlies every estimate; ask the CFO for the leading indicator. [book]"
+            "why": "The cycle call underlies every estimate; ask the CFO for the leading indicator. [book]",
+            "tag": "angle",
+            "listen_for": "Good: a specific leading indicator he watches (dealer inventory weeks, used-equipment pricing, order book). Evasive: 'hard to call' \u2192 no visibility, and 2026 estimates rest on faith."
           }
         ],
         "granite_pov": {
