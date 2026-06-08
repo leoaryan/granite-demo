@@ -1458,6 +1458,85 @@
             ],
             "read": "the operating KPIs say the cycle hasn't turned \u2014 retail units down in NA + Brazil; the beat is margin/cost execution + capital return, not unit demand. [book]"
           },
+          "task5_call": {
+            "title": "Task 5 \u00b7 Call & Q&A",
+            "prepared": [
+              {
+                "t": "Q1 performance",
+                "b": "Adj EPS $0.94 vs $0.41; sales ~$2.3B (+14%) on EME volume normalizing off easy comps [book]",
+                "quote": "\"deliberate actions to simplify and focus our operations and sharpen execution\" \u2014 CEO Hansotia"
+              },
+              {
+                "t": "Macro / fleet aging",
+                "b": "Replacement cycles delayed on high rates + tight liquidity + breakeven crop prices; global fleet age near a multi-year peak [book]"
+              },
+              {
+                "t": "Factory hours & build step-down",
+                "b": "Q1 assembly hours +15% y/y (Euro rebound); FY schedules now flat-to-lower with a strict 2H step-down to protect dealer channels [book]"
+              },
+              {
+                "t": "Finance-JV realignment",
+                "b": "Exiting the 49% AGCO Finance US + Canada JVs; Rabobank pays ~$190M cash, redeployed to buybacks [book]"
+              },
+              {
+                "t": "Capital return",
+                "b": "$350M Q2 ASR buyback; dividend +3.4% to $0.30 ($1.20 annualized) [book]"
+              }
+            ],
+            "qa": [
+              {
+                "topic": "Americas margin & underabsorption durability",
+                "analyst": "Jamie Cook, Truist",
+                "concern": "How bad is the underabsorption, and what's the Americas loss run-rate?",
+                "response": [
+                  "NA stays a mid-teens operating loss all year on the ~$135M ($25M incremental) tariff load \u2014 FY run-rate (10)% to (12)% [book]",
+                  "LATAM slight loss/breakeven in Q2, turning positive in 2H via FINAME credit, ~breakeven FY [book]"
+                ],
+                "takeaway": "Home-market margins are detached from retail reality \u2014 Europe is carrying the whole company."
+              },
+              {
+                "topic": "Global price realization",
+                "analyst": "Jamie Cook, Truist",
+                "concern": "Is pricing power holding, or is field discounting eroding gross margin?",
+                "response": [
+                  "Consolidated price capture stable in the 2-3% target, mildly ahead of budget [book]",
+                  "Europe/NA pricing resilient; LATAM needs promo + negative concessions [book]"
+                ],
+                "takeaway": "Discounting is starting in developing channels; mature Western networks stay insulated."
+              },
+              {
+                "topic": "Quality of the FY guide raise",
+                "analyst": "Kristen Owen, Oppenheimer",
+                "concern": "How much of the ~$6.00 raise is operational vs financial engineering?",
+                "response": [
+                  "Bridge: +$0.50 Q1 beat, +$0.15 buyback, +$0.20 efficiency [book]",
+                  "Offset by (0.25) tariffs, (0.20) volume cuts, (0.20) Middle-East freight [book]"
+                ],
+                "takeaway": "Core operating run-rate actually decayed sequentially \u2014 masked by tax + capital structure."
+              },
+              {
+                "topic": "Restructuring savings \u2014 timing or permanent?",
+                "analyst": "Kristen Owen, Oppenheimer",
+                "concern": "Are the cost savings a temporary pull-forward or a permanent margin step-up?",
+                "response": [
+                  "The $60-70M target is ~50/50 structural pull-forward + fresh permanent AI-driven cost-outs [book]",
+                  "Annualized run-rate now past $200M [book]"
+                ],
+                "takeaway": "Locking in higher trough-cycle margin protection \u2014 operating leverage on any macro inflection."
+              },
+              {
+                "topic": "Dealer inventory & 2H build cadence",
+                "analyst": "Stephen Volkmann, Jefferies",
+                "concern": "Where do dealer inventories sit and how aggressive is the 2H build cut?",
+                "response": [
+                  "NA dealer inventory elevated ~7 months vs a 6-month target [book]",
+                  "LATAM executing a ~20% build step-down in Q2 to hit a 3-month target [book]"
+                ],
+                "takeaway": "Production is being cut to defend channel health \u2014 near-term underabsorption is deliberate, not lost demand."
+              }
+            ],
+            "read": "the call is a 'don't extrapolate the beat' message: Europe carried it, the Americas are structurally loss-making this year, and the raise is financial, not demand-led. [book]"
+          },
           "task6_sellside": {
             "title": "Task 6 \u00b7 Sell-side",
             "bullish": [
@@ -1491,31 +1570,31 @@
           "debates": [
             {
               "debate": "Is the 1Q beat durable, or front-loaded revenue that reverses in 2H?",
-              "this_quarter": "Short answer: be careful \u2014 a lot of the beat was borrowed, not earned. Of the ~$0.50 EPS beat, a chunk was revenue booked before the gear actually sold to farmers \u2014 shipped to dealers and counted, but not sold through (channel fill) [book]. Add helpful FX and a lower tax rate, and very little is real demand. If that reverses, 2H gives some back. Watch dealer inventory. [book]",
+              "this_quarter": "Mostly borrowed, not earned: much of the ~$0.50 EPS beat is channel fill (shipped to dealers, not sold to farmers) plus FX and a low tax rate, not demand [book]. Watch dealer inventory into 2H.",
               "verdict": "OPEN \u2014 leans bear on quality",
               "draft": true
             },
             {
-              "debate": "Can Europe's margin (16.2%) keep carrying the company while the Americas stay weak?",
-              "this_quarter": "Short answer: yes for now, but it's a one-region story. Europe did basically all the work \u2014 op income up $104.6M y/y at a 16.2% margin [book]. Meanwhile North America's op income FELL $47.4M to a (12.5)% margin, and Latin America was (19.3)% [book]. The whole quarter leans on Europe. If Europe softens, there's nothing else to catch it. [book]",
+              "debate": "Can Europe's margin keep carrying the company while the Americas stay weak?",
+              "this_quarter": "A one-region quarter: Europe op income +$104.6M y/y at 16.2%, while North America fell to a (12.5)% margin and LATAM (19.3)% [book]. If Europe softens, nothing else catches it.",
               "verdict": "BULL pillar \u2014 but concentration risk",
               "draft": true
             },
             {
               "debate": "Is the rising tariff bill (~$135M) containable via price or sourcing?",
-              "this_quarter": "Short answer: maybe, but the number keeps creeping up. The FY26 tariff bill jumped to ~$135M \u2014 that's +$90M vs last year, and +$25M just since the last estimate, all from a change in how Section 232 tariffs are figured [book]. The guide builds in offsets, but management admits the number 'could change as the year evolves' [book]. So it's a real headwind that's still moving. Press the CFO: is $135M conservative, and how do they offset it? [book]",
+              "this_quarter": "A moving headwind: the FY26 tariff bill jumped to ~$135M (+$90M y/y, +$25M just since last estimate) on the Section 232 method change, and management says it 'could change' [book]. Press the CFO on the offset.",
               "verdict": "OPEN \u2014 a moving headwind",
               "draft": true
             },
             {
               "debate": "Has the farm-equipment down-cycle bottomed?",
-              "this_quarter": "Short answer: no, not yet. Tractors are still selling worse, not better \u2014 North America (8)%, Brazil (10)%, with only Western Europe up at +7% [book]. Crop prices near breakeven keep farmers cautious about buying. Until those unit numbers stop falling, the 2026 story is cost-cutting and FX, not a real demand turn. Ask the CFO which indicator he'd watch for the bottom. [book]",
+              "this_quarter": "No bottom yet: retail tractors still falling \u2014 NA (8)%, Brazil (10)%, only W.Europe +7% [book]. Until units stop dropping, 2026 is a cost/FX story, not a demand turn.",
               "verdict": "BEAR \u2014 cycle not yet turned",
               "draft": true
             },
             {
-              "debate": "Is the capital-return step-up a real, repeatable value lever?",
-              "this_quarter": "Short answer: yes, this is the cleanest good-news story in the quarter. They raised the dividend to $0.30 and announced a $350M Q2 buyback \u2014 partly paid for by selling a ~$190M stake in the AGCO Finance JV to Rabobank [book]. Smart move: it funds returns without leaning on soft earnings. The one open question is whether that JV sale is a one-off or the first of a recurring playbook. [book]",
+              "debate": "Is the capital-return step-up a real, repeatable lever?",
+              "this_quarter": "The cleanest positive: dividend up to $0.30 + a $350M Q2 buyback, partly funded by a ~$190M Rabobank JV stake sale [book] \u2014 returns without leaning on soft earnings. Open Q: one-off or recurring?",
               "verdict": "BULL \u2014 cleanest positive",
               "draft": true
             }
@@ -4281,6 +4360,444 @@
       "room": "TBD",
       "brief": null,
       "has_book": true
+    },
+    {
+      "ticker": "CAVA",
+      "company": "CAVA Group, Inc.",
+      "day": "Sample",
+      "date": "",
+      "start": "",
+      "end": "",
+      "type": "Sample brief \u2014 CAVA isn't a conference meeting; built as the Gemini-vs-Claude convergence proof.",
+      "execs": [],
+      "sample": true,
+      "brief": {
+        "ticker": "CAVA",
+        "company": "CAVA Group, Inc.",
+        "what_they_do": "Fast-casual Mediterranean restaurant chain \u2014 bowls/pitas, 459 units, growth-stage national expansion + digital. [book]",
+        "quarter": "Q1 2026 (reported May 19, 2026)",
+        "sample_note": "Sample brief \u2014 CAVA isn't a conference meeting; built as the Gemini-vs-Claude convergence proof.",
+        "company_brief": {
+          "the_view": "A clean, traffic-led beat into a soft QSR tape. Comp +9.7% (6.8% of it traffic) crushed the ~6.2% Street bar [book]; revenue +4.5% and EBITDA +8.7% vs consensus. RLM held flat at 25.1% \u2014 deliberate reinvestment, not deleverage. Management raised the FY comp guide (mid +150bps to 5.5%) but kept it conservative. The print de-risks the growth story; at ~58x EBITDA, valuation is now the debate."
+        },
+        "room": {
+          "note": "Sample brief (CAVA is not on the conference schedule). Shown to compare our converged output vs the Gemini benchmark.",
+          "people": [
+            {
+              "name": "Brett Schulman",
+              "title": "Co-Founder & CEO",
+              "in_room": false,
+              "is_primary": false,
+              "bio": null,
+              "bio_status": "sample"
+            }
+          ],
+          "not_in_room": []
+        },
+        "smart_questions": [
+          {
+            "q": "Is the ~9.7% comp run-rate real into 2H, or does the guide's implied deceleration arrive?",
+            "why": "durability of the comp",
+            "tag": "one",
+            "listen_for": "Good: Q2-to-date number + the comp algorithm. Evasive: 'macro prudence' with no figure \u2192 the run-rate is softening."
+          },
+          {
+            "q": "RLM is flat at 25.1% despite a 9.7% comp \u2014 when does margin actually inflect?",
+            "why": "margin is the bear",
+            "tag": "rev",
+            "listen_for": "Good: a path past salmon/wage drag. Evasive: 'reinvesting' with no timeline \u2192 flat RLM is structural."
+          },
+          {
+            "q": "At ~58x EBITDA, what gets the multiple paid \u2014 and what breaks it?",
+            "why": "valuation is the debate",
+            "tag": "bear",
+            "listen_for": "Good: unit growth + AUV durability. Evasive: dodging valuation \u2192 the bull case is already in the stock."
+          },
+          {
+            "q": "Is salmon a permanent menu/traffic shift or a temporary LTO boost?",
+            "why": "the menu-innovation engine",
+            "tag": "angle",
+            "listen_for": "Good: attach + repeat data. Evasive: 'early' \u2192 next-Q comp gives it back."
+          },
+          {
+            "q": "Digital is ~40% of mix \u2014 is that margin-accretive or just optics?",
+            "why": "channel mix vs margin",
+            "tag": "angle",
+            "listen_for": "Good: profit-per-order parity. Evasive: 'profit-neutral' only \u2192 3P drag caps RLM."
+          }
+        ],
+        "granite_pov": {
+          "stance": "DRAFT / unblessed",
+          "line": "Best-in-class traffic-led growth, de-risked; the debate has moved from 'can they grow' to 'is the ~58x multiple already paying for it' \u2014 with flat RLM the swing factor."
+        },
+        "sourcing": "All financials [book] = CAVA FactSet book (Q1 2026: press release, transcript, slides, 10-broker sell-side). Numbers recomputed from the schedule. Sample proof for the Gemini-vs-Claude convergence; Q&A attributed at firm level (no fabricated names).",
+        "teardown": {
+          "task1_pnl": {
+            "title": "Task 1 \u00b7 P&L",
+            "headers": [
+              "Metric",
+              "$MM",
+              "PY$",
+              "y/y %",
+              "vs Consensus",
+              "Notes"
+            ],
+            "rows": [
+              [
+                "Revs",
+                "438",
+                "332",
+                "32%",
+                "$438 vs $419 \u2014 +4.5% beat",
+                "Traffic +6.8%, price/mix +2.9% [book]"
+              ],
+              [
+                "RLP",
+                "109",
+                "82.3",
+                "32%",
+                "in-line",
+                "Restaurant-Level Profit +32.3%; COGS beat ~60bps (mix) [book]"
+              ],
+              [
+                "RLM %",
+                "25.1%",
+                "25.1%",
+                "0 bps",
+                "25.1% vs 25.0% \u2014 in-line, flat",
+                "Leverage offset by 3P-mix + wage [book]"
+              ],
+              [
+                "EPS",
+                "0.20",
+                "0.22",
+                "(9%)",
+                "$0.20 vs $0.17 \u2014 beat",
+                "Tax optic (lower equity-comp benefit); PBT +48% [book]"
+              ],
+              [
+                "G&A",
+                "51.6",
+                "41.4",
+                "25%",
+                "in-line",
+                "11.8% of rev vs 12.5% (70)bps; ex-SBC 9.9% [book]"
+              ],
+              [
+                "Adj EBITDA",
+                "61.7",
+                "44.9",
+                "38%",
+                "$61.7 vs $57.3 \u2014 +8.7% beat",
+                "+49bps margin ahead; top-line flow-through [book]"
+              ],
+              [
+                "EM %",
+                "14.1%",
+                "13.5%",
+                "+57 bps",
+                "ahead",
+                "Top-line upside flowed through [book]"
+              ]
+            ],
+            "read": "Clean beat on every line. The only non-beat is RLM (flat) \u2014 deliberate reinvestment, not a miss; the EPS dip is a tax optic (PBT +48%)."
+          },
+          "task2_guidance": {
+            "title": "Task 2 \u00b7 Guidance (FY26, raised)",
+            "posture": "Conservative / hedged: SSS midpoint raised +150bps to 5.5% (4.5-6.5%) yet Q1 printed 9.7% and Q2-to-date tracks ~9.7% \u2014 the guide embeds an H2 deceleration management isn't yet seeing [book].",
+            "table": {
+              "headers": [
+                "Metric",
+                "Guidance",
+                "Cons",
+                "Prior",
+                "Mgmt Explanation"
+              ],
+              "rows": [
+                [
+                  "SSS %",
+                  "4.5-6.5%",
+                  "5.1%",
+                  "3.0-5.0%",
+                  "Q1 traffic + menu; H2 moderate MSD [book]"
+                ],
+                [
+                  "Net New Units",
+                  "75-77",
+                  "76",
+                  "74-76",
+                  "Accelerated pipeline; NRO productivity >100% [book]"
+                ],
+                [
+                  "RLM %",
+                  "23.7-24.3%",
+                  "24.0%",
+                  "23.7-24.2%",
+                  "+10bps top only; (100)bps salmon + wage + energy [book]"
+                ],
+                [
+                  "Adj EBITDA",
+                  "$181-191M",
+                  "$186-187M",
+                  "$176-184M",
+                  "+$6M mid on Q1 flow-through [book]"
+                ]
+              ]
+            },
+            "read": "A sandbag: the raise (mid 5.5%) lags the ~10% run-rate by ~450bps. Management is banking conservatism + reinvestment, not signaling deceleration."
+          },
+          "task3_segments": {
+            "title": "Task 3 \u00b7 Segments / Channel",
+            "headers": [
+              "Segment",
+              "Revs",
+              "Margin Y/Y",
+              "Notes"
+            ],
+            "rows": [
+              [
+                "CAVA (brand)",
+                "434 vs 328 +32%",
+                "RLM 25.1% flat",
+                "459 units (+20.2%); AUV $3.0M vs $2.3M 1st-yr target; FB&P 29.1% (20)bps, Labor 25.7% flat, Other OpEx +80bps (3P) [book]"
+              ],
+              [
+                "Digital (channel)",
+                "~40% mix",
+                "profit-neutral",
+                "Mix 39.9% vs ~36% PY; digital rev +1,080bps q/q; KDS investment [book]"
+              ]
+            ],
+            "read": "The model is the brand \u2014 digital mix rising is optically dilutive but priced profit-neutral; don't read the Other-OpEx tick as pressure."
+          },
+          "task4_kpis": {
+            "title": "Task 4 \u00b7 KPIs",
+            "headers": [
+              "KPI",
+              "Value",
+              "y/y",
+              "Read"
+            ],
+            "rows": [
+              [
+                "% SSS",
+                "9.7%",
+                "(110) bps",
+                "Beat Street 6.2%; traffic-led = high quality [book]"
+              ],
+              [
+                "% Traffic",
+                "6.8%",
+                "\u2014",
+                "The surprise \u2014 visits, not price [book]"
+              ],
+              [
+                "% Price/Mix",
+                "2.9%",
+                "\u2014",
+                "Only ~1.4% list price \u2192 traffic quality [book]"
+              ],
+              [
+                "CAVA Units",
+                "459",
+                "+20%",
+                "20 net opens; 29 states + DC [book]"
+              ],
+              [
+                "AUV",
+                "$3,027k",
+                "+3%",
+                "New units >$3M vs $2.3M target [book]"
+              ],
+              [
+                "Digital Mix",
+                "39.9%",
+                "+~390 bps",
+                "3P + 1P up; KDS investment [book]"
+              ]
+            ],
+            "read": "Traffic 6.8% is the whole story \u2014 the highest-quality kind of comp and the hardest for peers to copy."
+          },
+          "task5_call": {
+            "title": "Task 5 \u00b7 Call & Q&A",
+            "prepared": [
+              {
+                "t": "Headline",
+                "b": "Revs +32% to $438.3M; adj EBITDA +38% to $61.7M; SSS 9.7% on 6.8% traffic [book]",
+                "quote": "\"a clear industry leader\u2026 meet the moment for the modern consumer\" \u2014 CEO Schulman"
+              },
+              {
+                "t": "Footprint velocity",
+                "b": "20 net new units \u2192 459 (+20.2%); Midwest entries (Cincinnati, St. Louis, Columbus); 2024 class still positive at 18 months \u2014 honeymoon NOT fading [book]"
+              },
+              {
+                "t": "Unit economics",
+                "b": "RLM flat 25.1% ($108.9M RLP); leverage offset by 3P-delivery mix + wage; digital mix 39.9% [book]"
+              },
+              {
+                "t": "Menu innovation",
+                "b": "Glazed Salmon national launch (first seafood, ~100bps RLM headwind, 'penny-profit neutral'); shrimp in Nashville market test [book]"
+              },
+              {
+                "t": "Cash & liquidity",
+                "b": "Zero debt, ~$296-403M cash; OCF $64.1M, FCF $15.5M (vs $2.7M PY) [book]"
+              }
+            ],
+            "qa": [
+              {
+                "topic": "SSS run-rate sustainability & Q2 trajectory",
+                "analyst": "analyst-raised",
+                "concern": "Is the 9.7% comp + traffic velocity sustainable into Q2 as macro headwinds build?",
+                "response": [
+                  "Q2-to-date tracking ~Q1 (~9.7%), above the raised guide [book]",
+                  "FY 4.5-6.5% guide deliberately buffers tough comps + macro [book]"
+                ],
+                "takeaway": "The guide is a protective buffer, not a forecast of deceleration \u2014 re-raise optionality."
+              },
+              {
+                "topic": "Margin mechanics & delivery/wage pressure",
+                "analyst": "Stifel",
+                "concern": "Why is RLM flat (25.1%) despite a 9.7% comp and sales leverage?",
+                "response": [
+                  "De-leverage from 3P-delivery mix + 2% wage investment [book]",
+                  "Conservative ~1.4% pricing to hold the value proposition [book]"
+                ],
+                "takeaway": "Delivery friction caps near-term margin; strategy prioritizes share + value over price."
+              },
+              {
+                "topic": "Honeymoon-fade & new-unit durability",
+                "analyst": "BofA / Baird",
+                "concern": "Do new-store comps fade after the honeymoon (the structural unit-model bear)?",
+                "response": [
+                  "2024 class still positive at 18 months \u2014 no cliff [book]",
+                  "NRO productivity >100%; AUV $3.0M vs $2.3M 1st-yr target [book]"
+                ],
+                "takeaway": "The fade-bear is refuted \u2014 de-risks the growth algorithm, which matters to the multiple more than the print."
+              },
+              {
+                "topic": "Comp breadth",
+                "analyst": "TD Cowen",
+                "concern": "Is the comp broad-based or concentrated in a few regions/cohorts?",
+                "response": [
+                  "Strength across all regions, vintages, and income bands [book]",
+                  "Lower-income cohort outperforming (k-shaped) [book]"
+                ],
+                "takeaway": "Breadth signals durable demand, not a one-market spike."
+              },
+              {
+                "topic": "Pricing power & salmon permanence",
+                "analyst": "Citi / Morgan Stanley",
+                "concern": "Why not take more price, and is salmon a permanent traffic shift?",
+                "response": [
+                  "Chose NOT to price beyond ~1.4% \u2014 the AB1228 precedent; traffic outperformed [book]",
+                  "Salmon runs \u22654 quarters, not yet committed to everyday [book]"
+                ],
+                "takeaway": "Pricing power is held in reserve (a future lever); salmon permanence stays open."
+              }
+            ],
+            "read": "The call dismantled the honeymoon-fade bear and reframed the debate as margin + valuation \u2014 management is reinvesting the comp upside, not banking it, and sandbagging the guide."
+          },
+          "task6_sellside": {
+            "title": "Task 6 \u00b7 Sell-side",
+            "bullish": [
+              "9.7% comp beat Street 6.2% AND the ~8% buy-side whisper [book]",
+              "NRO productivity >100%; Blair TAM ~2,000 units [book]",
+              "Low-income cohort outperforming (k-shaped) [book]",
+              "EBITDA beat 8.7%, +49bps margin ahead [book]",
+              "Pristine balance sheet \u2014 zero debt, ~$400M cash [book]"
+            ],
+            "bearish": [
+              "~58x FY26 EBITDA \u2014 Davidson PT $84 assumes contraction to ~43x FY27 [book]",
+              "RLM flat/in-line, not expanding [book]",
+              "Guide implies a sharp H2 deceleration [book]",
+              "Salmon permanence + margin unresolved [book]",
+              "EPS down y/y (tax optic) + rising pre-opening/D&A [book]"
+            ],
+            "read": "The desk is constructive on the algorithm and split on the multiple \u2014 the bears are valuation bears, not growth bears."
+          },
+          "task7_stock": {
+            "title": "Task 7 \u00b7 Stock reaction (+~7% AH)",
+            "drivers": [
+              "Traffic-led comp crushed the bar (9.7% vs 6.2%, ~350bps) \u2014 the prime mover [book]",
+              "Honeymoon-fade bear dismantled \u2014 de-risks the growth algorithm [book]",
+              "Conservative raise (mid 5.5% vs ~10% run-rate) \u2192 easily-beatable bar [book]"
+            ],
+            "read": "Strong, but priced for greatness \u2014 the print confirmed a bull case already largely in the stock at ~58x."
+          }
+        },
+        "drivers_autodraft": {
+          "status": "AUTO-DRAFT \u2014 machine-extracted from this quarter's Q&A + sell-side. NOT a Granite-authored thesis. Needs analyst review.",
+          "debates": [
+            {
+              "debate": "Is the ~9.7% comp run-rate durable into 2H?",
+              "this_quarter": "Holding so far: Q2-to-date tracks ~9.7%, above a guide that embeds deceleration management isn't seeing [book]. Watch the 2-yr stack as comps toughen.",
+              "verdict": "BULL \u2014 leans durable",
+              "draft": true
+            },
+            {
+              "debate": "Will RLM ever inflect, or is flat the new normal?",
+              "this_quarter": "Flat by choice: 25.1% held as 3P-mix + 2% wage + salmon (~100bps) absorb the leverage; FY guide implies ~flat (23.7-24.3%) [book]. Reinvestment, not pressure \u2014 but the bear is now margin.",
+              "verdict": "OPEN \u2014 margin is the debate",
+              "draft": true
+            },
+            {
+              "debate": "Is the new-unit honeymoon fade real?",
+              "this_quarter": "Refuted this quarter: the 2024 class is still positive at 18 months and NRO productivity is >100% [book]. The biggest structural overhang weakened.",
+              "verdict": "BULL \u2014 bear weakened",
+              "draft": true
+            },
+            {
+              "debate": "Is salmon a permanent shift or a temporary LTO boost?",
+              "this_quarter": "Open: salmon runs \u22654 quarters but isn't committed to everyday; shrimp is in a Nashville market test [book]. Next-Q comp tests whether it gives anything back.",
+              "verdict": "OPEN \u2014 pipeline forming",
+              "draft": true
+            },
+            {
+              "debate": "Does ~58x EBITDA already price the bull case in?",
+              "this_quarter": "The crux: the print confirmed the algorithm but the stock only rose ~7% \u2014 Davidson's $84 PT assumes contraction to ~43x FY27 [book]. Valuation, not growth, is the live risk.",
+              "verdict": "BEAR \u2014 valuation risk",
+              "draft": true
+            }
+          ],
+          "kpi_scorecard": [
+            [
+              "% SSS",
+              "9.7%",
+              "vs 6.2% cons \u2014 big beat [book]"
+            ],
+            [
+              "% Traffic",
+              "6.8%",
+              "the surprise [book]"
+            ],
+            [
+              "RLM",
+              "25.1%",
+              "flat \u2014 the central debate [book]"
+            ],
+            [
+              "AUV",
+              "$3.0M",
+              "vs $2.3M 1st-yr target [book]"
+            ],
+            [
+              "EBITDA",
+              "$61.7M",
+              "+8.7% vs cons [book]"
+            ]
+          ],
+          "triggers": [
+            "Watch the 2-yr comp stack as FY26 comps toughen \u2014 the durability tell.",
+            "Watch salmon attach/repeat into Q2 \u2014 permanence vs LTO."
+          ],
+          "new_debates": [
+            "Energy/fuel-surcharge H2 RLM drag (20-40bps) \u2014 the FY26 margin swing factor.",
+            "Digital-mix margin optics (~40%) \u2014 is 3P really profit-neutral at scale?"
+          ],
+          "updated_pov": "Bull intact and strengthening on the top line (traffic-led, honeymoon-bear weakened); the bear has migrated from growth to margin + valuation. High conviction on durability, gated on the ~58x multiple."
+        }
+      },
+      "has_book": true
     }
   ],
   "briefs_built": [
@@ -4288,6 +4805,7 @@
     "ALSN",
     "ARCB",
     "ASTE",
+    "CAVA",
     "CTRI",
     "EQPT",
     "MLI",

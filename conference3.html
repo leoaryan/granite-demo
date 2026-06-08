@@ -220,6 +220,19 @@ table.dt td.k{font-weight:700;color:var(--ink);white-space:nowrap}
 .q-l{background:var(--bg);border:1px solid var(--line2);border-radius:10px;padding:10px 12px;margin-top:11px;font-size:.84rem;line-height:1.5;color:var(--ink2)}
 .q-l .ll{display:block;font-family:var(--mono);font-size:.6rem;font-weight:600;letter-spacing:.08em;color:var(--accent);text-transform:uppercase;margin-bottom:4px}
 .q-l .good{color:var(--up);font-weight:600} .q-l .evas{color:var(--down);font-weight:600}
+/* Task 5 rich Q&A (Gemini-depth) */
+.qatag2{font-family:var(--mono);font-size:.66rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin:14px 0 8px}
+.prep{margin:0 0 4px;padding-left:18px}
+.prep li{margin:6px 0;font-size:.86rem;line-height:1.5}
+.cq{font-style:italic;color:var(--dim);font-size:.82rem;margin-top:3px;border-left:2px solid var(--line);padding-left:8px}
+.qaitem{border:1px solid var(--line);border-radius:11px;padding:12px 13px;margin-bottom:9px;background:var(--bg)}
+.qa-h{font-weight:600;font-size:.92rem;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.qa-n{flex:none;width:20px;height:20px;display:grid;place-items:center;border-radius:6px;background:var(--accent);color:#fff;font-size:.7rem;font-weight:700}
+.qa-who{font-family:var(--mono);font-size:.66rem;color:var(--dim);font-weight:500}
+.qa-c,.qa-r,.qa-t{font-size:.84rem;line-height:1.5;margin-top:7px;color:var(--ink2)}
+.qa-c b,.qa-r b,.qa-t b{display:inline-block;font-family:var(--mono);font-size:.58rem;letter-spacing:.06em;text-transform:uppercase;margin-right:6px;font-weight:700}
+.qa-c b{color:var(--down)} .qa-r b{color:var(--accent)} .qa-t b{color:var(--up)}
+.qa-r ul{margin:4px 0 0;padding-left:16px} .qa-r li{margin:3px 0}
 
 /* drivers */
 .panel.drivers{border-color:#f0dcae;background:linear-gradient(180deg,#fffdf8,var(--card))}
@@ -299,14 +312,14 @@ async function load(){
   try{DATA=await(await fetch('conference_data.json?cb='+Date.now())).json();}
   catch(e){$('#sched').innerHTML='<p class="note">Could not load conference data.</p>';return;}
   // Scope: only days we've actually prepped briefs for (currently just Tue Jun 9).
-  // Drop the not-yet-built days so the schedule reflects what's real.
-  const liveDays=new Set(DATA.meetings.filter(m=>m.brief).map(m=>m.day));
-  if(liveDays.size) DATA.meetings=DATA.meetings.filter(m=>liveDays.has(m.day));
+  // Keep sample briefs (e.g. #CAVA) reachable by deep-link but OUT of the day scope.
+  const liveDays=new Set(DATA.meetings.filter(m=>m.brief&&!m.sample).map(m=>m.day));
+  if(liveDays.size) DATA.meetings=DATA.meetings.filter(m=>m.sample||liveDays.has(m.day));
   $('#meta').textContent=DATA.dates||'Wells Fargo Industrials';
   days();schedule();
   const h=(location.hash||'').replace('#','');if(h&&DATA.meetings.find(m=>m.ticker===h))openB(h);
 }
-function days(){const ds=[...new Set(DATA.meetings.map(m=>m.day))];DAY=DAY||ds[0];
+function days(){const ds=[...new Set(DATA.meetings.filter(m=>!m.sample).map(m=>m.day))];DAY=DAY||ds[0];
   // Only one meeting day in scope (Tue Jun 9) — show day tabs only if there's more than one.
   const tabs = ds.length>1
     ? `<div class="daytabs">${ds.map(d=>`<button class="dtab${d===DAY?' on':''}" data-d="${d}">${d}</button>`).join('')}</div>`
@@ -403,7 +416,20 @@ function guid(g){let h=`<p class="note">${chips(g.posture)}</p>`;if(g.table)h+=t
 function sells(s){return `<p class="read"><b>Bull</b></p><ul>${(s.bullish||[]).map(x=>`<li>${chips(x)}</li>`).join('')}</ul>`
   +`<p class="read"><b>Bear</b></p><ul>${(s.bearish||[]).map(x=>`<li>${chips(x)}</li>`).join('')}</ul>`+(s.read?`<p class="read"><b>Read</b> ${chips(s.read)}</p>`:'');}
 function stock(s){return `<ul>${(s.drivers||[]).map(x=>`<li>${chips(x)}</li>`).join('')}</ul>`+(s.read?`<p class="read"><b>Read</b> ${chips(s.read)}</p>`:'');}
-function callb(b){const p=b.room.people.find(x=>x.is_primary)||{};
+function callb(b){
+  const t5=(b.teardown||{}).task5_call;
+  if(t5){  // rich, Gemini-depth Q&A
+    const prep=(t5.prepared||[]).map(p=>`<li><b>${esc(p.t)}:</b> ${chips(p.b)}${p.quote?`<div class="cq">${chips(p.quote)}</div>`:''}</li>`).join('');
+    const qa=(t5.qa||[]).map((q,i)=>`<div class="qaitem">
+        <div class="qa-h"><span class="qa-n">${i+1}</span>${esc(q.topic)}<span class="qa-who">${esc(q.analyst)}</span></div>
+        <div class="qa-c"><b>Concern</b> ${chips(q.concern)}</div>
+        <div class="qa-r"><b>Response</b><ul>${(q.response||[]).map(x=>`<li>${chips(x)}</li>`).join('')}</ul></div>
+        <div class="qa-t"><b>Takeaway</b> ${chips(q.takeaway)}</div></div>`).join('');
+    return `<div class="qatag2">Prepared remarks</div><ul class="prep">${prep}</ul>
+      <div class="qatag2">Q&amp;A — analyst inquiries</div>${qa}
+      ${t5.read?`<p class="read"><b>Read</b> ${chips(t5.read)}</p>`:''}`;
+  }
+  const p=b.room.people.find(x=>x.is_primary)||{};
   return (p.tells_from_call?`<p class="read"><b>${esc(p.name)} on the call</b> ${chips(p.tells_from_call)}</p>`:'')
     +((p.last_q_commitments||[]).length?`<p class="read"><b>Committed last Q</b></p><ul>${p.last_q_commitments.map(c=>`<li>${chips(c)}</li>`).join('')}</ul>`:'');}
 function ex(title,inner){return `<details class="ex"><summary>${title}</summary><div class="exb">${inner}</div></details>`;}
