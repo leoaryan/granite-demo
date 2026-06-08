@@ -77,6 +77,7 @@ body{background:
   color:var(--accent);background:var(--accent-soft);padding:1px 5px;border-radius:5px;margin-left:5px;vertical-align:middle}
 .srow.is-nob{opacity:.82}
 /* schedule table (landing page) */
+.schcap{font-size:.82rem;font-weight:600;color:var(--dim);letter-spacing:.02em;margin:4px 2px 12px;text-transform:uppercase}
 .schhead{display:flex;align-items:baseline;gap:14px;margin:8px 0 16px}
 .schhead h1{font-family:var(--disp);font-size:clamp(1.5rem,3vw,2.1rem);font-weight:600;margin:0;letter-spacing:-.01em}
 .schcount{font-size:.84rem;color:var(--dim);font-weight:500}
@@ -294,13 +295,21 @@ function cellc(c){let h=chips(c);if(/\bbeat\b/i.test(c))h=h.replace(/\bbeat\b/i,
 async function load(){
   try{DATA=await(await fetch('conference_data.json?cb='+Date.now())).json();}
   catch(e){$('#sched').innerHTML='<p class="note">Could not load conference data.</p>';return;}
+  // Scope: only days we've actually prepped briefs for (currently just Tue Jun 9).
+  // Drop the not-yet-built days so the schedule reflects what's real.
+  const liveDays=new Set(DATA.meetings.filter(m=>m.brief).map(m=>m.day));
+  if(liveDays.size) DATA.meetings=DATA.meetings.filter(m=>liveDays.has(m.day));
   $('#meta').textContent=DATA.dates||'Wells Fargo Industrials';
   days();schedule();
   const h=(location.hash||'').replace('#','');if(h&&DATA.meetings.find(m=>m.ticker===h))openB(h);
 }
 function days(){const ds=[...new Set(DATA.meetings.map(m=>m.day))];DAY=DAY||ds[0];
-  $('#sched').innerHTML=`<div class="daytabs">${ds.map(d=>`<button class="dtab${d===DAY?' on':''}" data-d="${d}">${d}</button>`).join('')}</div><div class="schedgrid" id="mg"></div>`;
-  $$('.dtab').forEach(b=>b.onclick=()=>{DAY=b.dataset.d;days();schedule();});
+  // Only one meeting day in scope (Tue Jun 9) — show day tabs only if there's more than one.
+  const tabs = ds.length>1
+    ? `<div class="daytabs">${ds.map(d=>`<button class="dtab${d===DAY?' on':''}" data-d="${d}">${d}</button>`).join('')}</div>`
+    : '';
+  $('#sched').innerHTML=`${tabs}<div id="mg"></div>`;
+  if(ds.length>1)$$('.dtab').forEach(b=>b.onclick=()=>{DAY=b.dataset.d;days();schedule();});
 }
 // the EPS beat/miss signal for a built brief (for the schedule table)
 function epsSignal(b){
@@ -360,9 +369,9 @@ function schedule(){
   const greet=jarvisGreeting(items,dayLabel,built,beats,nobk);
   $('#mg').innerHTML=`
     ${greet}
-    <div class="schhead"><h1>${dayLabel}</h1><span class="schcount">${items.length} meetings · Chicago <span class="tzc">CDT</span></span></div>
+    <div class="schcap">${dayLabel} · ${items.length} meetings · Chicago <span class="tzc">CDT</span></div>
     <div class="schwrap"><table class="schtable">
-      <thead><tr><th>Time<span class="tzc">CDT</span></th><th>Company</th><th>Ticker</th><th>In the room</th><th>Print</th><th>Status</th></tr></thead>
+      <thead><tr><th>Time</th><th>Company</th><th>Ticker</th><th>In the room</th><th>Print</th><th>Status</th></tr></thead>
       <tbody>${rows||'<tr><td colspan="6" class="note">No meetings.</td></tr>'}</tbody>
     </table></div>`;
   $$('.srow').forEach(r=>r.onclick=()=>openB(r.dataset.t));
