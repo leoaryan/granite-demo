@@ -62,6 +62,20 @@ body{background:
   font-size:.86rem;padding:9px 20px;border-radius:11px;cursor:pointer;box-shadow:var(--shadow)}
 .dtab.on{background:var(--accent);color:#fff;border-color:var(--accent)}
 .schedgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:12px}
+/* Jarvis greeting (landing) */
+.jarvis{background:linear-gradient(135deg,#eef0fe 0,#f3f0fb 50%,#eef6f1 100%);
+  border:1px solid #dadcf6;border-radius:18px;padding:20px 22px;margin:6px 0 22px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.jarvis::after{content:"";position:absolute;right:-30px;top:-30px;width:140px;height:140px;border-radius:50%;
+  background:radial-gradient(circle,rgba(59,59,220,.10),transparent 70%)}
+.jv-hi{font-family:var(--disp);font-size:1.35rem;font-weight:600;letter-spacing:-.01em;margin-bottom:6px}
+.jv-body{font-size:.98rem;line-height:1.6;color:var(--ink2);max-width:72ch;position:relative;z-index:1}
+.jv-body b{color:var(--ink);font-weight:600}
+.jv-tip{font-size:.82rem;color:var(--accent);font-weight:600;margin-top:10px}
+.nob-tag{display:inline-block;font-size:.62rem;font-weight:700;letter-spacing:.03em;color:var(--down);
+  background:var(--down-bg);padding:2px 8px;border-radius:20px;margin-left:9px;vertical-align:middle}
+.tzc{display:inline-block;font-family:var(--mono);font-size:.56rem;font-weight:700;letter-spacing:.06em;
+  color:var(--accent);background:var(--accent-soft);padding:1px 5px;border-radius:5px;margin-left:5px;vertical-align:middle}
+.srow.is-nob{opacity:.82}
 /* schedule table (landing page) */
 .schhead{display:flex;align-items:baseline;gap:14px;margin:8px 0 16px}
 .schhead h1{font-family:var(--disp);font-size:clamp(1.5rem,3vw,2.1rem);font-weight:600;margin:0;letter-spacing:-.01em}
@@ -207,11 +221,10 @@ table.dt td.k{font-weight:700;color:var(--ink);white-space:nowrap}
 .panel.drivers{border-color:#f0dcae;background:linear-gradient(180deg,#fffdf8,var(--card))}
 .dwarn{font-size:.78rem;line-height:1.5;color:var(--warn);background:var(--warn-bg);border:1px solid #f0dcae;
   border-radius:11px;padding:11px 13px;margin-bottom:14px}
-.drow{border:1px solid var(--line);border-radius:12px;margin-bottom:9px;background:var(--card);overflow:hidden}
-.drow>summary{list-style:none;cursor:pointer;padding:12px 14px;display:flex;align-items:center;gap:11px}
-.drow>summary::-webkit-details-marker{display:none}
-.dr-q{font-size:.92rem;font-weight:500;line-height:1.35}
-.dr-b{padding:0 14px 13px;font-size:.85rem;line-height:1.5;color:var(--ink2)}
+.drow{border:1px solid var(--line);border-radius:12px;margin-bottom:11px;background:var(--card);overflow:hidden}
+.dr-head{padding:12px 14px 0;display:flex;align-items:center;gap:11px;flex-wrap:wrap}
+.dr-q{font-size:.96rem;font-weight:600;line-height:1.35}
+.dr-b{padding:9px 14px 13px;font-size:.88rem;line-height:1.6;color:var(--ink2)}
 .vp{flex:none;font-size:.6rem;font-weight:800;letter-spacing:.05em;padding:4px 9px;border-radius:20px;text-transform:uppercase}
 .vp.bull{background:var(--up-bg);color:var(--up)} .vp.bear{background:var(--down-bg);color:var(--down)} .vp.open{background:var(--warn-bg);color:var(--warn)}
 .pov{margin-top:14px;padding-top:13px;border-top:1px dashed #f0dcae;font-size:.94rem;line-height:1.6;color:var(--ink2)}
@@ -295,6 +308,34 @@ function epsSignal(b){
   const r=b.teardown.task1_pnl.rows.find(x=>/adj eps|^eps/i.test(x[0]));
   if(!r)return null;return verdict(r[4]);
 }
+// Chicago (Central) local time — the conference is on CDT and so is Pankaj.
+function chicagoNow(){
+  try{
+    const f=new Intl.DateTimeFormat('en-US',{timeZone:'America/Chicago',hour:'numeric',weekday:'long',hour12:false});
+    const parts=f.formatToParts(new Date());
+    const hour=+(parts.find(p=>p.name==='hour').value);
+    const weekday=parts.find(p=>p.name==='weekday').value;
+    return {hour,weekday};
+  }catch(e){return {hour:8,weekday:''};}
+}
+function greetWord(h){return h<5?'Working late':h<12?'Good morning':h<17?'Good afternoon':'Good evening';}
+// a warm, Jarvis-style line for Pankaj on the landing page (Chicago-time aware)
+function jarvisGreeting(items,dayLabel,built,beats,nobk){
+  if(!items.length)return'';
+  const first=items[0], last=items[items.length-1];
+  const now=chicagoNow();
+  const hello=greetWord(now.hour);
+  // is today the meeting day? then say "today"; else "your <day>"
+  const isToday=now.weekday===first.day;
+  const when=isToday?'today':`your ${first.day}`;
+  const tail=nobk?` Heads-up: ${nobk} ${nobk===1?'meeting is':'meetings are'} still waiting on a book — flagged below.`:'';
+  const beatLine=beats?` ${beats} of them printed a beat this quarter.`:'';
+  return `<div class="jarvis">
+    <div class="jv-hi">${hello}, Pankaj 👋</div>
+    <div class="jv-body">Here's ${when} — <b>${items.length} meetings</b> in Chicago, ${first.start}–${last.end} <span class="tzc">CDT</span>, starting with <b>${esc(first.company)}</b>.${beatLine} I've prepped a full brief for each: the snapshot, who's in the room, the questions to ask, and a draft thesis you can react to.${tail}</div>
+    <div class="jv-tip">Tap any meeting to open its console. I'll be right here.</div>
+  </div>`;
+}
 function schedule(){
   $('#sched').hidden=false;$('#brief').hidden=true;$('#back').hidden=true;
   const items=DATA.meetings.filter(m=>m.day===DAY);
@@ -305,17 +346,23 @@ function schedule(){
     const sig=epsSignal(m.brief);
     const sigCell=sig?`<span class="rsig ${sig.c}">${sig.m} ${sig.l}</span>`:(nob?'<span class="rsig na">—</span>':'<span class="rsig na">—</span>');
     const st=built?'<span class="rst rdy">● Brief</span>':nob?'<span class="rst nob">No book</span>':'<span class="rst pend">Pending</span>';
-    return `<tr class="srow" data-t="${m.ticker}">
+    const nobTag=nob?'<span class="nob-tag">⚠ no book yet</span>':'';
+    return `<tr class="srow${nob?' is-nob':''}" data-t="${m.ticker}">
       <td class="rt">${m.start}</td>
-      <td class="rco"><span class="rco-n">${esc(m.company)}</span></td>
+      <td class="rco"><span class="rco-n">${esc(m.company)}</span>${nobTag}</td>
       <td class="rtic">${m.ticker}</td>
       <td class="rwho">${who}</td>
       <td class="rsig-c">${sigCell}</td>
       <td class="rst-c">${st}</td></tr>`;}).join('');
+  const built=items.filter(m=>m.brief&&!m.brief.no_book).length;
+  const beats=items.filter(m=>{const s=epsSignal(m.brief);return s&&s.c==='up';}).length;
+  const nobk=items.filter(m=>!m.has_book).length;
+  const greet=jarvisGreeting(items,dayLabel,built,beats,nobk);
   $('#mg').innerHTML=`
-    <div class="schhead"><h1>${dayLabel}</h1><span class="schcount">${items.length} meetings</span></div>
+    ${greet}
+    <div class="schhead"><h1>${dayLabel}</h1><span class="schcount">${items.length} meetings · Chicago <span class="tzc">CDT</span></span></div>
     <div class="schwrap"><table class="schtable">
-      <thead><tr><th>Time</th><th>Company</th><th>Ticker</th><th>In the room</th><th>Print</th><th>Status</th></tr></thead>
+      <thead><tr><th>Time<span class="tzc">CDT</span></th><th>Company</th><th>Ticker</th><th>In the room</th><th>Print</th><th>Status</th></tr></thead>
       <tbody>${rows||'<tr><td colspan="6" class="note">No meetings.</td></tr>'}</tbody>
     </table></div>`;
   $$('.srow').forEach(r=>r.onclick=()=>openB(r.dataset.t));
@@ -376,15 +423,16 @@ function questions(b){return (b.smart_questions||[]).map((q,i)=>{const t=qtag(q)
   return `<div class="qc ${t.c}"><span class="q-tag">${t.i} ${t.l}<span class="n">${i+1}/${b.smart_questions.length}</span></span>
     <div class="q-q">${chips(q.q)}</div>${listen}</div>`;}).join('');}
 
-function drivers(dr){const deb=(dr.debates||[]).map(d=>`<details class="drow"><summary>${vpill(d.verdict)}<span class="dr-q">${chips(d.debate)}</span></summary>
-    <div class="dr-b">${chips(d.this_quarter)}</div></details>`).join('');
+function drivers(dr){const deb=(dr.debates||[]).map(d=>`<div class="drow open">
+    <div class="dr-head">${vpill(d.verdict)}<span class="dr-q">${chips(d.debate)}</span></div>
+    <div class="dr-b">${chips(d.this_quarter)}</div></div>`).join('');
   const extra=((dr.triggers||[]).length||(dr.new_debates||[]).length)?ex('Triggers &amp; new debates',
     ((dr.triggers||[]).length?`<p class="read"><b>Triggers</b></p><ul>${dr.triggers.map(t=>`<li>${chips(t)}</li>`).join('')}</ul>`:'')+
     ((dr.new_debates||[]).length?`<p class="read"><b>New</b></p><ul>${dr.new_debates.map(t=>`<li>${chips(t)}</li>`).join('')}</ul>`:'')):'';
   return `<div class="dwarn">⚑ ${chips(dr.status)}</div>${deb}${extra}
     <p class="pov"><b>Working view (auto-draft)</b> ${chips(dr.updated_pov)}</p>`;}
 
-function openB(tic){const m=DATA.meetings.find(x=>x.ticker===tic);if(!m)return;const b=m.brief;
+function openB(tic){const m=DATA.meetings.find(x=>x.ticker===tic);if(!m)return;const b=m.brief;DAY=m.day;
   let h='';
   const full=b&&!b.no_book;  // a real teardown vs a people-only "no book" brief
   // hero band — full width
@@ -425,7 +473,7 @@ function openB(tic){const m=DATA.meetings.find(x=>x.ticker===tic);if(!m)return;c
   $('#brief').innerHTML=h;$('#sched').hidden=true;$('#brief').hidden=false;$('#back').hidden=false;
   if(history.replaceState)history.replaceState(null,'','#'+tic);window.scrollTo(0,0);
 }
-$('#back').onclick=()=>{if(history.replaceState)history.replaceState(null,'',location.pathname);schedule();};
+$('#back').onclick=()=>{if(history.replaceState)history.replaceState(null,'',location.pathname);days();schedule();window.scrollTo(0,0);};
 $('#abtoggle').addEventListener('click',function(){if(location.hash)this.href='conference.html'+location.hash;});
 load();
 </script>
