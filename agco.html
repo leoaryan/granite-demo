@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AGCO Q1 2026 — Granite (Gemini-format)</title>
+<style>
+:root{ --ink:#1a1a1a; --dim:#666; --line:#d8dce3; --line2:#eceef2; --bg:#fff;
+  --head:#f4f6f9; --accent:#1f4e79; --red:#c0392b; --green:#1a7a44; --chipbg:#eef2f7; }
+*{box-sizing:border-box}
+body{margin:0;background:#f0f2f5;color:var(--ink);
+  font-family:Georgia,"Times New Roman",serif;font-size:15px;line-height:1.55}
+.page{max-width:980px;margin:0 auto;background:var(--bg);padding:48px 56px 80px;
+  box-shadow:0 0 0 1px var(--line),0 8px 40px rgba(0,0,0,.06);min-height:100vh}
+h1{font-size:1.7rem;margin:0 0 4px;letter-spacing:-.01em}
+.sub{color:var(--dim);font-size:.86rem;margin-bottom:6px;font-family:Arial,Helvetica,sans-serif}
+.note-banner{background:#fbf6e8;border:1px solid #ead9a0;border-radius:6px;padding:10px 14px;
+  font-family:Arial,Helvetica,sans-serif;font-size:.8rem;color:#6b5a1e;line-height:1.5;margin:14px 0 26px}
+hr{border:0;border-top:1px solid var(--line);margin:30px 0}
+h2{font-size:1.18rem;color:var(--accent);margin:30px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent);
+  font-family:Arial,Helvetica,sans-serif;letter-spacing:-.01em}
+h3{font-size:.98rem;margin:18px 0 8px;font-family:Arial,Helvetica,sans-serif;color:#333}
+p{margin:10px 0}
+.gran{font-size:.7rem;font-weight:700;color:#8a6d1e;background:#fbf3da;padding:2px 7px;border-radius:4px;
+  font-family:Arial,Helvetica,sans-serif;letter-spacing:.02em;vertical-align:middle}
+/* tables — the heart of the Gemini look */
+table{border-collapse:collapse;width:100%;margin:14px 0 6px;font-family:Arial,Helvetica,sans-serif;font-size:.82rem}
+th{background:var(--head);text-align:left;padding:9px 11px;border:1px solid var(--line);
+  font-weight:700;color:#2a2a2a;vertical-align:top}
+td{padding:9px 11px;border:1px solid var(--line);vertical-align:top;line-height:1.5}
+td:first-child{font-weight:700;white-space:nowrap;color:#222}
+tbody tr:nth-child(even){background:#fafbfc}
+.metric td:first-child{background:#f4f6f9}
+/* the multi-driver note cells */
+td .drv{display:block;margin:1px 0;padding-left:10px;text-indent:-10px}
+.read{background:#f3f7fb;border-left:3px solid var(--accent);padding:11px 14px;margin:12px 0 4px;
+  font-style:italic;font-size:.92rem;line-height:1.55}
+.read b{font-style:normal;font-family:Arial,Helvetica,sans-serif;font-size:.68rem;letter-spacing:.06em;
+  color:var(--accent);text-transform:uppercase;display:block;margin-bottom:3px}
+.posture{background:#fdf3f0;border-left:3px solid var(--red);padding:10px 14px;margin:10px 0;font-size:.9rem;line-height:1.55}
+ul{margin:8px 0;padding-left:22px} li{margin:5px 0;line-height:1.5}
+.qa{border:1px solid var(--line);border-radius:6px;padding:13px 15px;margin:11px 0;background:#fcfcfd}
+.qa-h{font-weight:700;font-size:.95rem;font-family:Arial,Helvetica,sans-serif}
+.qa-who{font-weight:400;color:var(--accent);font-size:.82rem}
+.qa-row{font-size:.88rem;margin-top:7px;line-height:1.5}
+.qa-row b{font-family:Arial,Helvetica,sans-serif;font-size:.66rem;letter-spacing:.05em;text-transform:uppercase;
+  margin-right:6px}
+.qa-row.c b{color:var(--red)} .qa-row.r b{color:var(--accent)} .qa-row.t b{color:var(--green)}
+.qa-row.r ul{margin:3px 0 0}
+.bb{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:10px 0}
+.bb h3{margin-top:0}
+.chip{font-size:.6rem;font-weight:700;color:var(--green);background:#e7f3ec;padding:1px 5px;border-radius:3px;
+  font-family:Arial,Helvetica,sans-serif;text-transform:uppercase;vertical-align:middle}
+.chip.web{color:var(--accent);background:#e9eef6}
+.neg{color:var(--red)}
+.foot{color:var(--dim);font-size:.78rem;font-family:Arial,Helvetica,sans-serif;margin-top:30px;
+  border-top:1px solid var(--line);padding-top:14px;line-height:1.5}
+@media(max-width:720px){.page{padding:28px 18px}.bb{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="page" id="doc">Loading…</div>
+
+<script>
+const $=s=>document.querySelector(s);
+const esc=s=>(s||'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+// inline render: [book]/[web] chips, <NN>->(NN) negatives, parenthesised negatives in red
+function inl(s){
+  s=(s||'').replace(/<(\d[\d,.]*)>/g,'($1)');
+  s=esc(s);
+  s=s.replace(/\[book\]/g,'<span class="chip">book</span>').replace(/\[web\]/g,'<span class="chip web">web</span>');
+  s=s.replace(/&lt;br&gt;/g,'<br>').replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
+  // colour (NN)/(NN%)/(NN) bps red
+  s=s.replace(/(\((?:\d[\d,.]*)\)(?:\s*(?:bps|%))?)/g,'<span class="neg">$1</span>');
+  return s;
+}
+// a notes cell: split bullets (•) into stacked lines
+function noteCell(s){
+  if(!s) return '';
+  const parts=(s.replace(/<br>/g,'•')).split('•').map(x=>x.trim()).filter(Boolean);
+  if(parts.length<=1) return inl(s);
+  return parts.map(p=>`<span class="drv">• ${inl(p)}</span>`).join('');
+}
+function tbl(headers,rows,cls){
+  const th=headers.map(h=>`<th>${esc(h)}</th>`).join('');
+  const body=rows.map(r=>'<tr>'+r.map((c,i)=>{
+    const isNote = i===r.length-1 && /•|<br>/.test(c||'');
+    return `<td>${isNote?noteCell(c):inl(c)}</td>`;
+  }).join('')+'</tr>').join('');
+  return `<table class="${cls||''}"><thead><tr>${th}</tr></thead><tbody>${body}</tbody></table>`;
+}
+function read(t){return t?`<div class="read"><b>Read</b>${inl(t)}</div>`:'';}
+function hr(){return '<hr>';}
+
+async function render(){
+  let b;
+  try{ const d=await (await fetch('conference_data.json?cb='+Date.now())).json();
+    b=(d.meetings.find(m=>m.ticker==='AGCO')||{}).brief; }catch(e){}
+  if(!b){ $('#doc').innerHTML='Could not load AGCO data.'; return; }
+  const td=b.teardown||{}, H=[];
+  H.push(`<h1>${esc(b.company)} (AGCO) — ${esc(b.quarter)}</h1>`);
+  H.push(`<div class="sub">Granite earnings teardown · Gemini-format reproduction · books-only [book]</div>`);
+  H.push(`<div class="note-banner">DRAFT — not yet analyst-approved. All financials sourced from the AGCO FactSet book (incl. the 10-Q). Tasks 1–7 mirror the Gemini structure; Task 8 (Drivers loop) is a Granite addition. Numbers are book-derived; Q&A/notes prose is synthesized from the call.</div>`);
+
+  // Task 0
+  H.push(`<h2>Task 0 — Executive Summary: The View</h2>`);
+  H.push(`<p>${inl(b.company_brief.the_view)}</p>`);
+  H.push(hr());
+
+  // Task 1
+  const t1=td.task1_pnl;
+  H.push(`<h2>Task 1 — P&amp;L Summary</h2>`);
+  H.push(tbl(t1.headers,t1.rows,'metric'));
+  H.push(read(t1.read));
+  H.push(hr());
+
+  // Task 2
+  const t2=td.task2_guidance;
+  H.push(`<h2>Task 2 — Guidance Analysis</h2>`);
+  if(t2.guidance_type) H.push(`<p><b>Guidance Type:</b> ${inl(t2.guidance_type)}</p>`);
+  H.push(`<div class="posture"><b>Macro Posture:</b> ${inl(t2.posture)}</div>`);
+  if(t2.narrative){const n=t2.narrative;
+    H.push(`<p><b>Common Narrative:</b></p><ul><li><i>The Why:</i> ${inl(n.why)}</li><li><i>Trends:</i> ${inl(n.trends)}</li><li><i>The Noise:</i> ${inl(n.noise)}</li></ul>`);}
+  H.push(tbl(t2.table.headers,t2.table.rows));
+  H.push(read(t2.read));
+  H.push(hr());
+
+  // Task 3
+  const t3=td.task3_segments;
+  H.push(`<h2>Task 3 — Segment Summary</h2>`);
+  H.push(tbl(t3.headers,t3.rows,'metric'));
+  H.push(read(t3.read));
+  H.push(hr());
+
+  // Task 4
+  const t4=td.task4_kpis;
+  H.push(`<h2>Task 4 — Predefined KPI Summary</h2>`);
+  if(t4.note) H.push(`<p class="sub">${inl(t4.note)}</p>`);
+  H.push(tbl(t4.headers,t4.rows,'metric'));
+  H.push(read(t4.read));
+  H.push(hr());
+
+  // Task 5
+  const t5=td.task5_call;
+  H.push(`<h2>Task 5 — Earnings Call: Management Discussion &amp; Q&amp;A</h2>`);
+  H.push(`<h3>Section 1 — Management Discussion (Prepared Remarks)</h3>`);
+  H.push('<ul>'+t5.prepared.map(p=>`<li><b>${esc(p.t)}:</b> ${inl(p.b)}${p.quote?`<br><i>${inl(p.quote)}</i>`:''}</li>`).join('')+'</ul>');
+  H.push(`<h3>Section 2 — Q&amp;A (Analyst Inquiries)</h3>`);
+  t5.qa.forEach((q,i)=>{
+    H.push(`<div class="qa"><div class="qa-h">${i+1}. ${esc(q.topic)} <span class="qa-who">(${esc(q.analyst)})</span></div>
+      <div class="qa-row c"><b>Concern</b>${inl(q.concern)}</div>
+      <div class="qa-row r"><b>Response</b><ul>${q.response.map(x=>`<li>${inl(x)}</li>`).join('')}</ul></div>
+      <div class="qa-row t"><b>Takeaway</b>${inl(q.takeaway)}</div></div>`);
+  });
+  H.push(read(t5.read));
+  H.push(hr());
+
+  // Task 6
+  const t6=td.task6_sellside;
+  H.push(`<h2>Task 6 — Sell-Side Summary</h2>`);
+  H.push('<div class="bb"><div><h3>🐂 Bullish</h3><ul>'+t6.bullish.map(x=>`<li>${inl(x)}</li>`).join('')+'</ul></div>'
+    +'<div><h3>🐻 Bearish</h3><ul>'+t6.bearish.map(x=>`<li>${inl(x)}</li>`).join('')+'</ul></div></div>');
+  if(t6.macro) H.push(`<h3>🌍 Macro Themes</h3><ul>${t6.macro.map(x=>`<li>${inl(x)}</li>`).join('')}</ul>`);
+  if(t6.ecosystem) H.push(`<h3>🔄 Industry / Ecosystem Shifts</h3><ul>${t6.ecosystem.map(x=>`<li>${inl(x)}</li>`).join('')}</ul>`);
+  H.push(read(t6.read));
+  H.push(hr());
+
+  // Task 7
+  const t7=td.task7_stock;
+  H.push(`<h2>Task 7 — Stock Reaction Analysis</h2>`);
+  H.push('<ul>'+t7.drivers.map(x=>`<li>${inl(x)}</li>`).join('')+'</ul>');
+  H.push(read(t7.read));
+  H.push(hr());
+
+  // Task 8 (Granite addition)
+  const dr=b.drivers_autodraft;
+  if(dr){
+    H.push(`<h2>Task 8 — Drivers Loop <span class="gran">Granite addition · not in Gemini</span></h2>`);
+    H.push(`<p class="sub">${inl(dr.status)}</p>`);
+    H.push('<ul>'+dr.debates.map(d=>`<li><b>${inl(d.debate)}</b> — <i>${inl(d.verdict)}</i><br>${inl(d.this_quarter)}</li>`).join('')+'</ul>');
+    if(dr.triggers) H.push(`<p><b>Triggers:</b> ${dr.triggers.map(inl).join(' · ')}</p>`);
+    if(dr.new_debates) H.push(`<p><b>New debates:</b> ${dr.new_debates.map(inl).join(' · ')}</p>`);
+    H.push(`<p><b>Working view:</b> ${inl(dr.updated_pov)}</p>`);
+    H.push(hr());
+  }
+
+  // questions
+  if(b.smart_questions){
+    H.push(`<h2>Questions to ask in the room</h2><ol>`+
+      b.smart_questions.map(q=>`<li><b>[${(q.tag||'').toUpperCase()}]</b> ${inl(q.q)}${q.listen_for?`<br><i>Listen for:</i> ${inl(q.listen_for)}`:''}</li>`).join('')+`</ol>`);
+  }
+  H.push(`<div class="foot">${inl(b.sourcing||'')}</div>`);
+  $('#doc').innerHTML=H.join('\n');
+}
+render();
+</script>
+</body>
+</html>
