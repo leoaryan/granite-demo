@@ -288,8 +288,9 @@ table.dt td.k{font-weight:700;color:var(--ink);white-space:nowrap}
 <script>
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const esc=s=>(s||'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
-const chips=s=>esc(s).replace(/\[book\]/g,'<span class="chip book">book</span>')
-  .replace(/\[web\]/g,'<span class="chip web">web</span>').replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
+const chips=s=>esc((s||'').replace(/<(\d[\d,.]*)>/g,'($1)')).replace(/\[book\]/g,'<span class="chip book">book</span>')
+  .replace(/\[web\]/g,'<span class="chip web">web</span>').replace(/\*\*(.+?)\*\*/g,'<b>$1</b>')
+  .replace(/&lt;br&gt;/g,'<br>');
 let DATA=null,DAY=null;
 
 function verdict(s){s=(s||'').toLowerCase();
@@ -412,9 +413,18 @@ function tbl(t){const note=t.note?`<p class="note">${chips(t.note)}</p>`:'';
   const th=t.headers.map(h=>`<th>${esc(h)}</th>`).join('');
   const rows=t.rows.map(r=>'<tr>'+r.map((c,i)=>`<td class="${i===0?'k':'tnum'}">${i===0?chips(c):cellc(c)}</td>`).join('')+'</tr>').join('');
   return `${note}<table class="dt"><thead><tr>${th}</tr></thead><tbody>${rows}</tbody></table>`+(t.read?`<p class="read"><b>Read</b> ${chips(t.read)}</p>`:'');}
-function guid(g){let h=`<p class="note">${chips(g.posture)}</p>`;if(g.table)h+=tbl({headers:g.table.headers,rows:g.table.rows});if(g.read)h+=`<p class="read"><b>Read</b> ${chips(g.read)}</p>`;return h;}
-function sells(s){return `<p class="read"><b>Bull</b></p><ul>${(s.bullish||[]).map(x=>`<li>${chips(x)}</li>`).join('')}</ul>`
-  +`<p class="read"><b>Bear</b></p><ul>${(s.bearish||[]).map(x=>`<li>${chips(x)}</li>`).join('')}</ul>`+(s.read?`<p class="read"><b>Read</b> ${chips(s.read)}</p>`:'');}
+function guid(g){let h='';
+  if(g.guidance_type)h+=`<p class="note"><b>Guidance type:</b> ${chips(g.guidance_type)}</p>`;
+  h+=`<p class="posture">${chips(g.posture)}</p>`;
+  if(g.narrative){const n=g.narrative;h+=`<p class="read"><b>Common narrative</b></p><ul>`+
+    `<li><i>Why:</i> ${chips(n.why||'')}</li><li><i>Trends:</i> ${chips(n.trends||'')}</li><li><i>Noise:</i> ${chips(n.noise||'')}</li></ul>`;}
+  if(g.table)h+=tbl({headers:g.table.headers,rows:g.table.rows});
+  if(g.read)h+=`<p class="read"><b>Read</b> ${chips(g.read)}</p>`;return h;}
+function sells(s){let h=`<p class="read"><b>Bull</b></p><ul>${(s.bullish||[]).map(x=>`<li>${chips(x)}</li>`).join('')}</ul>`
+  +`<p class="read"><b>Bear</b></p><ul>${(s.bearish||[]).map(x=>`<li>${chips(x)}</li>`).join('')}</ul>`;
+  if((s.macro||[]).length)h+=`<p class="read"><b>Macro themes</b></p><ul>${s.macro.map(x=>`<li>${chips(x)}</li>`).join('')}</ul>`;
+  if((s.ecosystem||[]).length)h+=`<p class="read"><b>Industry / ecosystem</b></p><ul>${s.ecosystem.map(x=>`<li>${chips(x)}</li>`).join('')}</ul>`;
+  return h+(s.read?`<p class="read"><b>Read</b> ${chips(s.read)}</p>`:'');}
 function stock(s){return `<ul>${(s.drivers||[]).map(x=>`<li>${chips(x)}</li>`).join('')}</ul>`+(s.read?`<p class="read"><b>Read</b> ${chips(s.read)}</p>`:'');}
 function callb(b){
   const t5=(b.teardown||{}).task5_call;

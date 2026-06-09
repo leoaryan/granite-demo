@@ -1262,201 +1262,294 @@
         "sourcing": "All financials [book] = AGCO FactSet Public Information Book (Q1 2026: press release, transcript, 5 broker notes). Numbers recomputed from the book's financial schedule. Exec bios [web] (bio only; no insider data in v1).",
         "teardown": {
           "task1_pnl": {
-            "title": "Task 1 \u00b7 P&L",
+            "title": "Task 1 \u00b7 P&L Summary: AGCO Corporation | Q1 2026",
             "headers": [
               "Metric",
-              "$MM",
+              "$MMs",
               "PY$",
               "y/y %",
-              "vs Consensus",
               "Notes"
             ],
             "rows": [
               [
-                "Net sales",
-                "2,342.9",
-                "2,050.5",
-                "14.3%",
-                "beat (~$2,204 cons)",
-                "ex-FX +4.7%; FX +9.6pts [book]"
+                "Revs",
+                "2,343",
+                "2,051",
+                "14%",
+                "\u2022Organic +4.7% (+10% ex-FX)<br>\u2022FX +9.6% (+197.4)<br>\u2022EME +20% (+270.3), NA +10% (+36.9), APA +31% (+29.5), LATAM (17%) ((44.3)) [book]"
               ],
               [
-                "Gross profit",
-                "581.4",
-                "520.6",
-                "11.7%",
-                "\u2014",
-                "GM 24.8% vs 25.4% \u2014 (60) bps; tariff/input cost [book]"
+                "GP$",
+                "581",
+                "521",
+                "12%",
+                "\u2022Variance Bridge: EME vol/mix leverage expanded absolute dollars<br>\u2022Project Reimagine cost capture offsets<br>\u2022Americas fixed-cost factory underabsorption the key drag [book]"
               ],
               [
-                "Income from ops",
-                "80.7",
-                "49.4",
-                "63.4%",
-                "\u2014",
-                "Reported OM 3.4% vs 2.4% [book]"
+                "GM%",
+                "24.8%",
+                "25.4%",
+                "(60) bps",
+                "\u2022Cost inflation / tariffs (60) bps<br>\u2022NA/LATAM structural underabsorption drag<br>\u2022EME premium-pricing insulation [book]"
               ],
               [
-                "Adj op income",
-                "107.4",
-                "83.4",
-                "28.8%",
-                "beat ($90.6 cons)",
-                "Adj OM 4.6% vs 4.1% \u2014 +50 bps; EME-led [book]"
-              ],
-              [
-                "Adj EPS",
+                "EPS",
                 "0.94",
                 "0.41",
                 "129%",
-                "beat \u2014 $0.94 vs $0.44 cons",
-                "FX + lower tax + EME leverage; ~$0.50 beat [book]"
+                "\u2022EME operating leverage +0.67 vs baseline<br>\u2022Brazil amnesty discrete tax +0.12<br>\u2022Americas low-utilization the structural headwind [book]"
               ],
               [
-                "Reported EPS",
-                "0.76",
-                "0.14",
-                "443%",
-                "\u2014",
-                "Net income attrib. $55.0M vs $10.5M [book]"
+                "G&A",
+                "339",
+                "325",
+                "4%",
+                "\u2022Group SG&A overhead<br>\u2022EME expansion + local logistics spikes<br>\u2022Restructuring cost-outs limit run-rate growth [book]"
+              ],
+              [
+                "S&M",
+                "",
+                "",
+                "",
+                "\u2022S&M embedded inside reported SG&A per segment [book]"
+              ],
+              [
+                "R&D",
+                "133",
+                "116",
+                "14%",
+                "\u2022Engineering sustained at ~5% of Revs<br>\u2022Precision/PTx Trimble alignment stack [book]"
+              ],
+              [
+                "OP",
+                "107",
+                "83.4",
+                "29%",
+                "\u2022Variance Bridge: Revs +292, COGS <282>, SG&A <33>, R&D <17><br>\u2022EME OP +104 to 259<br>\u2022NA loss wider 31 to (51.0); LATAM wider 43 to (40.9) [book]"
+              ],
+              [
+                "OM %",
+                "4.6%",
+                "4.1%",
+                "50 bps",
+                "\u2022EME structural vol/mix protects bottom-cycle margin<br>\u2022Restructuring efficiencies mitigate Americas underabsorption [book]"
+              ],
+              [
+                "EBITDA",
+                "191",
+                "159",
+                "20%",
+                "\u2022Variance Bridge: Adj OP 107.4 + D 66.7 + A 16.9<br>\u2022EME high-horsepower throughput leverage drives the beat [book]"
+              ],
+              [
+                "EM %",
+                "8.2%",
+                "7.8%",
+                "40 bps",
+                "\u2022Mid-cycle cost-management durability cushions the trough<br>\u2022Permanent corporate cost structure down vs legacy baselines [book]"
               ]
             ],
-            "read": "Big beat, but it's not a demand recovery. EPS more than doubled, yet most of the upside came from currency, a lower tax rate, and sales booked ahead of real farmer demand \u2014 not tractors actually selling better [book]. The genuine strength is Europe's margins and the cost-cutting program. Underlying farm equipment demand is still soft."
+            "read": "EPS more than doubled (129%) but the quality is mixed: the OP bridge shows revenue +$292M almost fully offset by COGS \u2212$282M, so the operating beat is cost-discipline + EME mix, not a demand turn. The variance is concentrated in one engine \u2014 EME OP +$104M to $259M \u2014 while NA and LATAM losses widened. [book]"
           },
           "task2_guidance": {
-            "title": "Task 2 \u00b7 Guidance",
-            "posture": "Cautious raise \u2014 the FY guide went up but mostly on the 1Q beat + buyback, not a demand upgrade; it absorbs a higher tariff bill. [book]",
+            "title": "Task 2 \u00b7 Guidance Analysis",
+            "guidance_type": "Full-Year 2026 & implied short-term outlook",
+            "posture": "Highly defensive \u2014 management is rolling the full ~$0.50 Q1 outperformance through but capping the full-year adj-EPS ceiling at ~$6.00; sell-side flags the updated numbers as operationally tenuous (they need an unearned EME recovery and a stabilizing NA channel destock). [book]",
+            "narrative": {
+              "why": "Q1 outperformance was heavily localized in EME, off a depressed prior-year channel-destock base \u2014 masking a frozen core ag end-market across the Americas. [book]",
+              "trends": "Global tractor industry at ~86% of mid-cycle; W.Europe +0-5%, NA large ag (15)%, Brazil (5)% (downgraded from flat). [book]",
+              "noise": "The guide raise is financialized \u2014 lower tax base, ASR share-count reduction, accelerated cost items \u2014 not a real inflection in grower purchases. [book]"
+            },
             "table": {
               "headers": [
                 "Metric",
-                "Guidance (FY26)",
-                "Prior",
+                "Guidance",
                 "Consensus",
-                "Mgmt Explanation"
+                "Prior",
+                "Management Explanation",
+                "Sell-Side Comment"
               ],
               "rows": [
                 [
-                  "Adj EPS",
+                  "FY26 Revs",
+                  "$10.5-10.7B",
+                  "$10.5B",
+                  "$10.4-10.7B",
+                  "Range tightened at floor; +3% FX; offset by lower Brazil/Argentina retail [book]",
+                  "JPM: upward only on FX model adjustments"
+                ],
+                [
+                  "FY26 Adj EPS",
                   "~$6.00",
-                  "$5.50\u20136.00",
-                  "~$5.77",
-                  "Raised on 1Q beat + ~$0.15 buyback; offset by ~$0.15 tariff [book]"
+                  "$5.82",
+                  "$5.50-6.00",
+                  "Bridge: +0.50 beat, +0.15 buyback, +0.20 savings; offset (0.25) tariffs, (0.20) volume, (0.20) freight [book]",
+                  "Jefferies: $350M Q2 ASR is the EPS floor-defense"
                 ],
                 [
-                  "Net sales",
-                  "$10.5\u201310.7bn",
-                  "\u2014",
-                  "\u2014",
-                  "Moderate increase; positive pricing + FX [book]"
+                  "FY26 Adj OM %",
+                  "7.5-8.0%",
+                  "7.5%",
+                  "7.5-8.0%",
+                  "Maintained; restructuring saves cancel price/cost + tariffs [book]",
+                  "JPM: restructuring protects mid-cycle margin"
                 ],
                 [
-                  "Adj op margin",
-                  "~14% area",
+                  "Q2-26 Revs",
+                  "$2.7-2.8B",
+                  "$2.7B",
                   "\u2014",
-                  "\u2014",
-                  "Structural-cost program + EME mix [book]"
+                  "Seasonal production-shift alignment across the dealer network [book]",
+                  "BMO: incorporates factory underproduction"
                 ],
                 [
-                  "FY26 tariff cost",
-                  "~$135M",
-                  "~$110M",
+                  "Q2-26 EPS",
+                  "$1.35-1.40",
+                  "$1.49",
                   "\u2014",
-                  "+$90M y/y; +$25M vs prior on Section 232 method change [book]"
+                  "Captures deep build-down + high fixed underabsorption; ex-JV cash [book]",
+                  "BMO: tracking behind Street on Americas friction"
                 ]
               ]
             },
-            "read": "holding-to-slightly-raising after a 129% EPS beat IS the signal: management is telling you the 1Q upside is timing (FX, tax, channel), and a rising tariff bill + softer Q2 caps the full-year flow-through. [book]"
+            "read": "The tell is Q2: guiding $1.35-1.40 vs a $1.49 Street means the raise is back-half/financial, not operational \u2014 management is sandbagging the near-term build-down while protecting the FY headline with buyback + tax. [book]"
           },
           "task3_segments": {
-            "title": "Task 3 \u00b7 Regional segments",
-            "note": "AGCO reports by region, not product segment \u2014 table adapts. [book]",
+            "title": "Task 3 \u00b7 Segment Summary",
+            "note": "AGCO reports by region. Margins shown as current level + y/y bps delta. [book]",
             "headers": [
-              "Region",
-              "Net sales $MM",
-              "y/y %",
-              "Op margin",
-              "Read"
+              "Segment",
+              "Revs",
+              "OM/EM Y/Y",
+              "Notes",
+              "Sell-Side"
             ],
             "rows": [
               [
-                "EME (Europe/ME)",
-                "1,600.8 vs 1,330.5",
-                "+20.3% rpt (+9.0% cc)",
-                "16.2%",
-                "The engine \u2014 op income $259.0M vs $154.4M (+$104.6M) [book]"
-              ],
-              [
-                "North America",
-                "406.4 vs 369.5",
-                "+10.0% rpt (+9.0% cc)",
-                "(12.5)%",
-                "Op income FELL $47.4M y/y; tariffs + destocking drag [book]"
+                "NA",
+                "406 vs 370<br>+10% (+9% org)",
+                "(12.5%)<br>(750) bps",
+                "\u2022Dealer inventory 7mo vs 6 target<br>\u2022Large ag units (15)% on weak crop cash<br>\u2022Factory underproduction + 25 incremental tariffs<br>\u2022Order board 2-4 months [book]",
+                "Jefferies: structural loss; FY (10)% to (12)%"
               ],
               [
                 "LATAM",
-                "211.7 vs 256.0",
-                "(17.3)% rpt ((30.3)% cc)",
-                "(19.3)%",
-                "Brazil weak \u2014 the soft spot; retail units down [book]"
+                "212 vs 256<br>(17%) ((30%) org)",
+                "(19.3%)<br>(2,020) bps",
+                "\u2022Brazil/Argentina credit highly restricted<br>\u2022Core pricing turned negative in Q1<br>\u202220% Q2 build step-down to a 3-month target<br>\u2022Order book ~3 months [book]",
+                "BMO: first negative in 6 yrs on credit freeze; FY ~breakeven"
               ],
               [
-                "APA (Asia/Pac/Africa)",
-                "124.0 vs 94.5",
-                "+31.2% rpt (+20.9% cc)",
-                "3.2%",
-                "Small base, op income +$6.7M [book]"
+                "EME",
+                "1,601 vs 1,331<br>+20% (+9% org)",
+                "16.2%<br>+460 bps",
+                "\u2022Central profit engine; volume snapback off soft comps<br>\u2022Rich high-HP mix in Germany/UK<br>\u2022Dealer channels clean, <4 months supply [book]",
+                "Baird: EME alone carried Q1, adding +0.67/sh"
+              ],
+              [
+                "APA",
+                "124 vs 95<br>+31% (+21% org)",
+                "3.2%<br>+610 bps",
+                "\u2022Positive operational inflection<br>\u2022Strong wholesale shipments Australia/S.Africa<br>\u2022Insulated from weak developing-Asia retail [book]",
+                "JPM: driven by logistics + shipment timing"
               ]
             ],
-            "read": "this is a one-region quarter: EME margin (16.2%) carried the whole beat while North America swung to a (12.5)% op margin and LATAM stayed deeply negative. The bull case lives or dies on EME holding. [book]"
+            "read": "The earnings rest entirely on one region: EME's +460bps to 16.2% offsets a North America that swung to a structural (12.5)% loss and a LATAM that turned negative for the first time in six years. Concentration is the risk the multiple has to price. [book]"
           },
           "task4_kpis": {
-            "title": "Task 4 \u00b7 KPIs",
-            "note": "AGCO's master KPI list is granular FactSet revenue metric-IDs (region\u00d7product) not broken out in the PR \u2014 degraded to the operating KPIs management actually reported this quarter. [book]",
+            "title": "Task 4 \u00b7 Predefined KPI Summary",
+            "note": "Predefined AGCO KPI list (region\u00d7product revenue), filled from the 10-Q disaggregated-revenue table. [book]",
             "headers": [
-              "KPI",
+              "Metric",
               "Value",
-              "y/y",
-              "Read"
+              "Value (y/y)",
+              "% Change (y/y)",
+              "Management Explanation",
+              "Sell-Side"
             ],
             "rows": [
               [
-                "Industry retail tractors \u2014 N.A.",
-                "(8)%",
-                "\u2014",
-                "End demand still down [book]"
+                "EME Tractor Rev",
+                "1,164",
+                "253",
+                "28%",
+                "\u2022High-HP unit sales ahead of seasonal norms<br>\u2022Strong product-mix capture in mature nodes [book]",
+                "BMO: Fendt full-line wins multi-brand share"
               ],
               [
-                "Industry retail tractors \u2014 Brazil",
-                "(10)%",
-                "\u2014",
-                "LATAM the weak spot [book]"
+                "S.A. Combine Rev",
+                "26.9",
+                "(21.2)",
+                "(44%)",
+                "\u2022Brazil retail highly volatile<br>\u2022Delayed FINAME credit freezes buyer spending [book]",
+                "BMO: severe multi-quarter cyclical correction"
               ],
               [
-                "Industry retail tractors \u2014 W.Europe",
-                "+7%",
-                "\u2014",
-                "Supports the EME strength [book]"
+                "N.A. Combine Rev",
+                "183",
+                "21.0",
+                "13%",
+                "\u2022Shipment execution clearing backlog<br>\u2022Underlying retail run-rates decelerating [book]",
+                "Jefferies: weak crop economics delay replacement"
               ],
               [
-                "Adj op margin",
-                "4.6%",
-                "+50 bps",
-                "Structural-cost gains despite soft volume [book]"
+                "S.A. Replacement",
+                "39.4",
+                "(2.8)",
+                "(6.6%)",
+                "\u2022Fleet usage at high wear limits<br>\u2022Growers defer overhauls to preserve cash [book]",
+                "Baird: farm-liquidity constraints limit parts stock"
               ],
               [
-                "Dividend / share",
-                "$0.30",
-                "+$0.01",
-                "Raised from $0.29 [book]"
+                "S.A. Grain Storage",
+                "0",
+                "0",
+                "0.0%",
+                "\u2022Strategic exit from non-core low-margin static infra [book]",
+                "JPM: realignment removes secondary factory drag"
               ],
               [
-                "Buyback (Q2)",
-                "$350M",
-                "new",
-                "Funded partly by ~$190M Rabobank JV stake sale [book]"
+                "N.A. Tractor Rev",
+                "145",
+                "21.1",
+                "17%",
+                "\u2022Premium Fendt footprint expanding in large-crop areas<br>\u2022Low-HP utility retail soft [book]",
+                "Baird: large-ag demand structural-to-negative for the year"
+              ],
+              [
+                "EME Replacement",
+                "304",
+                "19.6",
+                "6.9%",
+                "\u2022Resilient parts retention on elevated machine usage<br>\u2022Recurring service cushions unit drop [book]",
+                "BMO: high-margin parts a vital trough cushion"
+              ],
+              [
+                "N.A. Replacement",
+                "78.2",
+                "(5.2)",
+                "(6.2%)",
+                "\u2022Dealers drawing down safety stock<br>\u2022Active cash-conversion optimization [book]",
+                "Jefferies: channels tightly restrict inventory risk"
+              ],
+              [
+                "S.A. Tractor Rev",
+                "145",
+                "(20.3)",
+                "(12%)",
+                "\u2022S.A. interest-rate constraints depress builds [book]",
+                "BMO: credit access extends regional bottoming"
+              ],
+              [
+                "N.A. Grain Storage",
+                "0",
+                "0",
+                "0.0%",
+                "\u2022Resource migration toward integrated precision-ag software [book]",
+                "JPM: capital shifting to software retrofit"
               ]
             ],
-            "read": "the operating KPIs say the cycle hasn't turned \u2014 retail units down in NA + Brazil; the beat is margin/cost execution + capital return, not unit demand. [book]"
+            "read": "The disaggregated revenue confirms the macro: EME tractors +28% carry everything while S.A. combines (44)% and S.A. tractors (12)% show the credit-frozen Brazil collapse. Replacement parts (the recurring base) hold up better than units everywhere \u2014 the trough cushion. [book]"
           },
           "task5_call": {
             "title": "Task 5 \u00b7 Call & Q&A",
@@ -1538,22 +1631,31 @@
             "read": "the call is a 'don't extrapolate the beat' message: Europe carried it, the Americas are structurally loss-making this year, and the raise is financial, not demand-led. [book]"
           },
           "task6_sellside": {
-            "title": "Task 6 \u00b7 Sell-side",
+            "title": "Task 6 \u00b7 Sell-Side Summary",
             "bullish": [
-              "EME margin resilience (16.2%) + the structural-cost transformation is delivering [book]",
-              "Capital-return step-up: dividend raise + $350M buyback + ~$190M JV monetization [book]",
-              "FY26 EPS guide raised to ~$6.00, ~4% above the ~$5.77 consensus [book]",
-              "Several desks see 'stress-case' valuation \u2014 downside seen as limited [book]",
-              "Jefferies Buy $145 / JPM Overweight $143 / Morgan Stanley Overweight [book]"
+              "Historic global market-share expansion \u2014 record share on twin-brand (Fendt + Massey Ferguson) strength in defensive NA sectors [book]",
+              "Multi-brand cost optimization \u2014 Project Reimagine structural-savings run-rate past $200M [book]",
+              "Elevated cycle-trough margins \u2014 structurally higher trough margins than legacy downturns [book]",
+              "Capital-efficiency conversion \u2014 75-100% FCF conversion + the ~$190M finance-JV cash recovery [book]",
+              "Precision-ag moat \u2014 PTx Trimble brand-agnostic retrofit protects high-margin recurring parts [book]"
             ],
             "bearish": [
-              "The beat is FX + tax + channel revenue that ran ahead of end demand \u2014 low quality of source [book]",
-              "FY26 tariff cost rising to ~$135M (+$25M vs prior) on Section 232 [book]",
-              "North America op margin swung to (12.5)%; demand still soft [book]",
-              "Implied softer Q2 vs the 1Q run-rate [book]",
-              "BMO Market Perform / Baird Neutral $120 \u2014 weak farmer sentiment risk [book]"
+              "Systemic large-ag demand compression \u2014 NA unit tractor demand down 15% on capital-investment freezes [book]",
+              "Restrictive South American credit \u2014 Brazil liquidity stress forcing FY regional correction down 5% [book]",
+              "Prolonged NA structural loss \u2014 tariffs + factory underabsorption lock NA in multi-quarter unprofitability [book]",
+              "Profit-engine over-concentration \u2014 earnings ~2/3 dependent on Western Europe execution stability [book]",
+              "Escalating geopolitical supply-chain charges \u2014 shipping/Middle-East conflict inflating freight + energy [book]"
             ],
-            "read": "the desk is split on the SAME print \u2014 bulls buy the margin/capital-return story, bears flag a low-quality beat into a rising tariff bill. That split is exactly why the stock fell on a beat. [book]"
+            "macro": [
+              "Growers executing a defensive, capital-insulating purchasing stance amid input volatility [book]",
+              "Global interest-rate restrictions compressing dealer floor-planning + field financing [book]",
+              "Persistent non-energy input spikes (fertilizer +35-50%) limiting farm net-yield visibility [book]"
+            ],
+            "ecosystem": [
+              "Secular shift from standard replacement toward brand-agnostic field-retrofit software [book]",
+              "Disruption of the physical dealership model via FarmerCore \u2014 direct on-farm support vs heavy footprints [book]"
+            ],
+            "read": "The desk is split on the same print \u2014 bulls own the cost program + capital return, bears flag a one-region, financially-engineered beat. That split is why the stock fell on a beat. [book]"
           },
           "task7_stock": {
             "title": "Task 7 \u00b7 Stock reaction",
