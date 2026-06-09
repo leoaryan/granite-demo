@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Granite — pipeline document</title>
+<style>
+:root{ --ink:#1a1a1a; --dim:#666; --line:#d8dce3; --accent:#1f4e79; --red:#c0392b; --green:#1a7a44; }
+*{box-sizing:border-box}
+body{margin:0;background:#f0f2f5;color:var(--ink);
+  font-family:Georgia,"Times New Roman",serif;font-size:15px;line-height:1.55}
+.page{max-width:980px;margin:0 auto;background:#fff;padding:48px 56px 80px;
+  box-shadow:0 0 0 1px var(--line),0 8px 40px rgba(0,0,0,.06);min-height:100vh}
+h1{font-size:1.55rem;margin:0 0 14px;letter-spacing:-.01em;line-height:1.25}
+h2{font-size:1.16rem;color:var(--accent);margin:30px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--accent);
+  font-family:Arial,Helvetica,sans-serif;letter-spacing:-.01em}
+h3{font-size:.98rem;margin:18px 0 8px;font-family:Arial,Helvetica,sans-serif;color:#333}
+p{margin:10px 0}
+blockquote{background:#fbf6e8;border:1px solid #ead9a0;border-left:4px solid #d4af37;border-radius:4px;
+  padding:10px 16px;margin:14px 0;font-family:Arial,Helvetica,sans-serif;font-size:.82rem;color:#5c4d18;line-height:1.55}
+blockquote p{margin:6px 0}
+hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+table{border-collapse:collapse;width:100%;margin:14px 0 6px;font-family:Arial,Helvetica,sans-serif;font-size:.82rem}
+th{background:#f4f6f9;text-align:left;padding:9px 11px;border:1px solid var(--line);font-weight:700;color:#2a2a2a;vertical-align:top}
+td{padding:9px 11px;border:1px solid var(--line);vertical-align:top;line-height:1.5}
+td:first-child{font-weight:700;color:#222}
+tbody tr:nth-child(even){background:#fafbfc}
+ul,ol{margin:8px 0;padding-left:22px} li{margin:5px 0;line-height:1.5}
+em{color:#444}
+.chip{font-size:.6rem;font-weight:700;color:var(--green);background:#e7f3ec;padding:1px 5px;border-radius:3px;
+  font-family:Arial,Helvetica,sans-serif;text-transform:uppercase;vertical-align:middle;white-space:nowrap}
+.chip.se{color:var(--accent);background:#e9eef6}
+.neg{color:var(--red)}
+.err{color:var(--red);font-family:Arial,Helvetica,sans-serif;padding:40px}
+@media(max-width:720px){.page{padding:28px 18px}}
+</style>
+</head>
+<body>
+<div class="page" id="doc">Loading…</div>
+<script>
+const esc=s=>(s||'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+// inline markdown: bold, italic, code; source chips [SE-XX]/[book]/[web]; <NN>->(NN) red negatives
+function inl(s){
+  s=(s||'').replace(/<(\d[\d,.]*)>/g,'($1)');
+  s=esc(s);
+  s=s.replace(/\[(SE-[A-Z]{2}(?:\s+[A-Za-z]+)?)\]/g,'<span class="chip se">$1</span>');
+  s=s.replace(/\[book\]/g,'<span class="chip">book</span>').replace(/\[web\]/g,'<span class="chip se">web</span>');
+  s=s.replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/(^|[^*])\*([^*]+?)\*/g,'$1<em>$2</em>');
+  s=s.replace(/`([^`]+?)`/g,'<code>$1</code>');
+  s=s.replace(/&lt;br\s*\/?&gt;/g,'<br>');
+  s=s.replace(/(\((?:\d[\d,.]*)\)(?:\s*(?:bps|%))?)/g,'<span class="neg">$1</span>');
+  return s;
+}
+// minimal markdown block parser: headings, hr, tables, blockquotes, lists, paragraphs
+function mdToHtml(md){
+  const lines=md.replace(/\r/g,'').split('\n');
+  const out=[]; let i=0;
+  const flushP=(buf)=>{ if(buf.length){ out.push('<p>'+inl(buf.join(' '))+'</p>'); buf.length=0; } };
+  let para=[];
+  while(i<lines.length){
+    let ln=lines[i];
+    // table: a line with | and the next line is a separator row
+    if(/^\s*\|/.test(ln) && i+1<lines.length && /^\s*\|?[\s:|-]+\|/.test(lines[i+1]) && lines[i+1].includes('-')){
+      flushP(para);
+      const header=ln.split('|').slice(1,-1).map(c=>c.trim());
+      i+=2; const rows=[];
+      while(i<lines.length && /^\s*\|/.test(lines[i])){
+        rows.push(lines[i].split('|').slice(1,-1).map(c=>c.trim())); i++;
+      }
+      let t='<table><thead><tr>'+header.map(h=>'<th>'+inl(h)+'</th>').join('')+'</tr></thead><tbody>';
+      t+=rows.map(r=>'<tr>'+r.map(c=>'<td>'+inl(c)+'</td>').join('')+'</tr>').join('');
+      t+='</tbody></table>'; out.push(t); continue;
+    }
+    if(/^#{1,6}\s/.test(ln)){ flushP(para); const lvl=ln.match(/^#+/)[0].length; const txt=ln.replace(/^#+\s/,'');
+      out.push(`<h${Math.min(lvl,3)}>${inl(txt)}</h${Math.min(lvl,3)}>`); i++; continue; }
+    if(/^\s*---\s*$/.test(ln) || /^\s*___\s*$/.test(ln)){ flushP(para); out.push('<hr>'); i++; continue; }
+    if(/^\s*>/.test(ln)){ flushP(para); const bq=[];
+      while(i<lines.length && /^\s*>/.test(lines[i])){ bq.push(lines[i].replace(/^\s*>\s?/,'')); i++; }
+      out.push('<blockquote>'+mdToHtml(bq.join('\n'))+'</blockquote>'); continue; }
+    if(/^\s*(\d+\.|[-*•])\s/.test(ln)){ flushP(para); const ordered=/^\s*\d+\./.test(ln); const items=[];
+      while(i<lines.length && /^\s*(\d+\.|[-*•])\s/.test(lines[i])){
+        items.push(lines[i].replace(/^\s*(\d+\.|[-*•])\s/,'')); i++; }
+      out.push((ordered?'<ol>':'<ul>')+items.map(x=>'<li>'+inl(x)+'</li>').join('')+(ordered?'</ol>':'</ul>')); continue; }
+    if(/^\s*$/.test(ln)){ flushP(para); i++; continue; }
+    para.push(ln.trim()); i++;
+  }
+  flushP(para);
+  return out.join('\n');
+}
+async function main(){
+  const f=(new URLSearchParams(location.search)).get('f')||'ASTE_PIPELINE';
+  const safe=f.replace(/[^A-Za-z0-9_-]/g,'');
+  try{
+    const md=await (await fetch(safe+'.md?cb='+Date.now())).text();
+    if(md.startsWith('<!')||/^\s*<html/i.test(md)) throw new Error('not found');
+    document.getElementById('doc').innerHTML=mdToHtml(md);
+    document.title='Granite — '+safe;
+  }catch(e){
+    document.getElementById('doc').innerHTML='<div class="err">Could not load <b>'+esc(safe)+'.md</b>. Pass ?f=TICKER_PIPELINE.</div>';
+  }
+}
+main();
+</script>
+</body>
+</html>
