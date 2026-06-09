@@ -598,91 +598,24 @@
       "brief": {
         "ticker": "RXO",
         "company": "RXO, Inc.",
-        "what_they_do": "Asset-light freight transportation provider \u2014 tech-enabled truck brokerage (the core, ~74% of revenue) plus complementary services: last-mile big-and-bulky delivery and managed transportation. No trucks of its own; it matches shippers to third-party carriers. [book]",
+        "what_they_do": "Asset-light freight transportation provider \u2014 tech-enabled truck brokerage (the core, ~74% of revenue) plus complementary services: last-mile big-and-bulky delivery and managed transportation. No trucks of its own; it matches shippers to third-party carriers. Integrating the acquired Coyote Logistics business.",
         "quarter": "Q1 2026 (reported May 7, 2026)",
         "company_brief": {
-          "the_view": "Soft quarter, but the stock went UP on the outlook, not the print. Q1 itself was a trough \u2014 adjusted EBITDA was just $6M (vs $22M a year ago) and the company posted an adjusted loss of $0.09/share, worse than the ~$(0.02) the Street expected [book]. What investors liked was the Q2 guide: $27\u201337M of EBITDA, whose ~$32M midpoint is roughly 28% above the ~$25M consensus [book] \u2014 a near-6x sequential jump. The story management is selling is a 'supply-driven' freight recovery: truckers are exiting the market on regulatory enforcement (non-domiciled CDLs, English-language rules), tightening capacity even though shipping demand is still soft. RXO's spot mix jumped to 33% of truckload (+600bps y/y), driving the biggest sequential gross-profit-per-load gain in 3+ years [book]. The debate is whether this is a real multi-year cycle turn or an early head-fake that needs actual demand to show up. A May Supreme Court ruling (Montgomery) added a fresh broker-liability/insurance risk on top.",
-          "pnl": {
-            "headers": [
-              "Metric",
-              "$MM",
-              "PY$",
-              "y/y %",
-              "vs Consensus",
-              "Notes"
-            ],
-            "rows": [
-              [
-                "Revenue",
-                "1,425",
-                "1,433",
-                "(0.6)%",
-                "~in line (~$1,425 cons)",
-                "Brokerage +3% offset by complementary services -7% [book]"
-              ],
-              [
-                "Gross margin $",
-                "202",
-                "229",
-                "(11.8)%",
-                "\u2014",
-                "GM% 14.2% vs 16.0% \u2014 (180) bps; weather ~$3M hit [book]"
-              ],
-              [
-                "Operating loss",
-                "(28)",
-                "(30)",
-                "n/m",
-                "\u2014",
-                "Still a loss; restructuring $7M + transaction $2M [book]"
-              ],
-              [
-                "Adj EBITDA",
-                "6",
-                "22",
-                "(72.7)%",
-                "miss vs ~run-rate; low end of guide",
-                "Margin 0.4% vs 1.5%; weather at low end [book]"
-              ],
-              [
-                "Adj EPS (dil.)",
-                "(0.09)",
-                "(0.03)",
-                "n/m",
-                "MISS \u2014 $(0.09) vs $(0.02) cons",
-                "Worse than Street; weather + soft demand [book]"
-              ],
-              [
-                "GAAP EPS (dil.)",
-                "(0.21)",
-                "(0.18)",
-                "n/m",
-                "\u2014",
-                "Incl. $11M debt-extinguishment loss on refi [book]"
-              ]
-            ],
-            "read": "This was the bottom of the cycle, not a beat. RXO lost money \u2014 $6M of EBITDA and a $0.09 adjusted loss per share, worse than analysts expected, hurt partly by bad weather [book]. The real news isn't this quarter's P&L; it's that brokerage volume and spot pricing improved every month and management guided Q2 well above what the Street had penciled in. The bet is that freight is bottoming and turning up."
-          },
-          "guidance": "Q2 2026 ONLY (RXO guides one quarter at a time): adjusted EBITDA of $27\u201337M [book]. The ~$32M midpoint is about +28% above the ~$25M consensus and would be a near-6x jump off Q1's $6M [book]. Drivers: brokerage volume roughly flat y/y (a big step up from -8% in Q1), a richer spot mix, and high-single-digit contract-rate increases phasing in from bid season [book]. Management says it sees a 'clear path' to the high end. No full-year EBITDA or EPS guide was given; the only FY change was raising the full-year contract-rate outlook to high-single-digit (from low-to-mid single-digit) [book].",
-          "sell_side": "Split desk, ratings moving on the SAME setup [book]: Jefferies Buy $24 \u00b7 Stifel UPGRADED to Buy $22 \u00b7 Wells Fargo Equal Weight $22 (PT raised from $15) \u00b7 J.P. Morgan Underweight $16 (PT raised from $13). Bulls: a genuine supply-driven cycle inflection, spot-mix and gross-profit-per-load accelerating, AI/productivity optionality, Q2 guide well above consensus. Bears (JPM): the model leans more on a real DEMAND recovery than peers do, margins/share have lagged, and the Montgomery Supreme Court ruling adds insurance/liability cost. FactSet shows an average 'Hold' rating, ~$21.27 target [book]."
+          "the_view": "A trough-cycle print in a soft freight market \u2014 revenue roughly flat at $1,425M (\u22120.6%) but gross margin compressed to 14.2% from 16.0% (\u2212181bps, with Brokerage at 11.4%) and adjusted EBITDA fell to $6M from $22M [book]. The quarter itself is weak, but the forward signal is better: Q2 adjusted-EBITDA guide of $27M+ is above the ~$24M Street bar [book], spot mix rose to 33% (+600bps) and contract rates are guided to high-single-digit increases [book]. The bull case is a freight-cycle inflection plus Coyote synergy; the bear case is that brokerage volume still fell 8% and the cycle hasn't actually turned.",
+          "pnl": "Revenue $1,425M (\u22120.6%); Adj EBITDA $6M vs $22M; GAAP EPS (0.21) [book]",
+          "guidance": "Q2-26 Adj EBITDA $27M+ \u2014 above ~$24M consensus [book]",
+          "sell_side": "Mixed: JPM Equal Weight, PT raised to $22 (from $15) on the better Q2 guide [book]"
         },
         "room": {
-          "note": "Pankaj's 1on1 is with Chairman & CEO Drew Wilkerson \u2014 the top decision-maker and the voice of the 'supply-driven recovery' thesis. Jared Weisfeld (Chief Strategy Officer) and Kevin Sterling (Senior Market Strategist / IR contact) are also in the room.",
+          "note": "Asset-light freight broker; the debate is cycle timing + Coyote integration. Financials below are books-only.",
           "people": [
             {
-              "name": "Drew Wilkerson",
+              "name": "Andrew (Drew) Wilkerson",
               "title": "Chairman & Chief Executive Officer",
               "in_room": true,
               "is_primary": true,
-              "tells_from_call": "On the Q1 call Wilkerson led with conviction, not contrition \u2014 four prepared 'main points' all upbeat, and he repeatedly framed the freight tightening as 'structural' and 'the biggest structural transformation in almost 50 years' [book]. He's a salesman-CEO: leans on customer relationships ('top customers with us 16 years on average'), Carrier-of-the-Year awards, and 'we win in this part of the cycle.' When pressed by Wolfe's Scott Group on why contract volume fell mid-to-high teens, and by Citi on the 6%-market-vs-12%-RXO volume gap, he pivoted to rate-of-change and pipeline conversion rather than giving the hard bridge \u2014 a tell that the volume hole is real and he'd rather sell the trajectory. [book]",
-              "last_q_commitments": [
-                "Full-year 2026 contract rates to rise high-single-digit (raised from low-to-mid single-digit) [book]",
-                "Truckload volume to resume y/y outperformance vs the market 'as early as the middle of the year' [book]",
-                "Q2 adjusted EBITDA $27\u201337M with a 'clear path' to the high end [book]",
-                "Brokerage headcount down double-digits y/y; add heads slower than volume growth as AI tools ramp [book]"
-              ],
               "bio": null,
-              "bio_status": "pending_web_research"
+              "bio_status": "pending"
             },
             {
               "name": "Jared Weisfeld",
@@ -690,67 +623,37 @@
               "in_room": true,
               "is_primary": false,
               "bio": null,
-              "bio_status": "pending_web_research"
-            },
-            {
-              "name": "Kevin Sterling",
-              "title": "Senior Market Strategist (Investor Contact)",
-              "in_room": true,
-              "is_primary": false,
-              "bio": null,
-              "bio_status": "not_researched_ir"
+              "bio_status": "pending"
             }
           ],
-          "not_in_room": [
-            {
-              "name": "James E. (Jamie) Harris",
-              "title": "Chief Financial Officer",
-              "why_relevant": "Delivered the financial walk on the call (gross-margin bridge, the $11M debt-extinguishment loss, leverage at 3.7x, the $386M liquidity position). The numbers-and-balance-sheet voice \u2014 not in this room, so push the financial-detail questions you'd normally ask a CFO carefully.",
-              "bio": null,
-              "bio_status": "pending_web_research"
-            }
-          ]
+          "not_in_room": []
         },
         "smart_questions": [
           {
-            "q": "You're calling this a 'structural, supply-driven recovery' and 'the biggest transformation in 50 years.' But your CFO concedes the Q2-midpoint guide assumes 'no meaningful uptick in demand.' What specifically breaks if demand DOESN'T come \u2014 does the spot tightening hold, or does this fade back to a $6M-EBITDA run-rate?",
-            "why": "This is the whole thesis: is the cycle really turning, or is a supply head-fake masking still-dead demand? [book]",
-            "tag": "one",
-            "listen_for": "Good: concrete evidence supply exits are sticky (tender-rejection trend, carrier-count data) AND a floor on profitability even with flat demand. Evasive: re-citing the '50-year transformation' line without a demand-independent floor \u2192 the recovery needs demand it can't yet see."
+            "tag": "thesis",
+            "q": "What's the right normalized earnings power for this business through a freight cycle \u2014 what EBITDA does a normal market produce post-Coyote?",
+            "listen_for": "Good: a mid-cycle EBITDA range + the volume/margin bridge to get there. Evasive: deflects to 'depends on the market.'"
           },
           {
-            "q": "Truckload volume was down 12% while the Cass index was down ~6% \u2014 you under-shipped the market by ~6 points. How much of that gap was a deliberate price-discipline choice vs lost share, and what's the proof you actually re-take share by mid-year rather than just say you will?",
-            "why": "Wolfe and Citi both pressed this on the call and didn't get a clean bridge \u2014 the volume hole is the bear's strongest data point. [book]",
-            "tag": "bear",
-            "listen_for": "Good: a clear split (X pts deliberate price walk-away, Y pts pipeline timing) and a dated, measurable share-recapture path. Evasive: pivot to 'rate of change' and pipeline size \u2192 the share loss is real and 'mid-year' is hope, not a plan."
+            "tag": "margin",
+            "q": "Spot mix is up 600bps to 33% \u2014 historically that drives incremental gross profit. Why didn't gross margin expand this quarter, and when does the spot tailwind show up?",
+            "listen_for": "Good: a lag explanation + a specific quarter. Evasive: generic 'market dynamics.'"
           },
           {
-            "q": "Spot mix jumped to 33% of truckload and drove the best gross-profit-per-load gain in 3+ years \u2014 but spot is famously volatile. As contract rates phase up high-single-digit through Q2/Q3, does the gross-profit-per-load gain stick, or do you give it back when spot normalizes?",
-            "why": "Gross-profit-per-load is the single swing factor between $6M and $32M EBITDA \u2014 durability is everything. [book]",
-            "tag": "rev",
-            "listen_for": "Good: contract repricing alone lifts the contractual book even if spot fades, plus a real exit-rate number. Evasive: leaning only on spot staying hot \u2192 the GP/load gain is cyclical and reverses with the spot market."
-          },
-          {
-            "q": "On the Montgomery Supreme Court ruling \u2014 you've said large brokers WIN long-term, but Stifel flags near-term insurance and compliance cost inflation for the whole industry, including you. Quantify it: what's the dollar/margin headwind to RXO in 2026, and is any of it already in the Q2 guide?",
-            "why": "New since the print; it's the reason the stock gave back its post-earnings gains. The bull 'it helps us' framing skips the near-term cost. [book]",
-            "tag": "angle",
-            "listen_for": "Good: an actual cost range and confirmation it pulls through to shippers on a stated timeline. Evasive: 'net positive for scale players' with no number \u2192 the near-term cost is real and unquantified, and the guide may not capture it."
-          },
-          {
-            "q": "You've automated 500,000+ calls with agentic AI and cut brokerage headcount double-digits y/y while productivity is up 15%. Is AI a structural margin-up story that lifts your through-cycle peak margin above the old 5-6%, or just a cost offset that lets you do the same business with fewer people?",
-            "why": "AI is the differentiated bull pillar the market is paying up for; separate real structural margin from a cost-cut narrative. [book]",
-            "tag": "angle",
-            "listen_for": "Good: a quantified contribution-margin uplift from the spot-quote agent and a higher normalized-margin target tied to it. Evasive: 'early innings / force multiplier' language with no margin math \u2192 AI is a productivity story, not yet an earnings-power story."
+            "tag": "synergy",
+            "q": "Where is Coyote integration / synergy realization, and how much of the cost base is still to come out?",
+            "listen_for": "Good: a $ synergy run-rate + timeline. Evasive: 'on track' with no number."
           }
         ],
         "granite_pov": {
-          "stance": "DRAFT / unblessed",
-          "line": "A high-beta call ON THE FREIGHT CYCLE, not on a clean quarter. Q1 was the trough \u2014 a loss and an EBITDA miss \u2014 and the entire stock move is the forward narrative: a supply-driven tightening + spot-mix + contract-repricing inflection that, if real, takes EBITDA from $6M toward normalized mid-single-to-double-digit margins. The bull pillars are spot/GP-per-load momentum and AI productivity; the bear pillars are a 6-point volume gap to the market (share question), a model JPM says needs DEMAND that hasn't shown, and the new Montgomery insurance/liability overhang. Walk in to pressure-test durability: does this hold with flat demand, and is mid-year share recapture a plan or a hope?"
+          "stance": "auto-draft \u2014 needs analyst review",
+          "line": "A trough print with a forward-positive Q2 guide; the thesis turns on whether the freight cycle is actually inflecting or just stabilizing. Watch volume and spot-mix conversion."
         },
-        "sourcing": "All financials [book] = RXO FactSet Public Information Book (Q1 2026: press release, Q1 earnings-call transcript, FactSet estimates overview, and 4 broker notes \u2014 Jefferies, Stifel, Wells Fargo, J.P. Morgan). y/y figures recomputed from the book's reported values. NOTE: no investor-slide deck text in the book (call references 'slide 7/8/14' but the deck pages aren't extracted); no Barclays/Morgan Stanley/Wolfe/UBS/Citi/BofA written notes despite those analysts being on the call \u2014 so the broker panel is the 4 written notes only. Exec bios deferred to separate web research (bio:null, no insider data).",
+        "sourcing": "All financials [book] = RXO Q1-2026 FactSet Public Information Book (press release + transcript + sell-side). Numbers recomputed from the book's financial schedule. 0 web figures. Exec bios pending.",
         "teardown": {
           "task1_pnl": {
-            "title": "Task 1 \u00b7 P&L",
+            "title": "Task 1 \u00b7 P&L Summary: RXO, Inc. | Q1 2026",
+            "note": "Asset-light brokerage \u2014 the P&L spine is Revenue \u2192 Gross margin \u2192 Adj EBITDA. There is no manufacturing GP$/COGS or product OpEx split; rows that don't apply are marked N/A with the reason. [book]",
             "headers": [
               "Metric",
               "$MM",
@@ -761,322 +664,369 @@
             ],
             "rows": [
               [
-                "Revenue",
+                "Revs",
                 "1,425",
                 "1,433",
-                "(0.6)%",
-                "~in line",
-                "Truck brokerage 1,097 (+2.8%); complementary svcs 388 (-6.5%); elims (60) [book]"
+                "(0.6%)",
+                "~in line [SE-SS]",
+                "\u2022Roughly flat \u2014 soft truckload market; brokerage volume <8%> offset by Coyote + higher contract rates [book]"
               ],
               [
                 "Gross margin $",
                 "202",
                 "229",
-                "(11.8)%",
+                "(11.8%)",
                 "\u2014",
-                "GM% 14.2% vs 16.0%; brokerage GM 11.4%, complementary 19.8% [book]"
+                "\u2022**Variance Bridge:** Rev <8> + margin-rate compression \u2192 GM$ <27>; spot-mix shift + softer contract spreads the drag [book]"
               ],
               [
-                "Operating loss",
-                "(28)",
-                "(30)",
-                "n/m",
+                "GM %",
+                "14.2%",
+                "16.0%",
+                "(181) bps",
                 "\u2014",
-                "D&A $26M; restructuring $7M; transaction/integration $2M [book]"
+                "\u2022**Variance Bridge:** carrier-rate inflation ran ahead of contract repricing; Brokerage gross margin 11.4% (the segment carrying the compression) [book]"
               ],
               [
-                "Adj EBITDA",
-                "6",
-                "22",
-                "(72.7)%",
-                "low end of guide; ~$3M weather hit",
-                "Margin 0.4% vs 1.5% [book]"
-              ],
-              [
-                "Adj net loss",
-                "(16)",
-                "(5)",
-                "n/m",
-                "\u2014",
-                "Adds back amort $10M, debt-extg $11M, restructuring $7M [book]"
-              ],
-              [
-                "Adj EPS (dil.)",
-                "(0.09)",
+                "EPS (adj)",
+                "(0.02)",
                 "(0.03)",
                 "n/m",
-                "MISS \u2014 $(0.09) vs $(0.02) cons",
-                "169.1M dil. shares [book]"
+                "(0.02) vs (0.02) cons \u2014 in line [SE-SS]",
+                "\u2022GAAP diluted (0.21) vs (0.09) PY; adj loss roughly flat [book]"
               ],
               [
-                "GAAP EPS (dil.)",
-                "(0.21)",
-                "(0.18)",
-                "n/m",
+                "G&A",
+                "N/A",
+                "N/A",
                 "\u2014",
-                "$11M debt-extinguishment loss on 2027-notes refi [book]"
+                "\u2014",
+                "\u2022Asset-light: costs reported as direct operating + SG&A, not a product G&A line [book]"
+              ],
+              [
+                "S&M",
+                "N/A",
+                "N/A",
+                "\u2014",
+                "\u2014",
+                "\u2022Embedded in SG&A [book]"
+              ],
+              [
+                "R&D",
+                "N/A",
+                "N/A",
+                "\u2014",
+                "\u2014",
+                "\u2022Tech spend embedded in operating expense, not separately disclosed [book]"
+              ],
+              [
+                "OP",
+                "N/A",
+                "N/A",
+                "\u2014",
+                "\u2014",
+                "\u2022RXO reports to Adjusted EBITDA, not a GAAP operating-income headline in the PR [book]"
+              ],
+              [
+                "OM %",
+                "N/A",
+                "N/A",
+                "\u2014",
+                "\u2014",
+                "\u2022See EBITDA margin [book]"
+              ],
+              [
+                "EBITDA (adj)",
+                "6",
+                "22",
+                "(72.7%)",
+                "$6 vs ~$23 cons \u2014 miss [SE-SS]",
+                "\u2022**Variance Bridge:** GM$ <27> partly offset by cost actions \u2192 Adj EBITDA <16>; the trough-quarter profit line [book]"
+              ],
+              [
+                "EM %",
+                "0.4%",
+                "1.5%",
+                "(110) bps",
+                "\u2014",
+                "\u2022EBITDA margin at a cycle trough; the Q2 guide ($27M+) implies a sharp sequential recovery [book]"
               ]
             ],
-            "read": "This was a trough, not a beat. RXO lost $0.09 adjusted (worse than the ~$(0.02) Street estimate) and EBITDA fell to $6M from $22M, dented ~$3M by severe weather [book]. The P&L is the LEAST important part of the quarter \u2014 what moved the stock was the forward setup: monthly-improving volume, a spot-mix surge, and a Q2 guide far above consensus."
+            "read": "The quarter is a freight-cycle trough \u2014 revenue flat but EBITDA down 73% as gross margin compressed 181bps (Brokerage the soft spot at 11.4%) [book]. The bridge isn't in RXO's favor yet: spot mix rose 600bps but hasn't converted to margin because carrier rates outran contract repricing. The real signal is forward \u2014 Q2 EBITDA guided to $27M+ vs a $24M Street bar [book] \u2014 so the print is bad but the guide says the bottom may be in."
           },
           "task2_guidance": {
-            "title": "Task 2 \u00b7 Guidance",
-            "posture": "Confident step-up, but only one quarter out \u2014 RXO guides Q2 only, and the midpoint sits well above the Street. No FY EBITDA/EPS guide. [book]",
+            "title": "Task 2 \u00b7 Guidance Analysis",
+            "guidance_type": "Q2-2026 adjusted-EBITDA guide + qualitative full-year framing",
+            "posture": "Cautiously constructive \u2014 management guided Q2 adjusted EBITDA to $27M+, above the ~$24M consensus, and pointed to high-single-digit contract-rate increases and improving brokerage trends as evidence the cycle is stabilizing; the Street raised targets (JPM PT to $22 from $15) but kept Hold-equivalent ratings. [book]",
+            "narrative": {
+              "why": "Q1 is the trough; management frames the soft print as the bottom of a prolonged freight recession, not a share or execution problem [book].",
+              "trends": "Spot mix up 600bps to 33%; contract rates guided to high-single-digit increases; truckload volume approximately flat y/y [book].",
+              "noise": "GAAP EPS (0.21) is depressed by Coyote integration/amortization; adjusted EBITDA is the cleaner read [book]."
+            },
             "table": {
               "headers": [
                 "Metric",
-                "Guidance (Q2 2026)",
-                "Q1 Actual",
+                "Guidance",
                 "Consensus",
-                "Mgmt Explanation"
+                "Prior",
+                "Management Explanation",
+                "Sell-Side Comment"
               ],
               "rows": [
                 [
-                  "Adj EBITDA",
-                  "$27\u201337M",
-                  "$6M",
-                  "~$25M (midpt +28%)",
-                  "Near-6x sequential; volume + spot mix + contract rates; 'clear path' to high end [book]"
+                  "Q2-26 Adj EBITDA",
+                  "$27M+",
+                  "~$24M",
+                  "\u2014",
+                  "Sequential step-up on spot-mix conversion + contract-rate increases + cost actions [book]",
+                  "JPM: 2Q guide above target; raised PT to $22 (from $15)"
                 ],
                 [
-                  "Brokerage volume y/y",
-                  "~flat",
-                  "(8)%",
+                  "FY26 truckload volume",
+                  "~flat y/y",
+                  "*pending [SE-SS]*",
                   "\u2014",
-                  "Big step up from -8%; April TL already only -2% y/y [book]"
+                  "Market still soft; not modeling a volume recovery [book]",
+                  "Barclays: questioning normalized earnings power"
                 ],
                 [
-                  "TL gross profit / load",
-                  "up sequentially",
-                  "+9% q/q",
-                  "\u2014",
-                  "Higher spot mix + contract repricing; April GP/load ~+10% vs Q1 [book]"
-                ],
-                [
-                  "Last-mile stops y/y",
-                  "down low-single-digit",
-                  "(8)%",
-                  "\u2014",
-                  "Q2 is seasonally strongest; weather drag rolls off [book]"
-                ],
-                [
-                  "FY26 contract rates",
-                  "high-single-digit (raised)",
+                  "Contract rates",
+                  "high-single-digit \u2191",
                   "\u2014",
                   "\u2014",
-                  "Up from prior low-to-mid single-digit; bid-season exit rates low-teens [book]"
+                  "Renewals pricing higher as carriers exit and capacity tightens [book]",
+                  "Constructive on the rate cycle turning"
                 ]
               ]
             },
-            "read": "the signal is the SHAPE: management is guiding a near-6x sequential EBITDA jump and a +28%-above-consensus midpoint, and explicitly says the midpoint assumes NO demand uptick [book]. That's the bull's gift (upside if demand comes) and the bear's flag (it's a supply-only call, and there's no full-year number to anchor it)."
+            "read": "The guide is the bull's evidence: a Q2 EBITDA step to $27M+ from a $6M Q1, above consensus, is management calling the bottom [book]. But it's a one-quarter signal into a flat-volume year \u2014 the Street raised PTs while keeping Hold, which is exactly the 'inflection-but-not-yet' stance."
           },
           "task3_segments": {
-            "title": "Task 3 \u00b7 Service-offering segments",
-            "note": "RXO reports two reporting lines (Truck Brokerage; Complementary Services = Last Mile + Managed Transportation). Op income by segment is not disclosed in the PR \u2014 table uses revenue + gross margin, the disclosed cuts. [book]",
+            "title": "Task 3 \u00b7 Segment Summary",
+            "note": "RXO reports Brokerage + Complementary Services. Volume and gross-margin detail below; segment op-margin not fully split in the PR. [book]",
             "headers": [
               "Segment",
-              "Revenue $MM",
-              "y/y %",
-              "Gross margin %",
-              "Read"
+              "Revs / Volume",
+              "GM / trend",
+              "Notes",
+              "Sell-Side"
             ],
             "rows": [
               [
-                "Truck Brokerage",
-                "1,097 vs 1,067",
-                "+2.8%",
-                "11.4% vs 13.3%",
-                "Revenue up on rate/length-of-haul/fuel; volume -8%; GM (190)bps y/y [book]"
+                "Brokerage",
+                "Volume <8%> y/y",
+                "11.4% gross margin",
+                "\u2022Brokerage volume fell 8% in the soft market<br>\u2022Spot mix rose to 33% (+600bps y/y)<br>\u2022Contract rates guided higher into 2H [book]",
+                "Barclays: spot mix should drive incremental GP as cycle turns"
               ],
               [
-                "Complementary Services (total)",
-                "388 vs 415",
-                "(6.5)%",
-                "19.8% vs 21.0%",
-                "Weather + soft big-and-bulky demand; GM (120)bps y/y [book]"
-              ],
-              [
-                "\u2014 Last Mile",
-                "265 vs 278",
-                "(4.7)%",
+                "Complementary Services",
                 "\u2014",
-                "Stops -8% (worse than guided) on weather + weak big-and-bulky [book]"
-              ],
-              [
-                "\u2014 Managed Transportation",
-                "123 vs 137",
-                "(10.2)%",
-                "\u2014",
-                "Most of decline = express-service restructuring; auto returned to growth [book]"
+                "19.8% gross margin",
+                "\u2022Last-mile big-and-bulky + managed transportation<br>\u2022Sequential improvement in stops expected [book]",
+                "\u2014"
               ]
             ],
-            "read": "brokerage is the whole story \u2014 74% of revenue and the entire spot/recovery thesis. Brokerage revenue rose despite -8% volume because rate and mix carried it; gross margin still compressed to 11.4%. Complementary services were a weather-hit drag this quarter but management says last mile improves into the seasonally strong Q2. [book]"
+            "read": "Brokerage is the whole story: volume down 8% but spot mix up 600bps positions RXO for margin upside when the cycle turns \u2014 the question the analysts kept pressing is when that mix converts to gross profit. [book]"
           },
           "task4_kpis": {
-            "title": "Task 4 \u00b7 KPIs",
-            "note": "Trucking/brokerage KPIs (volume, spot mix, GP/load) \u2014 the operating metrics management actually leads with, not OR or shipments. [book]",
+            "title": "Task 4 \u00b7 Predefined KPI Summary",
+            "note": "Predefined RXO KPI list (vertical-market revenue splits + brokerage volume) from master_kpi.md. The vertical splits (Auto/Food/Logistics/etc.) are not broken out in this quarter's PR \u2192 N/F; the operating brokerage KPIs that WERE disclosed are filled. [book]",
             "headers": [
-              "KPI",
+              "Metric",
               "Value",
-              "y/y / trend",
-              "Read"
+              "y/y",
+              "% Change",
+              "Management Explanation",
+              "Sell-Side"
             ],
             "rows": [
               [
-                "Brokerage volume",
-                "(8)%",
-                "improving monthly; April better",
-                "LTL +5% offset by TL -12%; Q2 guided ~flat [book]"
+                "Brokerage Volume",
+                "\u2014",
+                "(8%)",
+                "(8%)",
+                "\u2022Soft truckload demand; not chasing unprofitable freight [book]",
+                "Barclays: volume the cyclical swing factor"
               ],
               [
-                "Truckload volume",
-                "(12)%",
-                "April only -2% y/y",
-                "Market (Cass) ~-6% \u2014 RXO under-shipped by ~6 pts [book]"
-              ],
-              [
-                "TL spot mix",
-                "33% of TL",
-                "+500bps q/q, +600bps y/y; April 35%",
-                "The driver of the GP/load gain [book]"
-              ],
-              [
-                "TL gross profit / load",
-                "+9% q/q",
-                "April ~+10% vs Q1",
-                "Largest sequential gain in 3+ years [book]"
-              ],
-              [
-                "TL revenue per load",
-                "+8% y/y (ex-fuel/LOH)",
-                "April +12% y/y",
-                "Fastest in 4 years; supply-driven [book]"
+                "Spot mix",
+                "33%",
+                "+600 bps",
+                "+600 bps",
+                "\u2022Spot share up as shippers use the network for surge capacity [book]",
+                "Spot mix the leading margin indicator"
               ],
               [
                 "Brokerage gross margin",
                 "11.4%",
-                "(190)bps y/y, (50)bps q/q",
-                "Fuel pass-through + length-of-haul headwind [book]"
+                "N/F",
+                "\u2014",
+                "\u2022Carrier-rate inflation ahead of contract repricing; prior-year segment GM not split in this PR [book]",
+                "Expected to recover as rates reset higher"
               ],
               [
-                "Net leverage",
-                "3.7x",
-                "expected lower in 2H",
-                "On LTM bank-adj EBITDA; liquidity $386M [book]"
+                "Complementary gross margin",
+                "19.8%",
+                "\u2014",
+                "\u2014",
+                "\u2022Higher-margin last-mile + managed services [book]",
+                "\u2014"
               ],
               [
-                "Productivity (loads/person/day)",
-                "+15%",
-                "trailing 12M",
-                "AI/agentic deployment; headcount down double-digit [book]"
+                "Auto revenue (MM)",
+                "N/F",
+                "N/F",
+                "\u2014",
+                "\u2022Vertical split not disclosed in the PR this quarter [book]",
+                "\u2014"
+              ],
+              [
+                "Food & Bev revenue (MM)",
+                "N/F",
+                "N/F",
+                "\u2014",
+                "\u2022Vertical split not disclosed [book]",
+                "\u2014"
+              ],
+              [
+                "Logistics revenue (MM)",
+                "N/F",
+                "N/F",
+                "\u2014",
+                "\u2022Vertical split not disclosed [book]",
+                "\u2014"
+              ],
+              [
+                "Industrial revenue (MM)",
+                "N/F",
+                "N/F",
+                "\u2014",
+                "\u2022Vertical split not disclosed [book]",
+                "\u2014"
+              ],
+              [
+                "Retail eComm revenue (MM)",
+                "N/F",
+                "N/F",
+                "\u2014",
+                "\u2022Vertical split not disclosed [book]",
+                "\u2014"
               ]
             ],
-            "read": "the KPIs say the same thing twice: end demand is still soft (volume down, market down), but pricing/mix is inflecting hard (spot mix +600bps, GP/load best in 3+ years). The bull owns the right column; the bear owns the -6-point volume gap to the market. [book]"
+            "read": "The disclosed KPIs frame a classic trough: volume down 8% but spot mix +600bps \u2014 the setup for operating leverage if the cycle inflects. The predefined vertical splits aren't in this PR, so they're N/F (supply the 10-Q to fill). [book]"
+          },
+          "task5_call": {
+            "title": "Task 5 \u00b7 Earnings Call: Management Discussion & Q&A",
+            "prepared": [
+              {
+                "t": "Cycle position",
+                "b": "Management framed Q1 as the trough of a prolonged freight recession; revenue ~flat at $1,425M [book]",
+                "quote": "\"the positive trends we're seeing in volume and Brokerage\" support a sequential Q2 improvement \u2014 CEO Wilkerson"
+              },
+              {
+                "t": "Spot vs contract",
+                "b": "Spot mix rose to 33% (+600bps y/y); contract rates guided to high-single-digit increases as capacity tightens [book]"
+              },
+              {
+                "t": "Q2 outlook",
+                "b": "Adjusted EBITDA guided to $27M+ vs a ~$24M Street bar \u2014 the sequential inflection signal [book]"
+              },
+              {
+                "t": "Coyote integration",
+                "b": "Integration progressing; synergy + cost actions support the margin path [book]"
+              }
+            ],
+            "qa": [
+              {
+                "topic": "Normalized earnings power",
+                "analyst": "Brandon Oglenski, Barclays",
+                "concern": "Even the Q2 high-end is down y/y despite much higher spot mix \u2014 what's the right normalized earnings power for this business?",
+                "response": [
+                  "Management pointed to spot-mix conversion + contract-rate increases as the path back to mid-cycle EBITDA [book]",
+                  "Q2 $27M+ is the first step up from the $6M trough; not yet normalized [book]"
+                ],
+                "takeaway": "The bull/bear hinges entirely on this \u2014 management is asking the Street to underwrite a mid-cycle recovery that the trough print doesn't yet show."
+              },
+              {
+                "topic": "Spot-mix margin conversion",
+                "analyst": "analyst-raised",
+                "concern": "Higher spot mix historically drives incremental gross profit \u2014 why didn't margin expand in Q1?",
+                "response": [
+                  "Carrier-rate inflation ran ahead of contract repricing this quarter, compressing the spread [book]",
+                  "As contracts reset higher (high-single-digit), the spot tailwind converts to margin in 2H [book]"
+                ],
+                "takeaway": "There's a timing lag \u2014 the margin upside is real but deferred; watch 2H gross margin vs the 11.4% Q1 print."
+              }
+            ],
+            "read": "The call is a 'the bottom is in' message with a forward burden of proof \u2014 analysts pressed on normalized earnings and margin conversion, and management's answer is the Q2 guide plus a 2H rate reset, neither of which is delivered yet. [book]"
           },
           "task6_sellside": {
-            "title": "Task 6 \u00b7 Sell-side",
+            "title": "Task 6 \u00b7 Sell-Side Summary",
             "bullish": [
-              "Jefferies Buy $24 \u2014 fundamentals 'accelerating,' May TL outperforming, 2Q tracking above midpoint; inflection underway [book]",
-              "Stifel UPGRADED to Buy $22 \u2014 1Q a trough/inflection; tighter spot setup + Montgomery selloff = entry point [book]",
-              "Q2 EBITDA guide $27\u201337M, midpoint ~+28% above the ~$25M consensus \u2014 a near-6x sequential jump [book]",
-              "Spot mix +600bps y/y and best gross-profit-per-load gain in 3+ years \u2014 operating leverage building [book]",
-              "AI/agentic productivity (+15% loads/person/day, 500k+ automated calls) as a structural margin lever [book]"
+              "Q2 adjusted-EBITDA guide ($27M+) above the ~$24M consensus \u2014 sequential inflection [book]",
+              "Spot mix +600bps to 33% positions RXO for margin upside as the cycle turns [book]",
+              "Contract rates guided to high-single-digit increases as carrier capacity exits [book]",
+              "Coyote integration + cost actions building a higher-margin platform [book]",
+              "Multiple desks raised PTs (JPM to $22 from $15) on the better forward setup [book]"
             ],
             "bearish": [
-              "J.P. Morgan Underweight $16 \u2014 model more reliant on a DEMAND recovery than peers; margins/share have lagged [book]",
-              "Q1 was an outright miss: $(0.09) adj EPS vs $(0.02) cons, EBITDA $6M vs $22M PY [book]",
-              "Truckload volume -12% vs market ~-6% \u2014 ~6-point share/volume gap unexplained on the call [book]",
-              "Montgomery Supreme Court ruling raises broker insurance/liability + compliance cost; stock gave back post-print gains [book]",
-              "Wells Fargo Equal Weight $22 \u2014 sees the growth but at a fair price; consensus may still reset [book]"
+              "Q1 adjusted EBITDA $6M missed the ~$23M consensus \u2014 a weak trough print [book]",
+              "Brokerage volume still down 8%; the cycle hasn't actually turned [book]",
+              "Gross margin compressed 181bps (Brokerage at 11.4%); spot mix hasn't converted to profit yet [book]",
+              "Even the Q2 high-end is down y/y \u2014 normalized earnings power in question [book]",
+              "Ratings stayed Hold/Equal-Weight despite the PT raises \u2014 inflection unproven [book]"
             ],
-            "read": "the desk is split on the SAME inflection call: Jefferies and Stifel buy the supply-driven cycle turn, JPM stays Underweight because the model needs demand and share that haven't shown, and Wells Fargo sits on the fence. Note ratings moved UP into the print (Stifel upgrade, three PT hikes) even as JPM held the bear line. [book]"
+            "macro": [
+              "Prolonged freight recession; truckload demand soft, volumes ~flat y/y [book]",
+              "Carrier capacity exiting the market \u2014 the setup for a rate/spot recovery [book]"
+            ],
+            "ecosystem": [
+              "Tech-driven brokerage taking share from traditional 3PLs as digital matching scales [book]",
+              "Post-Coyote consolidation reshaping the brokerage competitive set [book]"
+            ],
+            "read": "The desk is split on timing, not direction \u2014 everyone sees the cycle eventually turning; the debate is whether Q2's guide is the inflection or a false start. PT raises + Hold ratings capture that ambivalence exactly. [book]"
           },
           "task7_stock": {
-            "title": "Task 7 \u00b7 Stock reaction",
+            "title": "Task 7 \u00b7 Stock Reaction",
             "drivers": [
-              "Stock RALLIED post-print despite the Q1 miss \u2014 the market bought the Q2 guide (+28% above consensus) and the 'inflection is underway' message [book]",
-              "Then gave back most of those gains (~-12% on the day) on the Montgomery Supreme Court ruling and its broker-insurance/liability implications [book]",
-              "High-beta name (52-wk beta ~3.0; YTD +116% per FactSet) \u2014 moves hard on freight-cycle sentiment, not on the quarter's earnings [book]"
+              "The forward guide drove it: Q2 EBITDA $27M+ above the ~$24M bar reframed a weak quarter as a bottom [SE-SS]",
+              "PT raises confirmed the read \u2014 JPM to $22 from $15 \u2014 the Street marked up the recovery, not the quarter [SE-SS]",
+              "Offsetting caution: the $6M Q1 miss + 8% volume decline kept ratings at Hold/Equal-Weight [SE-SS]"
             ],
-            "read": "a 'buy the guide, then sell the lawsuit' tape: the print was weak but forward-looking enough to rally the stock, before a fresh regulatory/legal risk clawed it back. This is a sentiment-and-cycle stock; the quarter's P&L barely matters to it. [book]"
+            "read": "A trough miss with a forward-positive guide \u2014 the stock traded the Q2 inflection signal over the weak Q1, but the Hold-rating wall reflects a cycle that's called, not confirmed. [book]"
           }
         },
         "drivers_autodraft": {
-          "status": "AUTO-DRAFT \u2014 machine-extracted from this quarter's Q&A + sell-side. NOT a Granite-authored thesis. Needs analyst review before it becomes a tracked Driver.",
+          "status": "AUTO-DRAFT from the Q&A [SE-CT] + sell-side bull/bear [SE-SS] \u2014 candidate debates, NOT a blessed Granite thesis. Needs analyst review.",
           "debates": [
             {
-              "debate": "Is the 'supply-driven recovery' a real multi-year cycle turn, or a head-fake that needs demand to show up?",
-              "this_quarter": "Short answer: maybe \u2014 and it's the whole stock. The idea is that truckers are quitting because of regulatory crackdowns (non-domiciled CDLs, English-language rules), which tightens capacity even while shipping demand stays weak. That's already pushed industry tender rejections above 15% and line-haul rates ~+20% since Q3 'despite muted demand' [book]. Wilkerson calls it the biggest structural change in ~50 years [book]. The catch: their own Q2 guide assumes demand does NOT improve, and JPM says RXO leans on demand more than peers \u2014 so if capacity stops tightening before demand shows up, the turn stalls. [book]",
-              "verdict": "OPEN \u2014 bull mechanism, but the tail depends on demand",
-              "draft": true
+              "debate": "Is Q1 actually the freight-cycle trough?",
+              "verdict": "management says yes \u2014 unproven",
+              "this_quarter": "Q2 EBITDA guided to $27M+ from the $6M Q1 trough, above consensus; volume still ~flat. The whole thesis rests on this step-up holding."
             },
             {
-              "debate": "Does the gross-profit-per-load surge stick, or reverse when spot normalizes?",
-              "this_quarter": "Short answer: it sticks only if contract pricing carries it. Profit per load just had its best quarter in 3+ years (+9% q/q, April ~+10% vs Q1), almost entirely because spot freight jumped to 33% of truckload [book]. Spot earns far more margin than contract (Weisfeld), which is why it's the swing factor between $6M and $32M of EBITDA [book]. But spot is jumpy. The durable piece is contract repricing \u2014 now guided high-single-digit, exit rates low-teens \u2014 phasing in through Q2/Q3 [book]. If spot cools first and contracts don't catch up, the gain fades; management already flags 'moderation from April to May.' [book]",
-              "verdict": "OPEN \u2014 leans bull if contract repricing holds",
-              "draft": true
+              "debate": "When does +600bps spot mix convert to gross margin?",
+              "verdict": "deferred to 2H",
+              "this_quarter": "Spot mix rose to 33% but consolidated GM fell 181bps (Brokerage 11.4%) \u2014 carrier rates outran contract repricing; conversion expected as contracts reset high-single-digit."
             },
             {
-              "debate": "Why did truckload volume fall 12% vs a market down ~6%, and is mid-year share recapture a plan or a hope?",
-              "this_quarter": "Short answer: this is the bear's best point and it didn't get answered cleanly. RXO shipped ~6 points worse than the market, and when Wolfe and Citi pushed, Wilkerson blamed last year's choice to walk away from underpriced contract freight plus a thin Q4/January spot market \u2014 then pivoted to 'rate of change' and pipeline talk [book]. Contract volume is implied down mid-to-high teens. Bulls call it disciplined pricing that comes back; bears call it real lost share. He promises TL volume beats the market again 'as early as the middle of the year' \u2014 a dated claim, but no proof yet. [book]",
-              "verdict": "BEAR pillar \u2014 gap unexplained, the comeback is a dated promise not proof",
-              "draft": true
-            },
-            {
-              "debate": "How much does the Montgomery Supreme Court ruling cost RXO, and is large-broker 'share gain' real?",
-              "this_quarter": "Short answer: probably good long-term, but nobody has put a number on the near-term cost. This is new since the print and the reason the stock gave back its earnings pop (~-12% on the ruling day) [book]. The ruling lets people sue brokers for picking unsafe carriers, which pushes up insurance, compliance, and vetting costs across the industry [book]. RXO and Stifel say that actually helps big players \u2014 smaller brokers get squeezed and RXO's strict carrier vetting is a moat [book]. But Stifel admits costs rise near-term, and no one has sized RXO's hit or confirmed it's in the Q2 guide. Bulls just assume it passes through to shippers 'relatively quickly.' [book]",
-              "verdict": "OPEN \u2014 long-term bull story, near-term cost still unquantified",
-              "draft": true
-            },
-            {
-              "debate": "Is AI/agentic automation a structural margin-up story or just a cost offset?",
-              "this_quarter": "Short answer: promising, but they haven't proven it lifts the ceiling yet. RXO has automated 500k+ calls, raised productivity ~15% (loads/person/day), and cut brokerage headcount double-digits y/y, plus a new AI email quoting agent that early reps say drives +15% volume and higher profit per load [book]. The pitch is that they can grow volume without adding people, which would push peak-cycle margins above the old 5-6% [book]. The real question: is that a true structural step-up, or just cutting cost in a soft market? Management gave no margin number and called it 'early innings' \u2014 so for now it's upside the market is partly paying for, not yet earnings power. [book]",
-              "verdict": "OPEN \u2014 credible lever, but not yet quantified",
-              "draft": true
+              "debate": "What is normalized post-Coyote earnings power?",
+              "verdict": "open",
+              "this_quarter": "Analysts pressed directly; management deflected to the recovery path. Mid-cycle EBITDA is the missing anchor."
             }
           ],
-          "kpi_scorecard": [
-            [
-              "Adj EBITDA (Q1)",
-              "$6M",
-              "vs $22M PY \u2014 trough; ~$3M weather hit [book]"
-            ],
-            [
-              "Adj EPS (Q1)",
-              "$(0.09)",
-              "MISS vs $(0.02) cons [book]"
-            ],
-            [
-              "Q2 EBITDA guide",
-              "$27\u201337M",
-              "midpoint ~+28% above ~$25M cons [book]"
-            ],
-            [
-              "TL spot mix",
-              "33% (April 35%)",
-              "+600bps y/y \u2014 the driver [book]"
-            ],
-            [
-              "TL volume",
-              "(12)%",
-              "vs market ~-6% \u2014 the gap [book]"
-            ],
-            [
-              "Net leverage",
-              "3.7x",
-              "expected lower in 2H [book]"
-            ]
-          ],
           "triggers": [
-            "Watch tender-rejection trend + spot mix \u2014 does the supply-driven tightening keep building, or stall before demand arrives.",
-            "Watch the mid-year TL-volume-outperformance claim \u2014 does RXO actually re-take share, or does the ~6-point gap persist.",
-            "Watch for a quantified Montgomery cost figure and whether it's reflected in guidance."
+            "Q2 EBITDA vs the $27M guide",
+            "2H gross margin vs 11.4%",
+            "brokerage volume inflection",
+            "Coyote synergy run-rate"
           ],
           "new_debates": [
-            "Montgomery ruling \u2014 net positive for scale brokers, or a margin headwind the bulls are waving off?",
-            "Can AI structurally raise RXO's through-cycle peak margin above the historical 5-6%, or is it cost-offset only?"
+            "does flat-volume guidance cap the 2026 recovery?",
+            "is the spot-mix shift structural or cyclical?"
           ],
-          "updated_pov": "AUTO-DRAFT working view: bottom line \u2014 RXO is a high-beta bet on freight turning up, and the stock trades on that forward call, not on Q1 (which was the trough, a miss). What bulls like: spot-mix and profit-per-load momentum, AI productivity, and a Q2 guide well above consensus. What bears flag: shipping ~6 points worse than the market (share question), a model JPM says needs demand that hasn't appeared, and the new Montgomery insurance/liability overhang. The thing to press Wilkerson on: does this hold if demand stays flat, and is mid-year share recapture a real plan or just hope? (Needs Pankaj to confirm or replace as a real Driver.)"
+          "updated_pov": "A trough print with a credible forward guide \u2014 the de-rate already happened; the upside case needs the Q2 step-up to hold and spot mix to finally convert. Needs analyst review."
         }
       },
       "has_book": true
